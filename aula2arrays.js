@@ -123,6 +123,6 @@ console.log("______________________________");
 // b) Use flat para achatar o array em um unico nível (os arrays internos se tornam elementos individuais) e exiba-o.
 
 // → Seu código aqui:
-
+numeros2 = [[2,4,6],[1,3,5],[1,2,3,4,5]]
 
 console.log("_______________________________");
