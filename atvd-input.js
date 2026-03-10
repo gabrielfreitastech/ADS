@@ -1,3 +1,5 @@
+let pegarinfo = require('readline-sync')
+
 // ============================================================
 //   ATIVIDADE 03 – Input e Output em JavaScript
 // ============================================================
@@ -39,7 +41,7 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
- let pegarinfo = require('readline-sync')
+
 // const nomeusuario = pegarinfo.question('Qual o seu nome? ')
 // let idadeusuario = pegarinfo.questionInt('Qual a sua idade? ')
 // console.log(`Olá ${nomeusuario}, você tem ${idadeusuario} anos de idade!`)
@@ -130,12 +132,42 @@ console.log("_______________________________");
 // e) Exiba somente o nome e a idade do 2º usuário.
 // f) Exiba somente o endereço completo do 3º usuário.
 // g) Exiba somente o nome e a rua do 1º usuário.
-let usuario1 = pegarinfo.question('Qual o seu nome? ')
-let usuario1 = pegarinfo.questionInt('Qual a sua idade? ')
-let usuario1 = pegarinfo.question('Qual a sua cidade? ')
-
 
 // → Seu código aqui:
+
+let usuario1 = {
+    nome: pegarinfo.question('Qual o seu nome? '),
+    idade: pegarinfo.questionInt('Qual a sua idade? '),
+    endereco: {
+    cidade: pegarinfo.question('Qual a sua cidade? ' ),
+    rua: pegarinfo.question('Qual sua rua? '),
+    numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+    }
+} 
+
+let usuario2 = {
+    nome: pegarinfo.question('Qual o seu nome? '),
+    idade: pegarinfo.questionInt('Qual a sua idade? '),
+        endereco: {
+        cidade: pegarinfo.question('Qual a sua cidade?' ),
+        rua: pegarinfo.question('Qual sua rua? '),
+        numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+        }
+}
+let usuario3 = {
+    nome: pegarinfo.question('Qual o seu nome? '),
+    idade: pegarinfo.questionInt('Qual a sua idade? '),
+        endereco: {
+         cidade: pegarinfo.question('Qual a sua cidade?'  ),
+        rua: pegarinfo.question('Qual sua rua? '),
+        numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+        }
+}
+
+listaDeUsuarios = [usuario1, usuario2, usuario3]
+console.log(usuario2.nome, usuario2.idade)
+console.log(usuario3.endereco)
+console.log(usuario3.nome, usuario3.endereco.rua)
 
 
 console.log("_______________________________");
