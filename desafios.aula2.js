@@ -90,9 +90,26 @@ console.log("_______________________________");
 // e os valores são os objetos de produto correspondentes (sem usar loops ou funções).
 
 // → Seu código aqui:
+let produtos = [ {id: 1,
+  nome: 'Camisa',
+  preco: 30,
+},
+{id: 2,
+  nome: 'Calça',
+  preco: 40,
+},
+{id: 3,
+  nome: 'Tenis',
+  preco: 20
+}
+]
 
-
-console.log("_______________________________");
+let catalogo = {
+  1: produtos[0],
+  2: produtos[1],
+  3: produtos[2]
+}
+console.log(catalogo);
 
 
 // ------------------------------------------------------------
@@ -103,6 +120,21 @@ console.log("_______________________________");
 // b) Crie um novo array contendo apenas as tarefas que não estão concluídas
 
 // → Seu código aqui:
-
-
+let tarefas = [
+  {id: 1,
+    titulo: 'Estudar JavaScript',
+    concluida: true,
+  },
+  {
+  id: 2,
+  titulo: 'Ir a academia',
+  concluida: true,
+  },
+  {
+    id: 3,
+    titulo: 'Fazer compras',
+    concluida: false,
+  }
+]
+console.log(tarefas);
 console.log("_______________________________");
