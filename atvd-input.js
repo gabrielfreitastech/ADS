@@ -135,48 +135,48 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let usuario1 = {
-    nome: pegarinfo.question('Qual o seu nome? '),
-    idade: pegarinfo.questionInt('Qual a sua idade? '),
-    endereco: {
-    cidade: pegarinfo.question('Qual a sua cidade? ' ),
-    rua: pegarinfo.question('Qual sua rua? '),
-    numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
-    }
-} 
+// let usuario1 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     idade: pegarinfo.questionInt('Qual a sua idade? '),
+//     endereco: {
+//     cidade: pegarinfo.question('Qual a sua cidade? ' ),
+//     rua: pegarinfo.question('Qual sua rua? '),
+//     numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+//     }
+// } 
 
-let usuario2 = {
-    nome: pegarinfo.question('Qual o seu nome? '),
-    idade: pegarinfo.questionInt('Qual a sua idade? '),
-        endereco: {
-        cidade: pegarinfo.question('Qual a sua cidade?' ),
-        rua: pegarinfo.question('Qual sua rua? '),
-        numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
-        }
-}
-let usuario3 = {
-    nome: pegarinfo.question('Qual o seu nome? '),
-    idade: pegarinfo.questionInt('Qual a sua idade? '),
-        endereco: {
-         cidade: pegarinfo.question('Qual a sua cidade?'  ),
-        rua: pegarinfo.question('Qual sua rua? '),
-        numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
-        }
-}
+// let usuario2 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     idade: pegarinfo.questionInt('Qual a sua idade? '),
+//         endereco: {
+//         cidade: pegarinfo.question('Qual a sua cidade?' ),
+//         rua: pegarinfo.question('Qual sua rua? '),
+//         numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+//         }
+// }
+// let usuario3 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     idade: pegarin+fo.questionInt('Qual a sua idade? '),
+//         endereco: {
+//          cidade: pegarinfo.question('Qual a sua cidade?'  ),
+//         rua: pegarinfo.question('Qual sua rua? '),
+//         numero: pegarinfo.questionInt('Qual o numero da sua casa? ')
+//         }
+// }
 
-listaDeUsuarios = [usuario1, usuario2, usuario3]
-console.log(usuario2.nome, usuario2.idade)
-console.log(usuario3.endereco)
-console.log(usuario3.nome, usuario3.endereco.rua)
+// listaDeUsuarios = [usuario1, usuario2, usuario3]
+// console.log(usuario2.nome, usuario2.idade)
+// console.log(usuario3.endereco)
+// console.log(usuario3.nome, usuario3.endereco.rua)
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Ranking de notas
 // ------------------------------------------------------------
-// a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez.
+// a) Peça ao usuário o nome s três notade 3 alunos e suas, um por vez.
 // b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.
 // c) Guarde os 3 objetos em um array chamado 'turma'.
 // d) Exiba o array 'turma' com console.table().
@@ -186,8 +186,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let aluno1 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     notas: [pegarinfo.questionInt('Quais as suas notas? '),pegarinfo.questionInt('Mais uma: ') ,pegarinfo.questionInt('Mais uma: ' )]
+// }
+// let aluno2 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     notas: [pegarinfo.questionInt('Quais as suas notas? '),pegarinfo.questionInt('Mais uma: ') ,pegarinfo.questionInt('Mais uma: ' )]
+// }
+// let aluno3 = {
+//     nome: pegarinfo.question('Qual o seu nome? '),
+//     notas: [pegarinfo.questionInt('Quais as suas notas? '),pegarinfo.questionInt('Mais uma: ') ,pegarinfo.questionInt('Mais uma: ' )]
+// }
 
-console.log("_______________________________");
+// let turma = [aluno1, aluno2, aluno3]
+// console.table(turma)
+// console.log(aluno2.nome, aluno2.notas[0])
+// console.log(aluno3.nome, aluno3.notas[1])
+// console.log(aluno1.nome, aluno1.notas[2])
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -206,9 +223,23 @@ console.log("_______________________________");
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
+// let nomeProduto = pegarinfo.question('Digite o nome de um produto: ')
+// let categoria = pegarinfo.question('Digite a categoria desse produto: ')
+// let preco = pegarinfo.questionFloat('Digite o preco desse produto: ')
+// let estoque = pegarinfo.questionInt('Digite a quantidade no estoque desse produto: ')
+// let disponibilidade = pegarinfo.keyInYN('Esse produto está disponível para venda? y/n ')
 
-
-console.log("_______________________________");
+// let produto = {
+//     produto: nomeProduto,
+//     secao: categoria,
+//     valor: preco,
+//     deposito: estoque,
+//     disponivel: disponibilidade
+// }
+// console.table(produto)
+// let resumo = (`Produto: ${nomeProduto} | Categoria: ${categoria} | Estoque: ${estoque} un`)
+// console.log(resumo)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -222,3 +253,6 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+let medicamentos = pegarinfo.question('Digite o nome de um medicamento: ')
+let medicamentos2 = pegarinfo.question('Digite o nome de um medicamento: ')
