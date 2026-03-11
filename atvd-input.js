@@ -254,5 +254,14 @@ console.log("_______________________________");
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
 
-let medicamentos = pegarinfo.question('Digite o nome de um medicamento: ')
-let medicamentos2 = pegarinfo.question('Digite o nome de um medicamento: ')
+let medicamento1 = pegarinfo.question('Digite o nome de um medicamento: ')
+let medicamento2 = pegarinfo.question('Digite o nome de outro medicamento: ')
+let preco1 = pegarinfo.questionFloat('Digite o preco do medicamento: ')
+let preco2 = pegarinfo.questionFloat('Digite o preco do outro medicamento: ')
+let estoque1 = pegarinfo.keyInYN('Esse medicamento esta em estoque? y/n ')
+let estoque2 = pegarinfo.keyInYN('Esse outro medicamento esta em estoque? y/n ')
+estoqueFarmacia = []
+estoqueFarmacia.push(medicamento1, preco1, estoque1, medicamento2, preco2, estoque2)
+console.table(estoqueFarmacia)
+console.log(medicamento2[3], medicamento2[4])
+console.log(medicamento1, medicamento1[2])
