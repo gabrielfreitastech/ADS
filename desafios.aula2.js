@@ -137,4 +137,6 @@ let tarefas = [
   }
 ]
 console.log(tarefas);
+let tarefasNaoConcluidas = [tarefas[2]];
+console.log(tarefasNaoConcluidas)
 console.log("_______________________________");

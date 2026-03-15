@@ -316,27 +316,27 @@ console.log("_______________________________");
 // h) Exiba o objeto "loja" completo.
 
 // → Seu código aqui:
-let loja = {
-    nomeLoja: '10zão',
-    cnpj: '12.345.678/0001-95',
-    endereco: {
-        rua: 'Rua das Flores',
-        numero: 120,
-        cidade: 'Jaragua',
-        estado: 'SC',
-        categoriasProdutos: ['Louças','Eletro','Banheiro'],
-        aberta: true
-    }
-}   
-console.log(loja.nomeLoja)
-console.log(loja.endereco.cidade)
-loja.endereco.categoriasProdutos[0]
-template = (`A loja '${loja.nomeLoja}' fica em ${loja.endereco.cidade} - ${loja.endereco.estado} e está aberta: ${loja.endereco.aberta}.`);
-console.log(template)
-loja.endereco.categoriasProdutos.push("Eletrônicos");
-console.log(`Algumas categorias da loja '${loja.nomeLoja}' são: ${loja.endereco.categoriasProdutos[0]} e ${loja.endereco.categoriasProdutos[loja.endereco.categoriasProdutos.length - 1]}.`);
-console.log(loja)
-console.log("_______________________________");
+// let loja = {
+//     nomeLoja: '10zão',
+//     cnpj: '12.345.678/0001-95',
+//     endereco: {
+//         rua: 'Rua das Flores',
+//         numero: 120,
+//         cidade: 'Jaragua',
+//         estado: 'SC',
+//         categoriasProdutos: ['Louças','Eletro','Banheiro'],
+//         aberta: true
+//     }
+// }   
+// console.log(loja.nomeLoja)
+// console.log(loja.endereco.cidade)
+// loja.endereco.categoriasProdutos[0]
+// template = (`A loja '${loja.nomeLoja}' fica em ${loja.endereco.cidade} - ${loja.endereco.estado} e está aberta: ${loja.endereco.aberta}.`);
+// console.log(template)
+// loja.endereco.categoriasProdutos.push("Eletrônicos");
+// console.log(`Algumas categorias da loja '${loja.nomeLoja}' são: ${loja.endereco.categoriasProdutos[0]} e ${loja.endereco.categoriasProdutos[loja.endereco.categoriasProdutos.length - 1]}.`);
+// console.log(loja)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -358,34 +358,34 @@ console.log("_______________________________");
 // h) Exiba o objeto "escola" completo no final.
 
 // → Seu código aqui:
-let escola = {
-    nomeEscola: "Escola ABC",
-    cidade: "Jaraguá",
-    diretor: {
-        nome: "Clara Silva",
-        tempoDeServico: 10
-    },
-    turmas: [
-        {
-            periodo: "Manhã",
-            alunos: ["Lucas", "Ana", "Carlos"]
-        },
-        {
-            periodo: "Tarde",
-            alunos: ["Maria", "João", "Pedro"]
-        }
-    ]
-};
-console.log(escola.nomeEscola)
-console.log(escola.diretor.nome)
-console.log(escola.turmas[1].periodo)
-console.log(escola.turmas[0].alunos[2])
-escola.turmas[1].alunos.push("Fernanda")
-console.log(escola.turmas[1].alunos)
-escola.turmas[0].periodo = "Noite"
-console.log(escola.turmas[0].periodo)
-console.log(escola)
-console.log("_______________________________");
+// let escola = {
+//     nomeEscola: "Escola ABC",
+//     cidade: "Jaraguá",
+//     diretor: {
+//         nome: "Clara Silva",
+//         tempoDeServico: 10
+//     },
+//     turmas: [
+//         {
+//             periodo: "Manhã",
+//             alunos: ["Lucas", "Ana", "Carlos"]
+//         },
+//         {
+//             periodo: "Tarde",
+//             alunos: ["Maria", "João", "Pedro"]
+//         }
+//     ]
+// };
+// console.log(escola.nomeEscola)
+// console.log(escola.diretor.nome)
+// console.log(escola.turmas[1].periodo)
+// console.log(escola.turmas[0].alunos[2])
+// escola.turmas[1].alunos.push("Fernanda")
+// console.log(escola.turmas[1].alunos)
+// escola.turmas[0].periodo = "Noite"
+// console.log(escola.turmas[0].periodo)
+// console.log(escola)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -439,8 +439,64 @@ console.log("_______________________________");
 // - Título e autor de CADA livro do acervo (um livro por linha)
 //
 // → Seu código aqui:
+//a)
+// let nomeBiblioteca = pegarinfo.question('Digite o nome da Bibioteca: ')
+// let anoDeFundacao = pegarinfo.questionInt('Digite o ano de fundação: ')
+// let CapacidaDeLivros = pegarinfo.questionInt('Digite a capacidade de livros: ')
+// let bibliotecaAberta = pegarinfo.keyInYN('A biblioteca está aberta? y/n: ')
+// let frase = (`A biblioteca ${nomeBiblioteca} foi fundada em ${anoDeFundacao}, tem capacidade máxima de ${CapacidaDeLivros} livros e está aberta: ${bibliotecaAberta}.`)
+// console.log(frase)
 
+//b)
+let acervo = [
+    {
+        titulo: 'Elden Ring',
+        autor: 'Hidetaka Miyazaki',
+        ano: 2022,
+        paginas: 1000,
+        disponivel: true
+    },
+    {
+        titulo: 'Shadow Of The Erdtree',
+        autor: 'Hidetaka Miyazake',
+        ano: 2024,
+        paginas: 1200,
+        disponivel: true
+    },
+    {
+        titulo: 'GTA 6',
+        autor: 'Rockstar Games',
+        ano: 2026,
+        paginas: 10000,
+        disponivel: false,
+        
+    }
+]
+//c)
+// console.log(acervo[0].titulo)
+// console.log(acervo[1].autor)
+// console.log(acervo[2].paginas)
+// console.log(acervo.length)
 
+//d)
+acervo[0].disponivel = false
+acervo[2].titulo = 'GTA 6 Gold Edition'
+acervo.push(
+    {
+        titulo: 'Mario',
+        autor: 'Nintendo',
+        ano: 1999,
+        paginas: 300,
+        disponivel: true
+    }
+)
+
+//e)
+let secoes = ["Ficção", "Ciências", "História", "Infantil"]
+console.log(secoes[0], secoes[3])
+secoes.push('Tecnologia')
+secoes.shift()
+console.log(secoes)
 console.log("_______________________________");
 
 
