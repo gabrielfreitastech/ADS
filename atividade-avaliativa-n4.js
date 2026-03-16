@@ -550,17 +550,21 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 let restaurante = {
-    nome: 'Raviole',
-    tipoCozinha: 'Mexicana',
-    nota: 9.0,
-    aberto: true,
+    nome: pegarinfo.question('Digite o nome do restaurante: '),
+    tipoCozinha: pegarinfo.question('Digite o tipo de cozinha: '),
+    nota: pegarinfo.questionInt('Digite a nota: '),
+    aberto: pegarinfo.keyInYN('Está aberto: y/n '),
     endereco: {
-        rua: '25 de Julho',
-        numero: 100,
-        bairro: 'Centro',
-        cidade: 'Joinville', //continuar colatando dados via terminal para o obj restaurante
-    }
-
+        rua: pegarinfo.question('Digite a rua: '),
+        numero: pegarinfo.questionInt('Digite o numero: '),
+        bairro: pegarinfo.question('Digite o bairro: '),
+        cidade: ('Digite a cidade: ')
+    },
+    [ pratos = {
+        nomeprato: pegarinfo.question('Digite o prato: '),
+        preco: pegarinfo.questionInt('Digite o valor: '),
+        vegano: pegarinfo.keyInYN('Disponível? y/n '),
+    }]
 }
 
 console.log("_______________________________");
