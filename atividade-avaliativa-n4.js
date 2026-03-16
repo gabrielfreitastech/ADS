@@ -441,37 +441,37 @@ console.log("_______________________________");
 // → Seu código aqui:
 //a)
 // let nomeBiblioteca = pegarinfo.question('Digite o nome da Bibioteca: ')
-// let anoDeFundacao = pegarinfo.questionInt('Digite o ano de fundação: ')
+// let anoDeFundacao = pegarinfo.questionInt('Digite o ano de fundacao: ')
 // let CapacidaDeLivros = pegarinfo.questionInt('Digite a capacidade de livros: ')
 // let bibliotecaAberta = pegarinfo.keyInYN('A biblioteca está aberta? y/n: ')
 // let frase = (`A biblioteca ${nomeBiblioteca} foi fundada em ${anoDeFundacao}, tem capacidade máxima de ${CapacidaDeLivros} livros e está aberta: ${bibliotecaAberta}.`)
 // console.log(frase)
 
-//b)
-let acervo = [
-    {
-        titulo: 'Elden Ring',
-        autor: 'Hidetaka Miyazaki',
-        ano: 2022,
-        paginas: 1000,
-        disponivel: true
-    },
-    {
-        titulo: 'Shadow Of The Erdtree',
-        autor: 'Hidetaka Miyazake',
-        ano: 2024,
-        paginas: 1200,
-        disponivel: true
-    },
-    {
-        titulo: 'GTA 6',
-        autor: 'Rockstar Games',
-        ano: 2026,
-        paginas: 10000,
-        disponivel: false,
+// //b)
+// let acervo = [
+//     {
+//         titulo: 'Elden Ring',
+//         autor: 'Hidetaka Miyazaki',
+//         ano: 2022,
+//         paginas: 1000,
+//         disponivel: true
+//     },
+//     {
+//         titulo: 'Shadow Of The Erdtree',
+//         autor: 'Hidetaka Miyazake',
+//         ano: 2024,
+//         paginas: 1200,
+//         disponivel: true
+//     },
+//     {
+//         titulo: 'GTA 6',
+//         autor: 'Rockstar Games',
+//         ano: 2026,
+//         paginas: 10000,
+//         disponivel: false,
         
-    }
-]
+//     }
+// ]
 //c)
 // console.log(acervo[0].titulo)
 // console.log(acervo[1].autor)
@@ -479,26 +479,36 @@ let acervo = [
 // console.log(acervo.length)
 
 //d)
-acervo[0].disponivel = false
-acervo[2].titulo = 'GTA 6 Gold Edition'
-acervo.push(
-    {
-        titulo: 'Mario',
-        autor: 'Nintendo',
-        ano: 1999,
-        paginas: 300,
-        disponivel: true
-    }
-)
+// acervo[0].disponivel = false
+// acervo[2].titulo = 'GTA 6 Gold Edition'
+// acervo.push(
+//     {
+//         titulo: 'Mario',
+//         autor: 'Nintendo',
+//         ano: 1999,
+//         paginas: 300,
+//         disponivel: true
+//     }
+// )
 
-//e)
-let secoes = ["Ficção", "Ciências", "História", "Infantil"]
-console.log(secoes[0], secoes[3])
-secoes.push('Tecnologia')
-secoes.shift()
-console.log(secoes)
-console.log("_______________________________");
+// //e)
+// let secoes = ["Ficção", "Ciências", "História", "Infantil"]
+// console.log(secoes[0], secoes[3])
+// secoes.push('Tecnologia')
+// secoes.shift()
+// console.log(secoes)
+// console.log("_______________________________");
+// //f)
+// let relatorio = (`A biblioteca ${nomeBiblioteca} fundada em ${anoDeFundacao}, com ${acervo.length} livros e ${secoes.length} secoes disponiveis sendo eles:
+//     ${(acervo[0].titulo)}
+//     ${(acervo[0].autor)}
+//     ${(acervo[1].titulo)}
+//     ${(acervo[1].autor)}
+//     ${(acervo[2].titulo)}
+//     ${(acervo[2].autor)}
+//     `)
 
+// console.log(relatorio)
 
 // ------------------------------------------------------------
 // QUESTÃO 13 (questão bonus - peso: 1) – Cardápio de Restaurante
@@ -539,5 +549,18 @@ console.log("_______________________________");
 //
 // → Seu código aqui:
 
+let restaurante = {
+    nome: 'Raviole',
+    tipoCozinha: 'Mexicana',
+    nota: 9.0,
+    aberto: true,
+    endereco: {
+        rua: '25 de Julho',
+        numero: 100,
+        bairro: 'Centro',
+        cidade: 'Joinville', //continuar colatando dados via terminal para o obj restaurante
+    }
+
+}
 
 console.log("_______________________________");
