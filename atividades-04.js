@@ -78,6 +78,7 @@ let precoOriginal = 250
 let percentualDesconto = 15
 let valorDesconto = precoOriginal * (percentualDesconto / 100)
 let precoFinal = (precoOriginal - valorDesconto) // terminar atividade com template.
+console.log(`Preço original: R$ ${precoOriginal.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)} | Preço final: R$ ${precoFinal.toFixed(2)}`)
 console.log("_______________________________");
 
 

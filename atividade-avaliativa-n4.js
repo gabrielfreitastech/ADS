@@ -560,7 +560,7 @@ let restaurante = {
         bairro: pegarinfo.question('Digite o bairro: '),
         cidade: ('Digite a cidade: ')
     },
-    [ pratos = {
+    cardapio: [{
         nomeprato: pegarinfo.question('Digite o prato: '),
         preco: pegarinfo.questionInt('Digite o valor: '),
         vegano: pegarinfo.keyInYN('Disponível? y/n '), //CONTINUAR A COLETAR DADOS DOS PRATOS
