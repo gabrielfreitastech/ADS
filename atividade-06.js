@@ -103,20 +103,20 @@ console.log("_______________________________");
 // e) Exiba o IMC e os três resultados booleanos com template literal. Cada imc em um console.log() individual.
 
 // → Seu código aqui:
-let peso = pegarInfo.questionFloat('Digite o seu peso: ');
-let altura = pegarInfo.questionFloat('Digite a sua altura: ');
-let imc = peso / (altura ** 2);
+// let peso = pegarInfo.questionFloat('Digite o seu peso: ');
+// let altura = pegarInfo.questionFloat('Digite a sua altura: ');
+// let imc = peso / (altura ** 2);
 
-let usuario = {
-    imc,
-    imcAbaixoDoPeso: imc <= 18.5,
-    imcNormal: imc >= 18.5 && imc <= 24.9,
-    imcAcimaDoPeso: imc >= 25 && imc <= 29.9
-};
-console.log(usuario)
-console.log(`IMC normal:  ${usuario.imc.toFixed(2)}`)
-console.log(`IMC abaixo do peso:  ${usuario.imcAbaixoDoPeso}`)
-console.log(`IMC acima do peso:  ${usuario.imcAcimaDoPeso}`)
+// let usuario = {
+//     imc,
+//     imcAbaixoDoPeso: imc <= 18.5,
+//     imcNormal: imc >= 18.5 && imc <= 24.9,
+//     imcAcimaDoPeso: imc >= 25 && imc <= 29.9
+// };
+// console.log(usuario)
+// console.log(`IMC normal:  ${usuario.imc.toFixed(2)}`)
+// console.log(`IMC abaixo do peso:  ${usuario.imcAbaixoDoPeso}`)
+// console.log(`IMC acima do peso:  ${usuario.imcAcimaDoPeso}`)
 
 console.log("_______________________________");
 
@@ -134,7 +134,14 @@ console.log("_______________________________");
 // e) Exiba todos os resultados com template literal.
 
 // → Seu código aqui:
+let notaFinal = 4.8
+let precisaDeRecuperacao = notaFinal >= 4 && notaFinal < 6
+let reprovado = notaFinal < 4
+let precisaDeAjuda = precisaDeRecuperacao || reprovado
 
+console.log(`A nota final foi: ${notaFinal}`)
+console.log(`Precisa de recuperação? ${precisaDeRecuperacao}`)
+console.log(`Foi reprovado: ${reprovado}`)
 
 console.log("_______________________________");
 
