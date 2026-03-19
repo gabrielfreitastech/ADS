@@ -174,8 +174,13 @@ console.log("_______________________________");
 // c) Exiba cada resultado com template literal.
 
 // → Seu código aqui:
-let num1 = pegarInfo.questionInt('Digite um numero: ')
-let num2 = pegarInfo.questionInt('Digite um numero: ') //Terminar atvd
+// let num1 = pegarInfo.questionInt('Digite um numero: ')
+// let num2 = pegarInfo.questionInt('Digite um numero: ')
+// console.log(`O numero ${num1} > ${num2} ? ${num1 > num2? 'Sim' : 'Não'}`)
+// console.log(`O numero ${num1} < ${num2} ? ${num1 < num2? 'Sim' : 'Não'}`)
+// console.log(`O numero ${num1} === ${num2} ? ${num1 === num2? 'Sim' : 'Não'}`)
+// console.log(`O numero ${num1} >= ${num2} ? ${num1 >= num2? 'Sim' : 'Não'}`)
+
 
 
 console.log("_______________________________");
@@ -194,8 +199,12 @@ console.log("_______________________________");
 //    "Item caro (> R$ <precoMaximo>)? : <esteItemEhCaro ? "Sim" : "Não">"
 
 // → Seu código aqui:
-
-
+let preco = pegarInfo.questionFloat('Digite o preco do produto: ')
+const precoMaximo = 100
+let estaDentroDoOrcamento = preco <= precoMaximo
+let esteItemEhCaro = preco > precoMaximo
+console.log(`Preço informado : R$ ${preco}`)
+console.log(`Dentro do orcamento ()`)
 console.log("_______________________________");
 
 
