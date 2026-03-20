@@ -134,14 +134,14 @@ console.log("_______________________________");
 // e) Exiba todos os resultados com template literal.
 
 // → Seu código aqui:
-let notaFinal = 4.8
-let precisaDeRecuperacao = notaFinal >= 4 && notaFinal < 6
-let reprovado = notaFinal < 4
-let precisaDeAjuda = precisaDeRecuperacao || reprovado
+// let notaFinal = 4.8
+// let precisaDeRecuperacao = notaFinal >= 4 && notaFinal < 6
+// let reprovado =  !notaFinal<4
+// let precisaDeAjuda = precisaDeRecuperacao || reprovado
 
-console.log(`A nota final foi: ${notaFinal}`)
-console.log(`Precisa de recuperação? ${precisaDeRecuperacao}`)
-console.log(`Foi reprovado: ${reprovado}`)
+// console.log(`A nota final foi: ${notaFinal} ${notaFinal? 'Não atingiu a média' : 'Acima da média'}`)
+// console.log(`Precisa de recuperação? ${precisaDeRecuperacao? 'Sim, precisa de recuperação' : 'Não, não precisa de recuperação'}`)
+// console.log(`Foi reprovado: ${reprovado} ${reprovado? 'Não atingiu a média foi reprovado' : 'Não atingiu a média final'}`)
 
 console.log("_______________________________");
 
@@ -156,10 +156,12 @@ console.log("_______________________________");
 // c) Exiba a variável "diagnostico" com template literal mostrando a temperatura e o resultado do diagnóstico.
 
 // → Seu código aqui:
-
+// let temperatura = 38.2
+// let diagnostico = `Temperatura >= 37.6? ${temperatura >= 37.6}: ${temperatura? 'Febre detectada' : 'Sem febre'}`
+// console.log(diagnostico)
 
 console.log("_______________________________");
-
+ 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Operador ternário
@@ -171,7 +173,10 @@ console.log("_______________________________");
 // c) Exiba a variável "statusMulta" com template literal mostrando a velocidade e o resultado da multa.
 
 // → Seu código aqui:
-
+let velocidade = pegarInfo.questionInt('Informe a velocidade: ')
+let limiteVelocidade = 100
+let StatusMulta = (`${velocidade} > ${limiteVelocidade}: ${velocidade > limiteVelocidade? 'Multa aplicada' : 'Velocidade regular'}`)
+console.log(StatusMulta)
 
 console.log("_______________________________");
 
