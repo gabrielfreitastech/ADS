@@ -173,10 +173,10 @@ console.log("_______________________________");
 // c) Exiba a variável "statusMulta" com template literal mostrando a velocidade e o resultado da multa.
 
 // → Seu código aqui:
-let velocidade = pegarInfo.questionInt('Informe a velocidade: ')
-let limiteVelocidade = 100
-let StatusMulta = (`${velocidade} > ${limiteVelocidade}: ${velocidade > limiteVelocidade? 'Multa aplicada' : 'Velocidade regular'}`)
-console.log(StatusMulta)
+// let velocidade = pegarInfo.questionInt('Informe a velocidade: ')
+// let limiteVelocidade = 100
+// let StatusMulta = (`${velocidade} > ${limiteVelocidade}: ${velocidade > limiteVelocidade? 'Multa aplicada' : 'Velocidade regular'}`)
+// console.log(StatusMulta)
 
 console.log("_______________________________");
 
@@ -192,8 +192,10 @@ console.log("_______________________________");
 // c) Exiba a variável "mensagem" com template literal.
 
 // → Seu código aqui:
-let estudante = pegarInfo.keyInYN('Você é bolsista? ')
-
+let ehEstudante = pegarInfo.keyInYN('Voce eh bolsista? ')
+let paga = pegarInfo.keyInYN('Voce pagar mais de R$ 1000,00 mensais pelo curso? ')
+let mensagem =(`ehEstudante && paga: ${ehEstudante && paga? 'Aplicar desconto de R$1000,00' : 'Não aplicar desconto'}`)
+console.log(mensagem)
 console.log("_______________________________");
 
 
@@ -214,7 +216,18 @@ console.log("_______________________________");
 //    Caso contrário → "Entrada negada."
 
 // → Seu código aqui:
-
+let usuario = {
+    idade: pegarInfo.question('Digite a sua idade: '),
+    ingresso: pegarInfo.keyInYN('Possui ingresso? '),
+    associado: pegarInfo.keyInYN('É associado? ')
+}
+let socio = {
+    podeEntrarNormal: idade >=18 && ingresso,
+    podeEntrarSocio: ingresso && associado,
+    precisaAcompanhante: idade <18,
+    naoPodeEntrar: ingresso || associado
+}
+console.log(`Pode entrar normal ou entrar socio: ${podeEntrarNormal}`)
 
 console.log("_______________________________");
 
