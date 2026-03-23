@@ -192,7 +192,7 @@ console.log("_______________________________");
 // c) Exiba a variável "mensagem" com template literal.
 
 // → Seu código aqui:
-
+let estudante = pegarInfo.keyInYN('Você é bolsista? ')
 
 console.log("_______________________________");
 
