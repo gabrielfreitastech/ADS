@@ -192,10 +192,10 @@ console.log("_______________________________");
 // c) Exiba a variável "mensagem" com template literal.
 
 // → Seu código aqui:
-let ehEstudante = pegarInfo.keyInYN('Voce eh bolsista? ')
-let paga = pegarInfo.keyInYN('Voce pagar mais de R$ 1000,00 mensais pelo curso? ')
-let mensagem =(`ehEstudante && paga: ${ehEstudante && paga? 'Aplicar desconto de R$1000,00' : 'Não aplicar desconto'}`)
-console.log(mensagem)
+// let ehEstudante = pegarInfo.keyInYN('Voce eh bolsista? ')
+// let paga = pegarInfo.keyInYN('Voce pagar mais de R$ 1000,00 mensais pelo curso? ')
+// let mensagem =(`ehEstudante && paga: ${ehEstudante && paga? 'Aplicar desconto de R$1000,00' : 'Não aplicar desconto'}`)
+// console.log(mensagem)
 console.log("_______________________________");
 
 
@@ -216,18 +216,18 @@ console.log("_______________________________");
 //    Caso contrário → "Entrada negada."
 
 // → Seu código aqui:
-let usuario = {
-    idade: pegarInfo.question('Digite a sua idade: '),
-    ingresso: pegarInfo.keyInYN('Possui ingresso? '),
-    associado: pegarInfo.keyInYN('É associado? ')
-}
-let socio = {
-    podeEntrarNormal: idade >=18 && ingresso,
-    podeEntrarSocio: ingresso && associado,
-    precisaAcompanhante: idade <18,
-    naoPodeEntrar: ingresso || associado
-}
-console.log(`Pode entrar normal ou entrar socio: ${podeEntrarNormal}`)
+// let usuario = {
+//     idade: pegarInfo.question('Digite a sua idade: '),
+//     ingresso: pegarInfo.keyInYN('Possui ingresso? '),
+//     associado: pegarInfo.keyInYN('Eh associado? ')
+// }
+// let socio = {
+//     podeEntrarNormal: usuario.idade >=18 && usuario.ingresso,
+//     podeEntrarSocio: usuario.ingresso && usuario.associado,
+//     precisaAcompanhante: usuario.idade <18,
+//     naoPodeEntrar: usuario.ingresso || usuario.associado
+// }
+// console.log(`${socio.podeEntrarNormal || socio.podeEntrarSocio? 'Entrada liberada' : 'Entrada negada'}`)
 
 console.log("_______________________________");
 
@@ -247,8 +247,18 @@ console.log("_______________________________");
 // d) Exiba os resultados com template literal.
 
 // → Seu código aqui:
+let produto = {
+    nome: pegarInfo.question('Digite o nome do produto: '),
+    quantidadeEstoque: pegarInfo.question('Digite a quantidade do estoque: '),
+    ativo: pegarInfo.keyInYN('Esta ativo no estoque? ')
+}
+let temEstoque = produto.quantidadeEstoque > 0
+let produtoDisponivel = temEstoque && produto.ativo
+let produtoIndisponivel = !produto.estoque || !produto.ativo
 
-
+console.log(`Tem estoque de ${produto.nome}? ${temEstoque ? 'Sim, tem' : 'Nao, estoque zerado'}`)
+console.log(`${produto.nome} esta disponivel? ${produtoDisponivel? 'Sim, disponivel' : 'Nao, indisponivel' }`)
+console.log(`ProdutoIndisponivel? ${produtoIndisponivel? 'Nao, produto disponivel' : 'Sim, produto indisponivel'}`)
 console.log("_______________________________");
 
 
@@ -267,6 +277,11 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
+// let usuario = {
+//     adm: pegarInfo.keyInYN('Voce eh administrador? '),
+//     log: pegarInfo.keyInYN('Voce esta logado? '),
+//     ativa: pegarInfo.keyInYN('Sua conta esta ativa? ')
+//}
 
 
 console.log("_______________________________");
