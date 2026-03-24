@@ -247,18 +247,18 @@ console.log("_______________________________");
 // d) Exiba os resultados com template literal.
 
 // → Seu código aqui:
-let produto = {
-    nome: pegarInfo.question('Digite o nome do produto: '),
-    quantidadeEstoque: pegarInfo.question('Digite a quantidade do estoque: '),
-    ativo: pegarInfo.keyInYN('Esta ativo no estoque? ')
-}
-let temEstoque = produto.quantidadeEstoque > 0
-let produtoDisponivel = temEstoque && produto.ativo
-let produtoIndisponivel = !produto.estoque || !produto.ativo
+// let produto = {
+//     nome: pegarInfo.question('Digite o nome do produto: '),
+//     quantidadeEstoque: pegarInfo.questionInt('Digite a quantidade do estoque: '),
+//     ativo: pegarInfo.keyInYN('Esta ativo no estoque? ')
+// }
+// let temEstoque = produto.quantidadeEstoque > 0
+// let produtoDisponivel = temEstoque && produto.ativo
+// let produtoIndisponivel = !temEstoque || !produto.ativo
 
-console.log(`Tem estoque de ${produto.nome}? ${temEstoque ? 'Sim, tem' : 'Nao, estoque zerado'}`)
-console.log(`${produto.nome} esta disponivel? ${produtoDisponivel? 'Sim, disponivel' : 'Nao, indisponivel' }`)
-console.log(`ProdutoIndisponivel? ${produtoIndisponivel? 'Nao, produto disponivel' : 'Sim, produto indisponivel'}`)
+// console.log(`Tem estoque de ${produto.nome}? ${temEstoque ? 'Sim, tem' : 'Nao, estoque zerado'}`)
+// console.log(`${produto.nome} esta disponivel? ${produtoDisponivel? 'Sim, disponivel' : 'Nao, indisponivel' }`)
+// console.log(`ProdutoIndisponivel? ${produtoIndisponivel? 'Sim, indisponivel' : 'Sim, indisponivel'}`)
 console.log("_______________________________");
 
 
@@ -277,11 +277,19 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
-// let usuario = {
-//     adm: pegarInfo.keyInYN('Voce eh administrador? '),
-//     log: pegarInfo.keyInYN('Voce esta logado? '),
-//     ativa: pegarInfo.keyInYN('Sua conta esta ativa? ')
-//}
+let usuario = {
+    adm: pegarInfo.keyInYN('Voce eh administrador? '),
+    log: pegarInfo.keyInYN('Voce esta logado? '),
+    contaAtiva: pegarInfo.keyInYN('Sua conta esta ativa? ')
+}
+const acessoSistema = usuario.log && usuario.contaAtiva
+const acessoAdmin = acessoSistema && usuario.adm
+let acessoNegado = !usuario.log || !usuario.contaAtiva
+
+console.log(acessoSistema)
+console.log(acessoAdmin)
+console.log(acessoNegado)
+
 
 
 console.log("_______________________________");
