@@ -264,12 +264,32 @@ console.log("_______________________________");
 let calculo = {
     numeroA: pegarInfo.questionFloat('Digite um numero: '),
     numeroB: pegarInfo.questionFloat('Digite outro numero: '),
-    operacao: pegarInfo.questionInt('Escolha uma operacao: 1 - soma 2 - subtracao 3 - multiplicacao 4 - divisao '),
+    operacao: pegarInfo.questionInt('Escolha uma operacao: 1 - soma | 2 - subtracao | 3 - multiplicacao | 4 - divisao:  '),
     simbolo: ""
 }
 
-let resultado;
+let resultado
 
-if (calculo.operacao / calculo.numeroB)
+if (calculo.operacao === 1){
+    calculo.simbolo = '+'
+    resultado = calculo.numeroA + calculo.numeroB
 
+} else if (calculo.operacao === 2){
+    calculo.simbolo = '-'
+    resultado = calculo.numeroA - calculo.numeroB
+
+} else if (calculo.operacao === 3){
+    calculo.simbolo = '*'
+    resultado = calculo.numeroA * calculo.numeroB
+
+} else if (calculo.operacao === 4){
+    if (calculo.numeroB === 0){
+        console.log(`Divisão indiponível`)
+    } else {
+        calculo.simbolo = '/'
+        resultado = calculo.numeroA / calculo.numeroB
+    }
+}
+
+console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`)
 console.log("_______________________________");

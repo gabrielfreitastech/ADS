@@ -52,12 +52,12 @@ console.log("_______________________________");
 //    "Retângulo | Largura: <largura> | Altura: <altura> | Área: <area> | Perímetro: <perimetro>"
 
 // → Seu código aqui:
-let largura = 8
-let altura = 5
-let area = (8*5)
-let perimetro = (2 * largura + 2 * altura)
-let Retângulo =`Largura: ${largura} | Altura: ${altura} | Área: ${area} | Perímetro: ${perimetro}`
-console.log(Retângulo)
+// let largura = 8
+// let altura = 5
+// let area = (8*5)
+// let perimetro = (2 * largura + 2 * altura)
+// let Retângulo =`Largura: ${largura} | Altura: ${altura} | Área: ${area} | Perímetro: ${perimetro}`
+// console.log(Retângulo)
 console.log("_______________________________");
 
 
@@ -74,11 +74,11 @@ console.log("_______________________________");
 //    Use toFixed(2) nos valores em reais.
 
 // → Seu código aqui:
-let precoOriginal = 250
-let percentualDesconto = 15
-let valorDesconto = precoOriginal * (percentualDesconto / 100)
-let precoFinal = (precoOriginal - valorDesconto) // terminar atividade com template.
-console.log(`Preço original: R$ ${precoOriginal.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)} | Preço final: R$ ${precoFinal.toFixed(2)}`)
+// let precoOriginal = 250
+// let percentualDesconto = 15
+// let valorDesconto = precoOriginal * (percentualDesconto / 100)
+// let precoFinal = (precoOriginal - valorDesconto) 
+// console.log(`Preço original: R$ ${precoOriginal.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)} | Preço final: R$ ${precoFinal.toFixed(2)}`)
 console.log("_______________________________");
 
 
@@ -94,6 +94,16 @@ console.log("_______________________________");
 //    "Pontos após <tipo da operação>: <valor>"
 
 // → Seu código aqui:
+// let pontos = 100
+// pontos += 50
+// console.log((`Pontos apos adição: ${pontos} `))
+// pontos -= 50
+// console.log((`Pontos apos subtração: ${pontos} `))
+// pontos *= 2
+// console.log((`Pontos apos multiplicação: ${pontos} `))
+// pontos /= 4
+// console.log((`Pontos apos divisão: ${pontos} `))
+
 
 
 console.log("_______________________________");
@@ -110,6 +120,19 @@ console.log("_______________________________");
 // f) Incremente "nivel" três vezes usando ++nivel (prefixo) e exiba cada resultado.
 
 // → Seu código aqui:
+// let vidas = 3
+// console.log(`Quantidade atual de vidas: ${vidas}`)
+// vidas += 2
+// console.log(`Quantidade atual de vidas: ${vidas}`)
+// vidas -= 1
+// console.log(`Quantidade atual de vidas: ${vidas}`)
+
+// let nivel = 1
+// console.log(nivel)
+// console.log(++nivel)
+// console.log(++nivel)
+// console.log(++nivel)
+
 
 
 console.log("_______________________________");
@@ -127,9 +150,21 @@ console.log("_______________________________");
 // f) Use Math.min() para encontrar o menor entre 42, 17, 89, 5, 63. Exiba o resultado.
 
 // → Seu código aqui:
+// let nota = 7.3
+// Math.round(nota)
+// Math.floor(nota)
+// Math.ceil(nota)
 
+// console.log(`${nota} → Math.round = ${Math.round(nota)} `)
+// console.log(`${nota} → Math.floor = ${Math.floor(nota)} `)
+// console.log(`${nota} → Math.ceil = ${Math.ceil(nota)} `)
 
-console.log("_______________________________");
+// let temperatura = -12.5
+// console.log(`${temperatura} → Math.abs = ${Math.abs(temperatura)}`)
+// console.log("_______________________________");
+// console.log(`Math.max → ${Math.max(42,17,89,4,63)}`)
+// console.log(`Math.min → ${Math.min(42,17,89,4,63)}`)
+
 
 
 // ------------------------------------------------------------
@@ -142,7 +177,12 @@ console.log("_______________________________");
 //    "Média: <media>" (com 2 casas decimais usando toFixed(2))
 
 // → Seu código aqui:
-
+// let nota1 = pegarinfo.questionFloat('Nota 1: ')
+// let nota2 = pegarinfo.questionFloat('Nota 2: ')
+// let nota3 = pegarinfo.questionFloat('Nota 3: ')
+// console.log(`Nota 1: ${nota1} | Nota 2: ${nota2} | Nota 3: ${nota3}`)
+// let media = nota1 + nota2 + nota3 / 3
+// console.log(`Média das 3 notas: ${media.toFixed(2)}`)
 
 console.log("_______________________________");
 
@@ -160,7 +200,9 @@ console.log("_______________________________");
 //    Use toFixed(2) em todos os valores.
 
 // → Seu código aqui:
-
+let total = pegarInfo.questionFloat('Digite o valor total da compra: ')
+let entregue = pegarInfo.questionFloat('Digite o valor entregue pelo cliente, Obs: Maior que o total: ')
+let calculo = 
 
 console.log("_______________________________");
 
