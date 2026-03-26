@@ -289,7 +289,12 @@ if (calculo.operacao === 1){
         calculo.simbolo = '/'
         resultado = calculo.numeroA / calculo.numeroB
     }
+} else {
+    console.log('Operação inválida')
 }
 
-console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`)
+if (resultado != undefined) {
+    console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`)
+}
+
 console.log("_______________________________");
