@@ -97,7 +97,7 @@ let conta = {
     bloqueada: false,
     senha: 1234
 }
-console.log('\===== CAIXA ELETRONICO =====')
+console.log('===== CAIXA ELETRONICO =====')
 console.log('1 - Sacar')
 console.log('2 - Depositar')
 
@@ -122,7 +122,7 @@ if (senha !== conta.senha) {
         } else if (saqueDeposito === 1) {
             saque = pegarInfo.questionInt('Digite o valor para sacar: ')
 
-        } if (saque <= 0) {
+         if (saque <= 0) {
             console.log('Valor invalido!')
 
         } else if (saque > conta.saldo){
@@ -131,6 +131,7 @@ if (senha !== conta.senha) {
         } else {
             conta.saldo -= saque
             console.log(`Saque efetuado, saldo atual: ${conta.saldo}`)
+        }
 
         } if (saqueDeposito === 2) {
             deposito = pegarInfo.questionInt('Digite o valor para depositar: ')
@@ -146,7 +147,7 @@ if (senha !== conta.senha) {
 }
 
 
- 
+
 
 console.log("_______________________________");
 
