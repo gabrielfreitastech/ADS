@@ -1,4 +1,4 @@
-let pegarinfo = require('readline-sync')
+let pegarInfo = require('readline-sync')
 // ============================================================
 //   ATIVIDADE 04 – Operadores Aritméticos em JavaScript
 // ============================================================
@@ -202,7 +202,8 @@ console.log("_______________________________");
 // → Seu código aqui:
 let total = pegarInfo.questionFloat('Digite o valor total da compra: ')
 let entregue = pegarInfo.questionFloat('Digite o valor entregue pelo cliente, Obs: Maior que o total: ')
-let calculo = 
+let calculo = (entregue - total)
+console.log(`Total da compra: ${total.toFixed(2)}  | Valor entregue: ${entregue.toFixed(2)}  | Valor do troco: ${calculo.toFixed(2)}`)
 
 console.log("_______________________________");
 
