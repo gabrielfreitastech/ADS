@@ -263,26 +263,26 @@ console.log("_______________________________");
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
 
-let alunos = {
-    aluno1: lerTeclado.question('Digite o nome: '),
-    nota1: lerTeclado.questionInt('Digite a nota: '),
-    nota2: lerTeclado.questionInt('Digite a nota: '),
-    nota3: lerTeclado.questionInt('Digite a nota: '),
+// let alunos = {
+//     aluno1: lerTeclado.question('Digite o nome: '),
+//     nota1: lerTeclado.questionInt('Digite a nota: '),
+//     nota2: lerTeclado.questionInt('Digite a nota: '),
+//     nota3: lerTeclado.questionInt('Digite a nota: '),
 
-    aluno2: lerTeclado.question('Digite o nome: '),
-    nota4: lerTeclado.questionInt('Digite a nota: '),
-    nota5: lerTeclado.questionInt('Digite a nota: '),
-    nota6: lerTeclado.questionInt('Digite a nota: ')
-}
+//     aluno2: lerTeclado.question('Digite o nome: '),
+//     nota4: lerTeclado.questionInt('Digite a nota: '),
+//     nota5: lerTeclado.questionInt('Digite a nota: '),
+//     nota6: lerTeclado.questionInt('Digite a nota: ')
+// }
 
-let media1 = alunos.nota1 + alunos.nota2 + alunos.nota3 / 3
-let media2 = alunos.nota4 + alunos.nota5 + alunos.nota6 / 3
+// let media1 = alunos.nota1 + alunos.nota2 + alunos.nota3 / 3
+// let media2 = alunos.nota4 + alunos.nota5 + alunos.nota6 / 3
 
-console.log(`Aluno com primeira maior nota: ${alunos.nota1 > alunos.nota4 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
-console.log(`Aluno com a segunda maior nota: ${alunos.nota2 > alunos.nota5 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
-console.log(`Aluno com a terceeira maior nota: ${alunos.nota3 > alunos.nota6 ? '${alunos.aluno1}' : '${alunos.aluno2}'}?`)
+// console.log(`Aluno com primeira maior nota: ${alunos.nota1 > alunos.nota4 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
+// console.log(`Aluno com a segunda maior nota: ${alunos.nota2 > alunos.nota5 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
+// console.log(`Aluno com a terceeira maior nota: ${alunos.nota3 > alunos.nota6 ? '${alunos.aluno1}' : '${alunos.aluno2}'}?`)
 
 
 
-console.table(alunos)
+// console.table(alunos)
 console.log("_______________________________");
