@@ -1,4 +1,5 @@
-let pegarInfo = require('readline-sync')
+let lerTeclado = require('readline-sync')
+
 // ============================================================
 //   ATIVIDADE 04 – Operadores Aritméticos em JavaScript
 // ============================================================
@@ -200,10 +201,11 @@ console.log("_______________________________");
 //    Use toFixed(2) em todos os valores.
 
 // → Seu código aqui:
-let total = pegarInfo.questionFloat('Digite o valor total da compra: ')
-let entregue = pegarInfo.questionFloat('Digite o valor entregue pelo cliente, Obs: Maior que o total: ')
-let calculo = (entregue - total)
-console.log(`Total da compra: ${total.toFixed(2)}  | Valor entregue: ${entregue.toFixed(2)}  | Valor do troco: ${calculo.toFixed(2)}`)
+// let total = pegarInfo.questionFloat('Digite o valor total da compra: ')
+// let entregue = pegarInfo.questionFloat('Digite o valor entregue pelo cliente, Obs: Maior que o total: ')
+// let calculo = (entregue - total)
+
+// console.log(`Total da compra: ${total.toFixed(2)}  | Valor entregue: ${entregue.toFixed(2)}  | Valor do troco: ${calculo.toFixed(2)}`)
 
 console.log("_______________________________");
 
@@ -220,6 +222,7 @@ let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
 
+console.log(Math.max(29.90, 49.99, 15.75, 99.90))
 
 console.log("_______________________________");
 
@@ -249,6 +252,50 @@ let turma = {
 // e) Exiba a nota mais alta e a mais baixa da turma
 
 // → Seu código aqui:
+
+turma.aluno1.notas.push(6, 5, 7)
+turma.aluno2.notas.push(7, 9, 8)
+turma.aluno3.notas.push(3, 10, 6)
+
+let media1 = (turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]) / 3
+let media2 = (turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]) / 3
+let media3 = (turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]) / 3
+
+console.table(turma)
+
+console.log(`A media do ${turma.aluno1.nome} é : ${media1.toFixed(2)}`)
+console.log(`A media do ${turma.aluno2.nome} é : ${media2.toFixed(2)}`)
+console.log(`A media do ${turma.aluno3.nome} é : ${media3.toFixed(2)}`)
+
+let mediaTurma = (media1 + media2 + media3 / 3)
+console.log(`A media total da turma foi : ${mediaTurma.toFixed(2)}`)
+
+console.log(Math.max(...turma.aluno1.notas))
+console.log(Math.max(...turma.aluno2.notas))
+console.log(Math.max(...turma.aluno3.notas))
+
+console.log(Math.min(...turma.aluno1.notas))
+console.log(Math.min(...turma.aluno2.notas))
+console.log(Math.min(...turma.aluno3.notas))
+
+let maiorNota = Math.max(
+  ...turma.aluno1.notas,
+  ...turma.aluno2.notas,
+  ...turma.aluno3.notas
+)
+console.log(maiorNota)
+
+let menorNota = Math.min(
+  ...turma.aluno1.notas,
+  ...turma.aluno2.notas,
+  ...turma.aluno3.notas
+)
+
+console.log(menorNota)
+
+
+
+
 
 
 console.log("_______________________________");

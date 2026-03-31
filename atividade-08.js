@@ -362,57 +362,57 @@ console.log("_______________________________");
 
 
 
-let numero1 = lerTeclado.questionFloat('Digite um numero: ')
-let numero2 = lerTeclado.questionFloat('Digite outro numero: ')
-let simbolo = ''
-let resultado
+// let numero1 = lerTeclado.questionFloat('Digite um numero: ')
+// let numero2 = lerTeclado.questionFloat('Digite outro numero: ')
+// let simbolo = ''
+// let resultado
 
-console.log('===MENU DE OPERAÇÕES===')
-console.log('1  -   SOMA')
-console.log('2  -   SUBTRAÇÃO')
-console.log('3  -   MULTIPLICAÇÃO')
-console.log('4  -   DIVISÃO')
-console.log('5  -   RESTO')
+// console.log('===MENU DE OPERAÇÕES===')
+// console.log('1  -   SOMA')
+// console.log('2  -   SUBTRAÇÃO')
+// console.log('3  -   MULTIPLICAÇÃO')
+// console.log('4  -   DIVISÃO')
+// console.log('5  -   RESTO')
 
-let operacao = lerTeclado.questionInt('Escolha uma operacao de 1 a 5: ')
+// let operacao = lerTeclado.questionInt('Escolha uma operacao de 1 a 5: ')
 
-switch (operacao) {
-    case 1:
-        simbolo = '+'
-        console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
-        break
+// switch (operacao) {
+//     case 1:
+//         simbolo = '+'
+//         console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
+//         break
 
-    case 2:
-        simbolo = '-'
-        console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 - numero2}`)
-        break
+//     case 2:
+//         simbolo = '-'
+//         console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 - numero2}`)
+//         break
 
-    case 3:
-        simbolo = '*'
-        console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
-        break
+//     case 3:
+//         simbolo = '*'
+//         console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
+//         break
 
-    case 4:
-        if (numero2 === 0) {
-            console.log('Erro: divisão por zero não é permitida')
-            break
-        }
-        simbolo = '/'
-        console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 / numero2}`)
-        break
+//     case 4:
+//         if (numero2 === 0) {
+//             console.log('Erro: divisão por zero não é permitida')
+//             break
+//         }
+//         simbolo = '/'
+//         console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 / numero2}`)
+//         break
 
-    case 5:
-        simbolo = '%'
-        console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
-        break
+//     case 5:
+//         simbolo = '%'
+//         console.log(`${numero1} ${simbolo} ${numero2} = ${numero1 + numero2}`)
+//         break
 
-    default:
-        console.log('Operação inválida')
+//     default:
+//         console.log('Operação inválida')
 
-}
-if (resultado != undefined) {
-    console.log(`${numero1} ${simbolo} ${numero2} = ${resultado}`)
-}
+// }
+// if (resultado != undefined) {
+//     console.log(`${numero1} ${simbolo} ${numero2} = ${resultado}`)
+// }
 
 console.log("_______________________________");
 
@@ -449,6 +449,39 @@ console.log('3  -   VER CARRINHO')
 console.log('4  -   SAIR')
 
 let opcao = lerTeclado.questionInt('Escolha umas das opcoes acima, de 1 a 4: ')
+let preco
 
+switch (opcao) {
+    case 1:
+        loja.produtos = {
+            0: 'mouse',
+            preco0: 89.90,
+
+            1: 'ps5',
+            preco1: 3500,
+
+            2: 'alexa',
+            preco2: 300
+        }
+        console.table(loja.produtos)
+        
+
+    case 2: comprar = lerTeclado.question('Qual produto?: ')
+            preco = lerTeclado.questionFloat('Qual o preco?: ')
+            loja.saldo += preco
+            console.log('Produto adicionado ao carrinho')
+            break
+
+    case 3: console.log(`Total no carrinho: R$${loja.saldo}`)
+            break
+
+    case 4: console.log('Obrigado por visitar a TechShop!')
+            break
+
+    default:
+        console.log('Opção inválida')
+
+}
+console.log(`Total no seu carrinho: R$${loja.saldo}` )
 
 console.log("_______________________________");

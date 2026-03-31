@@ -1,4 +1,4 @@
-let pegarInfo = require('readline-sync')
+let lerTeclado = require('readline-sync')
 // ============================================================
 //   ATIVIDADE 06 – Operadores Lógicos em JavaScript
 // ============================================================
@@ -277,18 +277,18 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
-let usuario = {
-    adm: pegarInfo.keyInYN('Voce eh administrador? '),
-    log: pegarInfo.keyInYN('Voce esta logado? '),
-    contaAtiva: pegarInfo.keyInYN('Sua conta esta ativa? ')
-}
-const acessoSistema = usuario.log && usuario.contaAtiva
-const acessoAdmin = acessoSistema && usuario.adm
-let acessoNegado = !usuario.log || !usuario.contaAtiva
+// let usuario = {
+//     adm: pegarInfo.keyInYN('Voce eh administrador? '),
+//     log: pegarInfo.keyInYN('Voce esta logado? '),
+//     contaAtiva: pegarInfo.keyInYN('Sua conta esta ativa? ')
+// }
+// const acessoSistema = usuario.log && usuario.contaAtiva
+// const acessoAdmin = acessoSistema && usuario.adm
+// let acessoNegado = !usuario.log || !usuario.contaAtiva
 
-console.log(acessoSistema)
-console.log(acessoAdmin)
-console.log(acessoNegado)
+// console.log(acessoSistema)
+// console.log(acessoAdmin)
+// console.log(acessoNegado)
 
 
 
@@ -314,5 +314,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let credencaisSistema = {
+//     usuario: 'admin',
+//     senha: 1234
+// }
+
+// let user = lerTeclado.question('Digite o usuario: ')
+// let pass = lerTeclado.questionInt('Digita a senha: ')
+
+// const usuarioCorreto = credencaisSistema.usuario === user
+// const senhaCorreta = credencaisSistema.senha === pass
+// const loginValidado = usuarioCorreto && senhaCorreta
+
+// console.log(`Login validado? ${loginValidado? 'Login realizado com sucesso!' : 'Usuario ou senha incoretos!'}`)
+
+// if (loginValidado) {
+//     console.log('Login realizado com sucesso!')
+// } else {
+//     console.log('Usuario ou senha incorretos!')
+// }
+
+  
 
 console.log("_______________________________");

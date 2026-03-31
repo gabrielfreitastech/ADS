@@ -1,4 +1,4 @@
-let pegarInfo = require('readline-sync')
+let lerTeclado = require('readline-sync')
 // ============================================================
 //   ATIVIDADE 05 – Operadores Relacionais em JavaScript
 // ============================================================
@@ -199,13 +199,15 @@ console.log("_______________________________");
 //    "Item caro (> R$ <precoMaximo>)? : <esteItemEhCaro ? "Sim" : "Não">"
 
 // → Seu código aqui:
-let preco = pegarInfo.questionFloat('Digite o preco do produto: ')
-const precoMaximo = 100
-let estaDentroDoOrcamento = preco <= precoMaximo
-let esteItemEhCaro = preco > precoMaximo
-console.log(`Preço informado : R$ ${preco}`)
-console.log(`Dentro do orcamento ()`)
-console.log("_______________________________");
+// let preco = pegarInfo.questionFloat('Digite o preco do produto: ')
+// const precoMaximo = 250
+// let estaDentroDoOrcamento = preco <= precoMaximo
+// let esteItemEhCaro = preco > precoMaximo
+
+// console.log(`Preço informado : R$ ${preco}`)
+// console.log(`Dentro do orcamento ${estaDentroDoOrcamento}? : ${estaDentroDoOrcamento? 'sim' : 'nao'}`)
+// console.log(`Item caro ${precoMaximo}? ${esteItemEhCaro?  'Sim' : 'nao'} `)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -223,6 +225,30 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let cadastro = {
+//     nome1: lerTeclado.question('Digite um nome: '),
+//     idade1:  lerTeclado.questionInt('Digite uma idade: '),
+
+//     nome2: lerTeclado.question('Digite outro nome: '),
+//     idade2:  lerTeclado.questionInt('Digite outra idade: '),
+// }
+
+// let idade1maior = cadastro.idade1 > cadastro.idade2
+// let idadeIgual = cadastro.idade1 === cadastro.idade2
+// let idade118 = cadastro.idade1 > 18
+// let idade218 = cadastro.idade2 > 18
+
+// console.log(`Idade do ${cadastro.nome1} > ${cadastro.nome2}? ${idade1maior ? 'Sim, maior' : 'Nao, menor'} `)
+// console.log(`Idade do ${cadastro.nome1} = ${cadastro.nome2}? ${idadeIgual ? 'Sim, igual' : 'Nao, diferente'} `)
+// console.log(`${cadastro.nome1} tem idade > 18? ${idade118 ? 'Sim, maior de idade' : 'Nao, menor de idade'}`)
+// console.log(`${cadastro.nome2} tem idade > 18? ${idade218 ? 'Sim, maior de idade' : 'Nao, menor de idade'}`)
+
+
+// console.table(cadastro)
+
+
+
+
 
 console.log("_______________________________");
 
@@ -237,5 +263,26 @@ console.log("_______________________________");
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
 
+let alunos = {
+    aluno1: lerTeclado.question('Digite o nome: '),
+    nota1: lerTeclado.questionInt('Digite a nota: '),
+    nota2: lerTeclado.questionInt('Digite a nota: '),
+    nota3: lerTeclado.questionInt('Digite a nota: '),
 
+    aluno2: lerTeclado.question('Digite o nome: '),
+    nota4: lerTeclado.questionInt('Digite a nota: '),
+    nota5: lerTeclado.questionInt('Digite a nota: '),
+    nota6: lerTeclado.questionInt('Digite a nota: ')
+}
+
+let media1 = alunos.nota1 + alunos.nota2 + alunos.nota3 / 3
+let media2 = alunos.nota4 + alunos.nota5 + alunos.nota6 / 3
+
+console.log(`Aluno com primeira maior nota: ${alunos.nota1 > alunos.nota4 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
+console.log(`Aluno com a segunda maior nota: ${alunos.nota2 > alunos.nota5 ? '${alunos.aluno1}' : '${alunos.aluno2}'}`)
+console.log(`Aluno com a terceeira maior nota: ${alunos.nota3 > alunos.nota6 ? '${alunos.aluno1}' : '${alunos.aluno2}'}?`)
+
+
+
+console.table(alunos)
 console.log("_______________________________");
