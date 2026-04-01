@@ -79,69 +79,125 @@ let cardapio = {
 let nome = lerTeclado.question('Digite seu nome: ')
 let prato = lerTeclado.questionInt('Digite o numero do prato: ')
 let bebida = lerTeclado.questionInt('Digite o numero da bebida: ')
-let precoPrato
-let precoBebida
+
+let nomePrato = ''
+let precoPrato = 0
+
+let nomeBebida = ''
+let precoBebida = 0
+
 
 switch (prato) {
-    case 1: 'frangoGrelhado'
+    case 1:
     console.log('Frango Grelhado')
     console.log('R$32.00')
-    precoBebida = 32.00
+    nomePrato = 'Frango Grelhado'
+    precoPrato = 32.00
     break
     
-    case 2: 'fileAoMolho'
+    case 2:
     console.log('File ao molho')
     console.log('R$45.00')
+    nomePrato = 'File ao molho'
+    precoPrato = 45.00
     break
 
-    case 3: 'massaItaliana'
+    case 3:
     console.log('Massa italiana')
     console.log('R$28.00')
+    nomePrato = 'Massa italiana'
+    precoPrato = 28.00
     break
     
-    case 4: 'saladaCaesar'
+    case 4:
     console.log('Salada Caesar')
     console.log('R$22.00')
+    nomePrato = 'Salada Caesar'
+    precoPrato = 22.00
     break
 
-    case 5: 'sopaDoDia'
+    case 5:
     console.log('Sopa do dia')
     console.log('R$18.00')
+    nomePrato = 'Sopa do dia'
+    precoPrato = 18.00
     break
 
     default:
-        console.log('Esse prato não existe.')
-    
+        console.log('Prato selecionado não existe.')
+    break
 }
 
 switch(bebida) {
-    case 6: 'sucoNatural'
+    case 6:
     console.log('Suco natural')
     console.log('R$9.00')
+    nomeBebida = 'Suco natural'
+    precoBebida = 9.00
     break
 
-    case 7: 'refrigerante'
+    case 7:
     console.log('Refrigerante')
-    console.log('7.00')
+    console.log('R$7.00')
+    nomeBebida = 'Refrigerante'
+    precoBebida = 7.00
     break
     
-    case 8: 'agua'
+    case 8:
     console.log('Agua')
     console.log('R$4.00')
+    nomeBebida = 'Agua'
+    precoBebida = 4.00
     break
 
-    case 9: 'semBebida'
+    case 9:
     console.log('Sem bebida')
+    nomeBebida = 'Sem bebida'
+    precoBebida = 0
+    break
 
     default:
-        console.log('Digite um numero valido!')
+        console.log('Bebida selcionada naõ existe')
+        break
 }
+
+let total = (precoPrato + precoBebida)
 
 let pedido = {
     nomeCliente: nome,
-    nomePrato: prato,
-    nomeBebida: bebida
+    nomePrato: nomePrato,
+    preco: precoPrato, 
+    nomeBebida: nomeBebida,
+    preco: precoBebida,
+    total: total
 }
+console.table(pedido)
+
+let pix = lerTeclado.keyInYN('Vai pagar no Pix?  ')
+let desconto = 0
+let precoFinal = 0
+
+if (nome === ''){
+    console.log('Nome não informado, tente novamente!')
+} else if (prato < 1 || prato > 5) {
+
+    console.log('Prato não existente, tente novamente')
+
+} else if (pix) {
+    desconto = total * (10 / 100)
+    precoFinal = total - desconto
+    console.log(`Desconto de 10% aplicado, total ficou: R$${precoFinal.toFixed(2)}`)
+    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e bebida ${nomeBebida} e total gasto foi de R$${precoFinal.toFixed(2)}`)
+}
+    else {
+    precoTotal = total
+    console.log(`Sem desconto, total ficou: R$${total}`)
+    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e bebida ${nomeBebida} e total gasto foi de R$${precoFinal.toFixed(2)}`)
+}
+
+pedido.total = precoFinal
+console.log(pedido.total)
+
 
 console.log("_______________________________");
 
