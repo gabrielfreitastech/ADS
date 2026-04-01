@@ -181,7 +181,7 @@ if (nome === ''){
     console.log('Nome não informado, tente novamente!')
 } else if (prato < 1 || prato > 5) {
 
-    console.log('Prato não existente, tente novamente')
+    console.log('Prato não existente, tente novamente') // terminar a validação
 
 } else if (pix) {
     desconto = total * (10 / 100)
