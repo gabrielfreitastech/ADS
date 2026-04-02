@@ -290,3 +290,5 @@ console.table(resultado)
 //    Pergunta: Qx.
 //    Resposta do jogador para pergunta X: <respostaJogadorQx>
 //    Resposta correta da pergunta X: <respostaCorretaQx>
+
+
