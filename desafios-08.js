@@ -166,9 +166,9 @@ let total = (precoPrato + precoBebida)
 let pedido = {
     nomeCliente: nome,
     nomePrato: nomePrato,
-    preco: precoPrato, 
+    precoPrato: precoPrato, 
     nomeBebida: nomeBebida,
-    preco: precoBebida,
+    precoBebida: precoBebida,
     total: total
 }
 console.table(pedido)
@@ -179,10 +179,13 @@ let precoFinal = 0
 
 if (nome === ''){
     console.log('Nome não informado, tente novamente!')
-} else if (prato < 1 || prato > 5) {
+} else if (prato < 1 || prato > 5)
+     {
+    console.log('Prato não existente, tente novamente')
 
-    console.log('Prato não existente, tente novamente') // terminar a validação
-
+} else if (bebida < 6 || bebida > 9) {
+    console.log('Bebida não existente, tente novamente!')
+ 
 } else if (pix) {
     desconto = total * (10 / 100)
     precoFinal = total - desconto
@@ -192,7 +195,7 @@ if (nome === ''){
     else {
     precoTotal = total
     console.log(`Sem desconto, total ficou: R$${total}`)
-    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e bebida ${nomeBebida} e total gasto foi de R$${precoFinal.toFixed(2)}`)
+    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e de bebida ${nomeBebida} e seu total gasto foi de R$${precoFinal.toFixed(2)}`)
 }
 
 pedido.total = precoFinal
