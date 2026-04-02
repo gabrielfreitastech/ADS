@@ -58,10 +58,11 @@ console.log('======================================')
 console.log('Vamos começar!')
 console.log('PERGUNTA NUMERO 1:')
 console.log('1  -   EM QUE ANO FOI LANÇADO GTA 5 ?')
+console.log('Digite o numero da alternativa')
 console.log('1) 2000')
 console.log('2) 2008')
 console.log('3) 2010')
-console.log('4) 2012')
+console.log('4) 2013')
 console.log('======================================')
 
 let resposta1 = lerTeclado.questionInt('Digite o numero da alternativa correta: ')
@@ -94,7 +95,8 @@ switch (resposta1) {
 console.log('Proxima pergunta')
 console.log('======================================')
 console.log('PERGUNTA NUMERO 2:')
-console.log('Qual o nome do encanador de suspensorio vermelho ?')
+console.log('2  -   QUAL O NOME DO ENCANADOR DE SUSPENSORIO VERMELHO ?')
+console.log('Digite o numero da alternativa')
 console.log('1) Mario')
 console.log('2) Luigi')
 console.log('3) Yoshi')
@@ -129,7 +131,8 @@ switch (resposta2) {
 console.log('Proxima pergunta')
 console.log('======================================')
 console.log('PERGUNTA NUMERO 3:')
-console.log('Em qual FIFA o Mbappe foi introduzido no PSG ?')
+console.log('3  -   EM QUAL FIFA O MBAPPE ENTROU NO PSG ?')
+console.log('Digite o numero da alternativa')
 console.log('1) FIFA 17')
 console.log('2) FIFA 18')
 console.log('3) FIFA 19')
@@ -163,7 +166,8 @@ switch (resposta3) {
 console.log('Proxima pergunta')
 console.log('======================================')
 console.log('PERGUNTA NUMERO 4:')
-console.log('O personagem Crash Bandicoot é um(a)...')
+console.log('4  -   O CRASH BANDICOOT É UM UM(A)...')
+console.log('Digite o numero da alternativa')
 console.log('1) Raposa')
 console.log('2) Cachorro')
 console.log('3) Marsupial')
@@ -197,7 +201,8 @@ switch (resposta4) {
 console.log('Proxima pergunta')
 console.log('======================================')
 console.log('PERGUNTA NUMERO 5:')
-console.log('Qual o melhor jogo mobile existente?')
+console.log('5  -   QUAL O MELHOR JOGO MOBILE ?')
+console.log('Digite o numero da alternativa')
 console.log('1) Free Fire')
 console.log('2) Call Of Duty Mobile')
 console.log('3) Dragon City')
@@ -233,7 +238,7 @@ let total = resultado.pontos
 console.log('======================================')
 
 if (resultado.nome === ''){
-    console.log('Jogador não encontrado')
+    console.log('Jogador não encontrado, sem reultado final!')
 
 } else {
 console.log(`Beleza jogador ${resultado.nome} voce terminou o quiz e seu total de pontos foi ${resultado.pontos}!`)
@@ -267,16 +272,18 @@ switch (total) {
 console.log('======================================')
 
 if (resultado.nome === ''){
-    console.log('Jogador não encontrado')
+    console.log('Jogador não encontrado, sem nome, sem tabela com resultado final!')
 
 } else if (resultado.pontos >= 3) {
     resultado.situacao = 'Aprovado'
-    console.table(resultado)
 
 } else if (resultado.pontos <= 2) {
     resultado.situacao = 'Reprovado'
-    console.log(resultado)
+
 }
+
+console.table(resultado)
+
 
 // Desafio extra:
 //  Ao final, exiba para cada pergunta do quiz:
