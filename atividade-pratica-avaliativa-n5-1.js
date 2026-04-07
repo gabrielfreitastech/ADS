@@ -1,20 +1,4 @@
-const rl = require('readline-sync')
-
-// Atividade Prática Avaliativa - N4
-// Assuntos englobados:
-
-// Assunto já vistos anteriormente:
-// Variáveis
-// Tipos ( primitivos e compostos )
-// Arrays
-// Objetos
-// Input e Output de Dados
-// Assunto novos:
-// Operadores - Aritméticos
-// Operadores - Relacionais
-// Operadores - Lógicos
-// Estruturas de Controle - Condicionais: if + if else + else
-// Estruturas de Controle - Condicionais: switch / case
+let lerTeclado = require('readline-sync')
 // ============================================================
 //   ATIVIDADE AVALIATIVA N5
 //   Módulos: Operadores e Estruturas Condicionais (if/else, switch/case)
@@ -30,7 +14,7 @@ const rl = require('readline-sync')
 //    Se for resolvida em equipe, somente um deve fazer a entrega
 //    Se houverem 2 códigos iguais, ambos serão considerados plágio (nota 0).
 //
-//  • Nome do(s) aluno(s):
+//  • Nome do(s) aluno(s): Franciny Thais Braga Cunha, Vitória Cristiny Bandeira Lima, Gabriel Henrique de Freitas
 //
 // ============================================================
 
@@ -62,6 +46,7 @@ const rl = require('readline-sync')
 //
 // Exiba: "Olá, <nomeViajante>! Vamos encontrar o destino perfeito para você."
 //
+
 // ─────────────────────────────────────────────────────────────
 // PASSO B – Pergunta 1
 // ─────────────────────────────────────────────────────────────
@@ -163,174 +148,119 @@ const rl = require('readline-sync')
 //   Luxo → "Dica: resorts all-inclusive e voos executivos são a sua praia!"
 
 // → Seu código aqui:
+let usuario = {
+    nomeViajante: lerTeclado.question("Digite seu nome completo: "),
+    idade: lerTeclado.questionInt("Digite sua idade: "),
+    orcamento: lerTeclado.questionFloat("Digite uma opção: 1) Economica, 2) Moderado, 3) Luxo: ")
+}
+console.log("==========================")
+console.log(`Olá, ${usuario.nomeViajante}! Vamos encontrar o destino perfeito para você.`)
+console.log("==========================")
 
-let nomeViajante = rl.question('Digite seu nome viajante: ')
-let idadeViajante = rl.questionInt('Digite sua idade viajante: ')
+let norcamento = ""
 
-console.log('ORÇAMENTO')
-console.log('1) Econômico')
-console.log('2) Moderado')
-console.log('3) Luxo')
-
-let orcamento = rl.questionInt('Deseja qual orcamento ? ')
-let textoOrcamento = ''
-
-
-switch (orcamento) {
-    case 1:
-        orcamento = 'economico'
-        textoOrcamento = 'Econômico'
-        console.log('Você escolheu o orçamento Econômico!')
-        break 
-
-    case 2:
-        orcamento = 'moderado'
-        textoOrcamento = 'Moderado'
-        console.log('Você escolheu o orçamento Moderado')
-        break
-
-    case 3:
-        orcamento = 'luxo'
-        textoOrcamento = 'Luxo'
-        console.log('Você escolheu o orçamento Luxo')
-        break
-
-    default:
-        console.log('Opção inválida!')
-        break       
+if(usuario.orcamento === 1){
+    console.log("Economica")
+    norcamento = "Economica"
+} else if(usuario.orcamento === 2){
+    console.log("Moderado")
+    norcamento = "Moderado"
+} else if (usuario.orcamento === 3){
+    console.log("Luxo")
+    norcamento = "Luxo"
+} else if (usuario.orcamento < 0 || usuario.orcamento >= 4) {
+    console.log("Erro")
 }
 
-
-if (nomeViajante !== '') {
-    console.log(`Olá, ${nomeViajante}! Vamos encontrar o destino perfeito para você.`)
-
-} else {
-    console.log('Nome inválido!')
-}
-
-
-console.log('QUAL TIPO DE CLIMA VOCÊ PREFERE ?')
-console.log('1) Tropical / Quente')
-console.log('2) Frio / Neve')
-console.log('3) Temperado / Ameno')
-
-let resp1 = rl.questionInt('Escolha uma das opcoes acima: ')
+console.log("==========================")
+console.log("Qual tipo de clima você prefere?: ")
+console.log("1) Tropical / Quente")
+console.log("2) Frio / Neve")
+console.log("3) Temperado / Ameno")
+let resp1 = lerTeclado.questionInt("Escolha: ")
+console.log("==========================")
 let resp2
+if(resp1 === 1){
+    console.log("Qual voce prefere:")
+    console.log("1) Praia e mar")
+    console.log("2) Floresta e ecoturismo")
+    resp2 = lerTeclado.questionInt("Escolha:")
+} else if(resp1 === 2){
+    console.log("Qual voce prefere:")
+    console.log("1) Neve de verdade")
+    console.log("2) Frio sem neve")
+    resp2 = lerTeclado.questionInt("Escolha:")
+} else if(resp1 === 3){
+    console.log("Qual voce prefere:")
+    console.log("1) Cultura, museus e arquitetura histórica")
+    console.log("2) Natureza, trilhas e parques nacionais")
+    resp2 = lerTeclado.questionInt("Escolha:")
+} else {
+    console.log("Digite uma opcao válida.")
+}
+console.log("==========================")
 let resp3
-
-switch (resp1) {
-    case 1:
-        console.log('Você prefere :')
-        console.log('1) Praia e mar')
-        console.log('2) Floresta e ecoturismo')
-        resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-        break
-
-    case 2:
-        console.log('Você quer :')
-        console.log('1) Neve de verdade')
-        console.log('2) Frio sem neve')
-        resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-        break
-
-    case 3: 
-        console.log('Você prefere explorar :')
-        console.log('1) Cultura, museus e arquitetura histórica')
-        console.log('2) Natureza, trilhas e parques nacionais')
-        resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-        break
-
-    default:
-        console.log('Opção inválida. Encerrando o formulário.')
-        break
-
+if(resp1 === 1 && resp2 === 1){
+        console.log("Como voce prefere sua viagem:")
+        console.log("1) Animada — praias badaladas e muito agito")
+        console.log("2) Tranquila — sossego e natureza preservada")
+        resp3 = lerTeclado.questionInt("Escolha:")
+}   else if (resp1 === 2 && resp2 === 1){
+        console.log("Qual o seu objetivo:")
+        console.log("1) Praticar esportes de inverno (esqui, snowboard)")
+        console.log("2) Contemplar a paisagem nevada e relaxar")
+        resp3 = lerTeclado.questionInt("Escolha:")
+}   else if( resp1 === 3 && resp2 ===1){
+        console.log("Qual região voce prefere:")
+        console.log("1) Europa")
+        console.log("2) America do sul")
+        resp3 = lerTeclado.questionInt("Escolha:")
+} else {
+    console.log("Digite uma opcao válida.")
 }
 
-if (resp1 === 1 && resp2 === 1) {
-    console.log('COMO VOCÊ PREFERE A SUA VIAGEM?')
-    console.log('1) Animada — praias badaladas e muito agito')
-    console.log('2) Tranquila — sossego e natureza preservada')
-    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-} else if (resp1 == 1 && resp2 == 2) {
-    console.log('Tropical → Floresta              (1→2)    | C) "Amazônia (Brasil) ou Costa Rica"')
-
-} else if (resp1 == 2 && resp2 == 1) {
-    console.log('QUAL O SEU OBJETIVO?')
-    console.log(' 1) Praticar esportes de inverno (esqui, snowboard)')
-    console.log('2) Contemplar a paisagem nevada e relaxar')
-    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-} else if (resp1 == 2 && resp2 == 2) {
-    console.log('Frio → Sem neve                  (2→2)    | F) "Serra Gaúcha (Brasil) ou Patagônia Chilena"')
-
-} else if (resp1 == 3 && resp2 == 1) {
-    console.log('QUAL REGIÃO VOCÊ PREFERE?')
-    console.log('1) Europa')
-    console.log('2) América do Sul')
-    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-} else if (resp1 == 3 && resp2 == 2) {
-    console.log('Temperado → Natureza             (3→2)    | I) "Chapada dos Veadeiros ou Torres del Paine"')
-
-}
-
-let destino = ''
+console.log("==========================")
+let destino = ""
 
 if(resp1 === 1 && resp2 === 1 && resp3 === 1){
     destino = "Cancún (México) ou Fortaleza (Brasil)"
-
-} else if(resp1 === 1 && resp2 === 1 && resp3 === 2){
+}else if(resp1 === 1 && resp2 === 1 && resp3 === 2){
     destino = "Maldivas ou Fernando de Noronha (Brasil)"
-
-} else if(resp1 === 1 && resp2 === 2){
+}else if(resp1 === 1 && resp2 === 2){
     destino = "Amazônia (Brasil) ou Costa Rica"
-
-} else if(resp1 === 2 && resp2 === 1 && resp3 === 1){
+}else if(resp1 === 2 && resp2 === 1 && resp3 === 1){
     destino = "Aspen (EUA) ou Bariloche (Argentina)"
-
-} else if(resp1 === 2 && resp2 === 1 && resp3 === 2){
+}else if(resp1 === 2 && resp2 === 1 && resp3 === 2){
     destino = "Ushuaia (Argentina) ou Lapônia (Finlândia)"
-
-} else if(resp1 === 2 && resp2 === 2 ){
+}else if(resp1 === 2 && resp2 === 2 ){
     destino = "Serra Gaúcha (Brasil) ou Patagônia Chilena"
-
-} else if(resp1 === 3 && resp2 === 1 && resp3 === 1){
+}else if(resp1 === 3 && resp2 === 1 && resp3 === 1){
     destino = "Lisboa, Barcelona ou Roma"
-
-} else if(resp1 === 3 && resp2 === 1 && resp3 === 2){
+}else if(resp1 === 3 && resp2 === 1 && resp3 === 2){
     destino = "Buenos Aires, Cusco ou Cartagena"
-
-
-} else if(resp1 === 3 && resp2 === 2){
+}else if(resp1 === 3 && resp2 === 2){
     destino = "Chapada dos Veadeiros ou Torres del Paine"
 }
 
-console.log('===============================================')
-console.log('|        RECOMENDAÇÃO DA AGÊNCIA VOYAGER      |')
-console.log('===============================================')
-console.log(`| Viajante : ${nomeViajante}`)
-console.log(`| Idade    : ${idadeViajante} anos`)
-console.log(`| Orçamento : ${textoOrcamento}`)
-console.log(`| Destino  : ${destino}`)
-console.log('===============================================')
-console.log(`Boa viagem, ${nomeViajante}! ${destino} espera por você.`)
-
-console.log('DICA VIAJANTE:')
-
-switch (orcamento) {
+console.log(`
+===============================================
+//   |   RECOMENDAÇÃO DA AGÊNCIA VOYAGER           |
+//   ===============================================
+//   |   Viajante : ${usuario.nomeViajante}                 |
+//   |   Idade    : ${usuario.idade} anos           |
+//   |   Orçamento: ${norcamento}  |
+//   |   Destino  : ${destino}                     |
+//   ===============================================
+Boa viagem, ${usuario.nomeViajante}! O ${destino} espera por você.
+`)
+switch(usuario.orcamento){
     case 1:
-        console.log('Econômico → "Dica: procure voos com antecedência e use hostels ou Airbnb!"')
+        console.log("Econômico → Dica: procure voos com antecedência e use hostels ou Airbnb!")
         break
-
     case 2:
-        console.log('Moderado → "Dica: hotéis 3 estrelas e pacotes combinados são ótimas opções!"')
+        console.log("Moderado → Dica: hotéis 3 estrelas e pacotes combinados são ótimas opções!")
         break
-
     case 3:
-        console.log('Luxo → "Dica: resorts all-inclusive e voos executivos são a sua praia!"')
-        break
-
-    default:
-
+       console.log("Luxo → Dica: resorts all-inclusive e voos executivos são a sua praia!")
+       break
 }
