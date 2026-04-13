@@ -15,13 +15,13 @@ let rl = require('readline-sync')
 //   3 – Massa Italiana   R$ 28,00
 //   4 – Salada Caesar    R$ 22,00
 //   5 – Sopa do Dia      R$ 18,00
-//
+
 // Crie uma lista de objetos para as Bebidas:
 //   1 – Suco Natural     R$ 9,00
 //   2 – Refrigerante     R$ 7,00
 //   3 – Água             R$ 4,00
 //   4 – Sem bebida       R$ 0,00
-//
+
 // a) Pergunte ao usuário:
 //    - Nome pessoal.
 //    - Número do prato desejado.
