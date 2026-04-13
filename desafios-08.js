@@ -4,7 +4,7 @@
 // Instruções: resolva cada desafio no espaço indicado.
 // ============================================================
 
-let lerTeclado = require('readline-sync')
+let rl = require('readline-sync')
 
 // ------------------------------------------------------------
 // DESAFIO 1 – Simulador de caixa de restaurante
@@ -39,167 +39,167 @@ let lerTeclado = require('readline-sync')
 
 // → Seu código aqui:
 
-console.log('======================================')
-console.log('         RESTAURANTE - CARDÁPIO       ')
-console.log('======================================')
-console.log('               PRATOS                 ')
-console.log('--------------------------------------')
-console.log('1 - Frango Grelhado ......... R$ 32,00')
-console.log('2 - Filé ao Molho ........... R$ 45,00')
-console.log('3 - Massa Italiana .......... R$ 28,00')
-console.log('4 - Salada Caesar ........... R$ 22,00')
-console.log('5 - Sopa do Dia ............. R$ 18,00')
-console.log('--------------------------------------')
-console.log('               BEBIDAS                ')
-console.log('--------------------------------------')
-console.log('6 - Suco Natural ............ R$ 9,00')
-console.log('7 - Refrigerante ............ R$ 7,00')
-console.log('8 - Água .................... R$ 4,00')
-console.log('9 - Sem bebida .............. R$ 0,00')
-console.log('======================================')
+// console.log('======================================')
+// console.log('         RESTAURANTE - CARDÁPIO       ')
+// console.log('======================================')
+// console.log('               PRATOS                 ')
+// console.log('--------------------------------------')
+// console.log('1 - Frango Grelhado ......... R$ 32,00')
+// console.log('2 - Filé ao Molho ........... R$ 45,00')
+// console.log('3 - Massa Italiana .......... R$ 28,00')
+// console.log('4 - Salada Caesar ........... R$ 22,00')
+// console.log('5 - Sopa do Dia ............. R$ 18,00')
+// console.log('--------------------------------------')
+// console.log('               BEBIDAS                ')
+// console.log('--------------------------------------')
+// console.log('6 - Suco Natural ............ R$ 9,00')
+// console.log('7 - Refrigerante ............ R$ 7,00')
+// console.log('8 - Água .................... R$ 4,00')
+// console.log('9 - Sem bebida .............. R$ 0,00')
+// console.log('======================================')
 
 
-let cardapio = {
-    prato: {
-        frangoGrelhado: 32.00,
-        fileAoMolho: 45.00,
-        massaItaliana: 28.00,
-        saladaCaesar: 22.00,
-        sopaDoDia: 18.00,
-    },
-    bebida: {
-        sucoNatural: 9.00,
-        refrigerante: 7.00,
-        agua: 4.00,
-        semBebida: 0
-    }
+// let cardapio = {
+//     prato: {
+//         frangoGrelhado: 32.00,
+//         fileAoMolho: 45.00,
+//         massaItaliana: 28.00,
+//         saladaCaesar: 22.00,
+//         sopaDoDia: 18.00,
+//     },
+//     bebida: {
+//         sucoNatural: 9.00,
+//         refrigerante: 7.00,
+//         agua: 4.00,
+//         semBebida: 0
+//     }
 
-}
+// }
 
-let nome = lerTeclado.question('Digite seu nome: ')
-let prato = lerTeclado.questionInt('Digite o numero do prato: ')
-let bebida = lerTeclado.questionInt('Digite o numero da bebida: ')
+// let nome = rl.question('Digite seu nome: ')
+// let prato = rl.questionInt('Digite o numero do prato: ')
+// let bebida = rl.questionInt('Digite o numero da bebida: ')
 
-let nomePrato = ''
-let precoPrato = 0
+// let nomePrato = ''
+// let precoPrato = 0
 
-let nomeBebida = ''
-let precoBebida = 0
+// let nomeBebida = ''
+// let precoBebida = 0
 
 
-switch (prato) {
-    case 1:
-    console.log('Frango Grelhado')
-    console.log('R$32.00')
-    nomePrato = 'Frango Grelhado'
-    precoPrato = 32.00
-    break
+// switch (prato) {
+//     case 1:
+//     console.log('Frango Grelhado')
+//     console.log('R$32.00')
+//     nomePrato = 'Frango Grelhado'
+//     precoPrato = 32.00
+//     break
     
-    case 2:
-    console.log('File ao molho')
-    console.log('R$45.00')
-    nomePrato = 'File ao molho'
-    precoPrato = 45.00
-    break
+//     case 2:
+//     console.log('File ao molho')
+//     console.log('R$45.00')
+//     nomePrato = 'File ao molho'
+//     precoPrato = 45.00
+//     break
 
-    case 3:
-    console.log('Massa italiana')
-    console.log('R$28.00')
-    nomePrato = 'Massa italiana'
-    precoPrato = 28.00
-    break
+//     case 3:
+//     console.log('Massa italiana')
+//     console.log('R$28.00')
+//     nomePrato = 'Massa italiana'
+//     precoPrato = 28.00
+//     break
     
-    case 4:
-    console.log('Salada Caesar')
-    console.log('R$22.00')
-    nomePrato = 'Salada Caesar'
-    precoPrato = 22.00
-    break
+//     case 4:
+//     console.log('Salada Caesar')
+//     console.log('R$22.00')
+//     nomePrato = 'Salada Caesar'
+//     precoPrato = 22.00
+//     break
 
-    case 5:
-    console.log('Sopa do dia')
-    console.log('R$18.00')
-    nomePrato = 'Sopa do dia'
-    precoPrato = 18.00
-    break
+//     case 5:
+//     console.log('Sopa do dia')
+//     console.log('R$18.00')
+//     nomePrato = 'Sopa do dia'
+//     precoPrato = 18.00
+//     break
 
-    default:
-        console.log('Prato selecionado não existe.')
-    break
-}
+//     default:
+//         console.log('Prato selecionado não existe.')
+//     break
+// }
 
-switch(bebida) {
-    case 6:
-    console.log('Suco natural')
-    console.log('R$9.00')
-    nomeBebida = 'Suco natural'
-    precoBebida = 9.00
-    break
+// switch(bebida) {
+//     case 6:
+//     console.log('Suco natural')
+//     console.log('R$9.00')
+//     nomeBebida = 'Suco natural'
+//     precoBebida = 9.00
+//     break
 
-    case 7:
-    console.log('Refrigerante')
-    console.log('R$7.00')
-    nomeBebida = 'Refrigerante'
-    precoBebida = 7.00
-    break
+//     case 7:
+//     console.log('Refrigerante')
+//     console.log('R$7.00')
+//     nomeBebida = 'Refrigerante'
+//     precoBebida = 7.00
+//     break
     
-    case 8:
-    console.log('Agua')
-    console.log('R$4.00')
-    nomeBebida = 'Agua'
-    precoBebida = 4.00
-    break
+//     case 8:
+//     console.log('Agua')
+//     console.log('R$4.00')
+//     nomeBebida = 'Agua'
+//     precoBebida = 4.00
+//     break
 
-    case 9:
-    console.log('Sem bebida')
-    nomeBebida = 'Sem bebida'
-    precoBebida = 0
-    break
+//     case 9:
+//     console.log('Sem bebida')
+//     nomeBebida = 'Sem bebida'
+//     precoBebida = 0
+//     break
 
-    default:
-        console.log('Bebida selcionada naõ existe')
-        break
-}
+//     default:
+//         console.log('Bebida selcionada naõ existe')
+//         break
+// }
 
-let total = (precoPrato + precoBebida)
+// let total = (precoPrato + precoBebida)
 
-let pedido = {
-    nomeCliente: nome,
-    nomePrato: nomePrato,
-    precoPrato: precoPrato, 
-    nomeBebida: nomeBebida,
-    precoBebida: precoBebida,
-    total: total
-}
-console.table(pedido)
+// let pedido = {
+//     nomeCliente: nome,
+//     nomePrato: nomePrato,
+//     precoPrato: precoPrato, 
+//     nomeBebida: nomeBebida,
+//     precoBebida: precoBebida,
+//     total: total
+// }
+// console.table(pedido)
 
-let pix = lerTeclado.keyInYN('Vai pagar no Pix?  ')
-let desconto = 0
-let precoFinal = 0
+// let pix = rl.keyInYN('Vai pagar no Pix?  ')
+// let desconto = 0
+// let precoFinal = 0
 
-if (nome === ''){
-    console.log('Nome não informado, tente novamente!')
-} else if (prato < 1 || prato > 5)
-     {
-    console.log('Prato não existente, tente novamente')
+// if (nome === ''){
+//     console.log('Nome não informado, tente novamente!')
+// } else if (prato < 1 || prato > 5)
+//      {
+//     console.log('Prato não existente, tente novamente')
 
-} else if (bebida < 6 || bebida > 9) {
-    console.log('Bebida não existente, tente novamente!')
+// } else if (bebida < 6 || bebida > 9) {
+//     console.log('Bebida não existente, tente novamente!')
  
-} else if (pix) {
-    desconto = total * (10 / 100)
-    precoFinal = total - desconto
-    console.log(`Desconto de 10% aplicado, total ficou: R$${precoFinal.toFixed(2)}`)
-    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e bebida ${nomeBebida} e total gasto foi de R$${precoFinal.toFixed(2)}`)
-}
-    else {
-    precoTotal = total
-    console.log(`Sem desconto, total ficou: R$${total}`)
-    console.log(`Olá ${nome}, foram consumidos ${nomePrato} e de bebida ${nomeBebida} e seu total gasto foi de R$${precoFinal.toFixed(2)}`)
-}
+// } else if (pix) {
+//     desconto = total * (10 / 100)
+//     precoFinal = total - desconto
+//     console.log(`Desconto de 10% aplicado, total ficou: R$${precoFinal.toFixed(2)}`)
+//     console.log(`Olá ${nome}, foram consumidos ${nomePrato} e bebida ${nomeBebida} e total gasto foi de R$${precoFinal.toFixed(2)}`)
+// }
+//     else {
+//     precoTotal = total
+//     console.log(`Sem desconto, total ficou: R$${total}`)
+//     console.log(`Olá ${nome}, foram consumidos ${nomePrato} e de bebida ${nomeBebida} e seu total gasto foi de R$${precoFinal.toFixed(2)}`)
+// }
 
-pedido.total = precoFinal
-console.log(pedido.total)
+// pedido.total = precoFinal
+// console.log(pedido.total)
 
 
 console.log("_______________________________");
@@ -232,6 +232,31 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+
+const valor = rl.questionFloat('Digite o valor para a ser convertido: ')
+
+console.log('========')
+console.log('1 - Km para Milhas')
+console.log('2 - Milhas para Km')
+console.log('3 - Celsius para Fahrenheit')
+console.log('4 - Fahrenheit para Celsius')
+console.log('5 - Kg para Libras')
+console.log('6 - Libras para Kg')
+console.log('========')
+
+const tipo = rl.questionInt('Digite o tipo de conversão: ')
+let convertido = {
+    tipo: '',
+    valorOriginal: '',
+    unidadeOriginal: '',
+    resultado: '',
+    unidadeResultado: ''
+}
+
+switch(tipo) {
+    case 1:
+        
+}
 
 console.log("_______________________________");
 
