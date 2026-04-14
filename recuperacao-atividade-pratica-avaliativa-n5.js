@@ -101,9 +101,6 @@ let resultado = ''
 if (nomePaciente === '') {
     console.log('Nome do paciente digitado incorreto, encerrando a Triagem!.')
 
-} else if (!isNaN(nomePaciente) && nomePaciente.trim() !== '') {
-    console.log('Nome do paciente digitado incorreto, encerrando a Triagem!.')
-
 } else if (nivelDor < 0 || nivelDor > 10) {
     console.log('Nível de dor digitado incorreto, encerrando a Triagem!.')
 
