@@ -184,155 +184,145 @@ let textoOrcamento = ''
 
     switch (orcamento) {
         case 1:
-            orcamento = 'economico'
             textoOrcamento = 'Econômico'
             console.log('Você escolheu o orçamento Econômico!')
             break 
 
         case 2:
-            orcamento = 'moderado'
             textoOrcamento = 'Moderado'
             console.log('Você escolheu o orçamento Moderado')
             break
 
         case 3:
-            orcamento = 'luxo'
             textoOrcamento = 'Luxo'
             console.log('Você escolheu o orçamento Luxo')
             break
 
         default:
-            console.log('Opção inválida!')
+            console.log('Opção inválida. Encerrando o formulário.')
+            textoOrcamento = ''
             break       
     } 
-    if (orcamento !== 1 || orcamento !== 2 || orcamento !== 3) {
-        console.log('FORMULÁRIO ENCERRADO!')
-    } else {
+    if (orcamento >= 1 && orcamento <= 3) {
+        console.log('QUAL TIPO DE CLIMA VOCÊ PREFERE ?')
+        console.log('1) Tropical / Quente')
+        console.log('2) Frio / Neve')
+        console.log('3) Temperado / Ameno')
 
+        let resp1 = rl.questionInt('Escolha uma das opcoes acima: ')
+        
+        if (resp1 >= 1 && resp1 <= 3) {
+            let resp2
+            let resp3
 
-    console.log('QUAL TIPO DE CLIMA VOCÊ PREFERE ?')
-    console.log('1) Tropical / Quente')
-    console.log('2) Frio / Neve')
-    console.log('3) Temperado / Ameno')
+            if (resp1 === 1) {
+                console.log('Você prefere :')
+                console.log('1) Praia e mar')
+                console.log('2) Floresta e ecoturismo')
+                resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
+            } else if (resp1 === 2) {
+                console.log('Você quer :')
+                console.log('1) Neve de verdade')
+                console.log('2) Frio sem neve')
+                resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
+            } else if (resp1 === 3) {
+                console.log('Você prefere explorar :')
+                console.log('1) Cultura, museus e arquitetura histórica')
+                console.log('2) Natureza, trilhas e parques nacionais')
+                resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
+            }
 
-    let resp1 = rl.questionInt('Escolha uma das opcoes acima: ')
-    let resp2
-    let resp3
+            if ((resp1 === 1 || resp1 === 2 || resp1 === 3) && (resp2 >= 1 && resp2 <= 2)) {
+                
+                if (resp1 === 1 && resp2 === 1) {
+                    console.log('COMO VOCÊ PREFERE A SUA VIAGEM?')
+                    console.log('1) Animada — praias badaladas e muito agito')
+                    console.log('2) Tranquila — sossego e natureza preservada')
+                    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
+                    if (resp3 < 1 || resp3 > 2) {
+                        console.log('Opção inválida. Encerrando o formulário.')
+                        resp1 = 0
+                    }
+                } else if (resp1 === 2 && resp2 === 1) {
+                    console.log('QUAL O SEU OBJETIVO?')
+                    console.log('1) Praticar esportes de inverno (esqui, snowboard)')
+                    console.log('2) Contemplar a paisagem nevada e relaxar')
+                    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
+                    if (resp3 < 1 || resp3 > 2) {
+                        console.log('Opção inválida. Encerrando o formulário.')
+                        resp1 = 0
+                    }
+                } else if (resp1 === 3 && resp2 === 1) {
+                    console.log('QUAL REGIÃO VOCÊ PREFERE?')
+                    console.log('1) Europa')
+                    console.log('2) América do Sul')
+                    resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
+                    if (resp3 < 1 || resp3 > 2) {
+                        console.log('Opção inválida. Encerrando o formulário.')
+                        resp1 = 0
+                    }
+                }
 
-    switch (resp1) {
-        case 1:
-            console.log('Você prefere :')
-            console.log('1) Praia e mar')
-            console.log('2) Floresta e ecoturismo')
-            resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-            break
+                if ((resp1 === 1 && resp2 === 1 && resp3 >= 1 && resp3 <= 2) ||
+                    (resp1 === 1 && resp2 === 2) ||
+                    (resp1 === 2 && resp2 === 1 && resp3 >= 1 && resp3 <= 2) ||
+                    (resp1 === 2 && resp2 === 2) ||
+                    (resp1 === 3 && resp2 === 1 && resp3 >= 1 && resp3 <= 2) ||
+                    (resp1 === 3 && resp2 === 2)) {
 
-        case 2:
-            console.log('Você quer :')
-            console.log('1) Neve de verdade')
-            console.log('2) Frio sem neve')
-            resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-            break
+                    let destino = ''
 
-        case 3: 
-            console.log('Você prefere explorar :')
-            console.log('1) Cultura, museus e arquitetura histórica')
-            console.log('2) Natureza, trilhas e parques nacionais')
-            resp2 = rl.questionInt('Escolha uma das opcoes acima: ')
-            break
+                    if(resp1 === 1 && resp2 === 1 && resp3 === 1){
+                        destino = "Cancún (México) ou Fortaleza (Brasil)"
+                    } else if(resp1 === 1 && resp2 === 1 && resp3 === 2){
+                        destino = "Maldivas ou Fernando de Noronha (Brasil)"
+                    } else if(resp1 === 1 && resp2 === 2){
+                        destino = "Amazônia (Brasil) ou Costa Rica"
+                    } else if(resp1 === 2 && resp2 === 1 && resp3 === 1){
+                        destino = "Aspen (EUA) ou Bariloche (Argentina)"
+                    } else if(resp1 === 2 && resp2 === 1 && resp3 === 2){
+                        destino = "Ushuaia (Argentina) ou Lapônia (Finlândia)"
+                    } else if(resp1 === 2 && resp2 === 2){
+                        destino = "Serra Gaúcha (Brasil) ou Patagônia Chilena"
+                    } else if(resp1 === 3 && resp2 === 1 && resp3 === 1){
+                        destino = "Lisboa, Barcelona ou Roma"
+                    } else if(resp1 === 3 && resp2 === 1 && resp3 === 2){
+                        destino = "Buenos Aires, Cusco ou Cartagena"
+                    } else if(resp1 === 3 && resp2 === 2){
+                        destino = "Chapada dos Veadeiros ou Torres del Paine"
+                    }
 
-        default:
+                    console.log('===============================================')
+                    console.log('|        RECOMENDAÇÃO DA AGÊNCIA VOYAGER      |')
+                    console.log('===============================================')
+                    console.log(`| Viajante : ${nomeViajante}`)
+                    console.log(`| Idade    : ${idadeViajante} anos`)
+                    console.log(`| Orçamento : ${textoOrcamento}`)
+                    console.log(`| Destino  : ${destino}`)
+                    console.log('===============================================')
+                    console.log(`Boa viagem, ${nomeViajante}! ${destino} espera por você.`)
+
+                    console.log('DICA VIAJANTE:')
+
+                    switch (orcamento) {
+                        case 1:
+                            console.log('Dica: procure voos com antecedência e use hostels ou Airbnb!')
+                            break
+                        case 2:
+                            console.log('Dica: hotéis 3 estrelas e pacotes combinados são ótimas opções!')
+                            break
+                        case 3:
+                            console.log('Dica: resorts all-inclusive e voos executivos são a sua praia!')
+                            break
+                    }
+                }
+            } else {
+                console.log('Opção inválida. Encerrando o formulário.')
+            }
+        } else {
             console.log('Opção inválida. Encerrando o formulário.')
-            break
-
-    }
-
-    if (resp1 === 1 && resp2 === 1) {
-        console.log('COMO VOCÊ PREFERE A SUA VIAGEM?')
-        console.log('1) Animada — praias badaladas e muito agito')
-        console.log('2) Tranquila — sossego e natureza preservada')
-        resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-    } else if (resp1 == 1 && resp2 == 2) {
-        console.log('Tropical → Floresta              (1→2)    | C) "Amazônia (Brasil) ou Costa Rica"')
-
-    } else if (resp1 == 2 && resp2 == 1) {
-        console.log('QUAL O SEU OBJETIVO?')
-        console.log(' 1) Praticar esportes de inverno (esqui, snowboard)')
-        console.log('2) Contemplar a paisagem nevada e relaxar')
-        resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-    } else if (resp1 == 2 && resp2 == 2) {
-        console.log('Frio → Sem neve                  (2→2)    | F) "Serra Gaúcha (Brasil) ou Patagônia Chilena"')
-
-    } else if (resp1 == 3 && resp2 == 1) {
-        console.log('QUAL REGIÃO VOCÊ PREFERE?')
-        console.log('1) Europa')
-        console.log('2) América do Sul')
-        resp3 = rl.questionInt('Escolha uma das opcoes acima: ')
-
-    } else if (resp1 == 3 && resp2 == 2) {
-        console.log('Temperado → Natureza             (3→2)    | I) "Chapada dos Veadeiros ou Torres del Paine"')
-
-    }
-
-    let destino = ''
-
-    if(resp1 === 1 && resp2 === 1 && resp3 === 1){
-        destino = "Cancún (México) ou Fortaleza (Brasil)"
-
-    } else if(resp1 === 1 && resp2 === 1 && resp3 === 2){
-        destino = "Maldivas ou Fernando de Noronha (Brasil)"
-
-    } else if(resp1 === 1 && resp2 === 2){
-        destino = "Amazônia (Brasil) ou Costa Rica"
-
-    } else if(resp1 === 2 && resp2 === 1 && resp3 === 1){
-        destino = "Aspen (EUA) ou Bariloche (Argentina)"
-
-    } else if(resp1 === 2 && resp2 === 1 && resp3 === 2){
-        destino = "Ushuaia (Argentina) ou Lapônia (Finlândia)"
-
-    } else if(resp1 === 2 && resp2 === 2 ){
-        destino = "Serra Gaúcha (Brasil) ou Patagônia Chilena"
-
-    } else if(resp1 === 3 && resp2 === 1 && resp3 === 1){
-        destino = "Lisboa, Barcelona ou Roma"
-
-    } else if(resp1 === 3 && resp2 === 1 && resp3 === 2){
-        destino = "Buenos Aires, Cusco ou Cartagena"
-
-
-    } else if(resp1 === 3 && resp2 === 2){
-        destino = "Chapada dos Veadeiros ou Torres del Paine"
-    }
-
-    console.log('===============================================')
-    console.log('|        RECOMENDAÇÃO DA AGÊNCIA VOYAGER      |')
-    console.log('===============================================')
-    console.log(`| Viajante : ${nomeViajante}`)
-    console.log(`| Idade    : ${idadeViajante} anos`)
-    console.log(`| Orçamento : ${textoOrcamento}`)
-    console.log(`| Destino  : ${destino}`)
-    console.log('===============================================')
-    console.log(`Boa viagem, ${nomeViajante}! ${destino} espera por você.`)
-
-    console.log('DICA VIAJANTE:')
-
-    switch (orcamento) {
-        case 1:
-            console.log('Econômico → "Dica: procure voos com antecedência e use hostels ou Airbnb!"')
-            break
-
-        case 2:
-            console.log('Moderado → "Dica: hotéis 3 estrelas e pacotes combinados são ótimas opções!"')
-            break
-
-        case 3:
-            console.log('Luxo → "Dica: resorts all-inclusive e voos executivos são a sua praia!"')
-            break
-
-        default:
-    }
+        }
+    } else {
+        console.log('FORMULÁRIO ENCERRADO!')
     }
 }
