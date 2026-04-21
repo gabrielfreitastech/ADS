@@ -83,14 +83,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let n = rl.questionInt('Digite um numero inteiro positivo: ')
-let soma = 0
+// let n = rl.questionInt('Digite um numero inteiro positivo: ')
+// let soma = 0
 
-for (let i = 1; i <= n; i++) {
-    soma += i
+// for (let i = 1; i <= n; i++) {
+//     soma += i
 
-}
-console.log(`A soma de 1 até ${n} é ${soma}`)
+// }
+// console.log(`A soma de 1 até ${n} é ${soma}`)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Fatorial
@@ -103,7 +103,18 @@ console.log(`A soma de 1 até ${n} é ${soma}`)
 
 // → Seu código aqui:
 
+// let n = rl.questionInt('Digite um nuumero de 1 a 10: ')
+// let fatorial = 1
 
+// if (n < 1 || n > 10) {
+//     console.log('Número inválido')
+
+// } else
+
+// for (let i = 1; i <= n; i++) {
+//     fatorial *= i
+//     console.log(`${i}! = ${fatorial}`)
+// }
 
 console.log("_______________________________");
 
@@ -119,6 +130,9 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// for (let i = 0; i < cidades.length; i++) {
+//     console.log(`[${i}] - ${cidades[i]}`)
+// }
 
 console.log("_______________________________");
 
@@ -134,6 +148,23 @@ console.log("_______________________________");
 //    "Menor temperatura: <menor>°C"
 
 // → Seu código aqui:
+
+// const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25]
+
+// let maior = temperaturas[0]
+// let menor = temperaturas[0]
+
+// for (let i = 0; i < temperaturas.length; i++) {
+//     if (temperaturas[i] > maior) {
+//         maior = temperaturas[i]
+
+//     if (temperaturas[i] < menor) {
+//         menor = temperaturas[i]
+//     }
+// }
+// }   
+// console.log(`Maior temperatura: ${maior}`)
+// console.log(`Menor temperatura: ${menor}`)
 
 
 console.log("_______________________________");
@@ -151,6 +182,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let menores = 0
+// let maiores = 0
+
+// for (let i = 0; i < idades.length; i++) {
+//     if (idades[i] < 18) {
+//         menores++;
+//     } else {
+//         maiores++;
+//     }
+// }
+// console.log(`Tem ${menores} pessoas menores de idade`);
+// console.log(`Tem ${maiores} pessoas maiores de idade`);
 
 console.log("_______________________________");
 
@@ -168,6 +211,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+
+let soma = 0
+let media = (salarios[0] / salarios.length)
+
+for (let i = 0; i < salarios.length; i++) {
+    soma += salarios
+
+} console.log(`A media salarial é: ${media}`)
 
 console.log("_______________________________");
 
