@@ -211,14 +211,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-
 let soma = 0
-let media = (salarios[0] / salarios.length)
+let media = 0
 
 for (let i = 0; i < salarios.length; i++) {
-    soma += salarios
+    soma += salarios[i]
 
-} console.log(`A media salarial é: ${media}`)
+}
+media = (soma / salarios.length)
+
+console.log(`A média salárial é R$ ${media.toFixed(2)}`)
+
+for (let i = 0; i < salarios.length; i++) {
+
+    if (salarios[i] < media) {
+        console.log(`R$${salarios[i]} - Abaixo da média`)
+
+    } else if (salarios[i] > media) {
+        console.log(`R$${salarios[i]} - Acima da média`)
+    }
+}
 
 console.log("_______________________________");
 
