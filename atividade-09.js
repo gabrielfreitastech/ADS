@@ -133,7 +133,7 @@ console.log("_______________________________");
 // for (let i = 0; i < cidades.length; i++) {
 //     console.log(`[${i}] - ${cidades[i]}`)
 // }
-
+// console.log(`O total de cidades é ${cidades.length}`)
 console.log("_______________________________");
 
 
@@ -211,26 +211,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let soma = 0
-let media = 0
+// let soma = 0
+// let media = 0
 
-for (let i = 0; i < salarios.length; i++) {
-    soma += salarios[i]
+// for (let i = 0; i < salarios.length; i++) {
+//     soma += salarios[i]
 
-}
-media = (soma / salarios.length)
+// }
+// media = (soma / salarios.length)
 
-console.log(`A média salárial é R$ ${media.toFixed(2)}`)
+// console.log(`A média salárial é R$ ${media.toFixed(2)}`)
 
-for (let i = 0; i < salarios.length; i++) {
+// for (let i = 0; i < salarios.length; i++) {
 
-    if (salarios[i] < media) {
-        console.log(`R$${salarios[i]} - Abaixo da média`)
+//     if (salarios[i] < media) {
+//         console.log(`R$${salarios[i]} - Abaixo da média`)
 
-    } else if (salarios[i] > media) {
-        console.log(`R$${salarios[i]} - Acima da média`)
-    }
-}
+//     } else if (salarios[i] > media) {
+//         console.log(`R$${salarios[i]} - Acima da média`)
+//     }
+// }
 
 console.log("_______________________________");
 
@@ -253,6 +253,60 @@ console.log("_______________________________");
 // g) Exiba o array 'turma' com console.table().
 
 // → Seu código aqui:
+
+let aluno1 = {
+    nome: rl.question('Digite o nome do aluno 1: '),
+    notas: [
+        rl.questionFloat('Digite a nota 1 do aluno 1: '),
+        rl.questionFloat('Digite a nota 2 do aluno 1: '),
+        rl.questionFloat('Digite a nota 3 do aluno 1: ')
+    ]
+}
+
+let aluno2 = {
+    nome: rl.question('Digite o nome do aluno 2: '),
+    notas: [
+        rl.questionFloat('Digite a nota 1 do aluno 2: '),
+        rl.questionFloat('Digite a nota 2 do aluno 2: '),
+        rl.questionFloat('Digite a nota 3 do aluno 2: ')
+    ]
+}
+
+let aluno3 = {
+    nome: rl.question('Digite o nome do aluno 3: '),
+    notas: [
+        rl.questionFloat('Digite a nota 1 do aluno 3: '),
+        rl.questionFloat('Digite a nota 2 do aluno 3: '),
+        rl.questionFloat('Digite a nota 3 do aluno 3: ')
+    ]
+}
+
+let media = 0
+let soma = 0
+let turma = [aluno1, aluno2, aluno3]
+
+for (let i = 0; i < turma.length; i++) {
+
+    for (let j = 0; j < turma[i].notas.length; j++) {
+        soma += turma[i].notas[j];
+
+    }
+    media = soma / turma[i].notas.length;
+
+    soma = 0
+
+    if (media >= 7) {
+        console.log(`${turma[i].nome} | Nota: ${media.toFixed(2)} | Situação: APROVADO!`)
+
+    } else if (media >= 5 && media < 7) {
+        console.log(`${turma[i].nome} | Nota: ${media.toFixed(2)} | Situação: RECUPERAÇÃO!`)
+
+    } else if(media < 5) {
+        console.log(`${turma[i].nome} | Nota: ${media.toFixed(2)} | Situação: REPROVADO!`)
+    }
+
+}
+
 
 
 console.log("_______________________________");
