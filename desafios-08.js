@@ -233,75 +233,77 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-const valor = rl.questionFloat('Digite o valor para a ser convertido: ')
 
-console.log('========')
-console.log('1 - Km para Milhas')
-console.log('2 - Milhas para Km')
-console.log('3 - Celsius para Fahrenheit')
-console.log('4 - Fahrenheit para Celsius')
-console.log('5 - Kg para Libras')
-console.log('6 - Libras para Kg')
-console.log('========')
 
-const tipo = rl.questionInt('Digite o tipo de conversão: ')
-let convertido = {
-    tipo: '',
-    valorOriginal: '',
-    unidadeOriginal: '',
-    resultado: '',
-    unidadeResultado: ''
-}
+// console.log('========')
+// console.log('1 - Km para Milhas')
+// console.log('2 - Milhas para Km')
+// console.log('3 - Celsius para Fahrenheit')
+// console.log('4 - Fahrenheit para Celsius')
+// console.log('5 - Kg para Libras')
+// console.log('6 - Libras para Kg')
+// console.log('========')
 
-switch(tipo) {
-    case 1:
-        convertido.tipo = 'Km para Milhas'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = 'Km'
-        convertido.resultado = (valor * 0.621371).toFixed(2)
-        convertido.unidadeResultado = 'Milhas'
-        break
-    case 2:
-        convertido.tipo = 'Milhas para Km'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = 'Milhas'
-        convertido.resultado = (valor * 1.60934).toFixed(2)
-        convertido.unidadeResultado = 'Km'
-        break
-    case 3:
-        convertido.tipo = 'Celsius para Fahrenheit'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = '°C'
-        convertido.resultado = ((valor * 9/5) + 32).toFixed(2)
-        convertido.unidadeResultado = '°F'
-        break
-    case 4:
-        convertido.tipo = 'Fahrenheit para Celsius'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = '°F'
-        convertido.resultado = ((valor - 32) * 5/9).toFixed(2)
-        convertido.unidadeResultado = '°C'
-        break
-    case 5:
-        convertido.tipo = 'Kg para Libras'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = 'Kg'
-        convertido.resultado = (valor * 2.20462).toFixed(2)
-        convertido.unidadeResultado = 'Libras'
-        break
-    case 6:
-        convertido.tipo = 'Libras para Kg'
-        convertido.valorOriginal = valor
-        convertido.unidadeOriginal = 'Libras'
-        convertido.resultado = (valor / 2.20462).toFixed(2)
-        convertido.unidadeResultado = 'Kg'
-        break
-    default:
-        console.log('Tipo de conversão inválido.')
-}
+// const valor = rl.questionFloat('Digite o valor para a ser convertido: ')
 
-console.table(convertido)
-console.log(`${convertido.valorOriginal} ${convertido.unidadeOriginal} = ${convertido.resultado} ${convertido.unidadeResultado}`)
+// const tipo = rl.questionInt('Digite o tipo de conversao: ')
+// let convertido = {
+//     tipo: '',
+//     valorOriginal: '',
+//     unidadeOriginal: '',
+//     resultado: '',
+//     unidadeResultado: ''
+// }
+
+// switch(tipo) {
+//     case 1:
+//         convertido.tipo = 'Km para Milhas'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = 'Km'
+//         convertido.resultado = (valor * 0.621371).toFixed(2)
+//         convertido.unidadeResultado = 'Milhas'
+//         break
+//     case 2:
+//         convertido.tipo = 'Milhas para Km'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = 'Milhas'
+//         convertido.resultado = (valor * 1.60934).toFixed(2)
+//         convertido.unidadeResultado = 'Km'
+//         break
+//     case 3:
+//         convertido.tipo = 'Celsius para Fahrenheit'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = '°C'
+//         convertido.resultado = ((valor * 9/5) + 32).toFixed(2)
+//         convertido.unidadeResultado = '°F'
+//         break
+//     case 4:
+//         convertido.tipo = 'Fahrenheit para Celsius'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = '°F'
+//         convertido.resultado = ((valor - 32) * 5/9).toFixed(2)
+//         convertido.unidadeResultado = '°C'
+//         break
+//     case 5:
+//         convertido.tipo = 'Kg para Libras'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = 'Kg'
+//         convertido.resultado = (valor * 2.20462).toFixed(2)
+//         convertido.unidadeResultado = 'Libras'
+//         break
+//     case 6:
+//         convertido.tipo = 'Libras para Kg'
+//         convertido.valorOriginal = valor
+//         convertido.unidadeOriginal = 'Libras'
+//         convertido.resultado = (valor / 2.20462).toFixed(2)
+//         convertido.unidadeResultado = 'Kg'
+//         break
+//     default:
+//         console.log('Tipo de conversão inválido.')
+// }
+
+// console.table(convertido)
+// console.log(`${convertido.valorOriginal} ${convertido.unidadeOriginal} = ${convertido.resultado} ${convertido.unidadeResultado}`)
 
 console.log("_______________________________");
 
@@ -322,55 +324,55 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-const jogadas = ["pedra", "papel", "tesoura"]
-const computador = jogadas[Math.floor(Math.random() * 3)]
+// const jogadas = ["pedra", "papel", "tesoura"]
+// const computador = jogadas[Math.floor(Math.random() * 3)]
 
-console.log('========')
-console.log('1 - Pedra')
-console.log('2 - Papel')
-console.log('3 - Tesoura')
-console.log('========')
+// console.log('========')
+// console.log('1 - Pedra')
+// console.log('2 - Papel')
+// console.log('3 - Tesoura')
+// console.log('========')
 
-const jogadaUsuario = rl.questionInt('Digite sua jogada: ')
+// const jogadaUsuario = rl.questionInt('Digite sua jogada: ')
 
-let usuario = ''
+// let usuario = ''
 
-switch(jogadaUsuario) {
-    case 1:
-        usuario = 'pedra'
-        break
-    case 2:
-        usuario = 'papel'
-        break
-    case 3:
-        usuario = 'tesoura'
-        break
-    default:
-        console.log('Jogada inválida.')
-        process.exit(1)
-}
+// switch(jogadaUsuario) {
+//     case 1:
+//         usuario = 'pedra'
+//         break
+//     case 2:
+//         usuario = 'papel'
+//         break
+//     case 3:
+//         usuario = 'tesoura'
+//         break
+//     default:
+//         console.log('Jogada inválida.')
+//         process.exit(1)
+// }
 
-console.log(`Você: ${usuario} | Computador: ${computador}`)
+// console.log(`Você: ${usuario} | Computador: ${computador}`)
 
-let resultado = ''
+// let resultado = ''
 
-if (usuario === computador) {
-    resultado = 'Empate!'
-} else {
-    switch(usuario) {
-        case 'pedra':
-            resultado = computador === 'tesoura' ? 'Você venceu!' : 'Computador venceu!'
-            break
-        case 'papel':
-            resultado = computador === 'pedra' ? 'Você venceu!' : 'Computador venceu!'
-            break
-        case 'tesoura':
-            resultado = computador === 'papel' ? 'Você venceu!' : 'Computador venceu!'
-            break
-    }
-}
+// if (usuario === computador) {
+//     resultado = 'Empate!'
+// } else {
+//     switch(usuario) {
+//         case 'pedra':
+//             resultado = computador === 'tesoura' ? 'Você venceu!' : 'Computador venceu!'
+//             break
+//         case 'papel':
+//             resultado = computador === 'pedra' ? 'Você venceu!' : 'Computador venceu!'
+//             break
+//         case 'tesoura':
+//             resultado = computador === 'papel' ? 'Você venceu!' : 'Computador venceu!'
+//             break
+//     }
+// }
 
-console.log(resultado)
+// console.log(resultado)
 
 console.log("_______________________________");
 
@@ -404,79 +406,79 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-console.log('========')
-console.log('1 - Internet')
-console.log('2 - TV')
-console.log('3 - Telefone')
-console.log('4 - Falar com atendente')
-console.log('0 - Encerrar')
-console.log('========')
+// console.log('========')
+// console.log('1 - Internet')
+// console.log('2 - TV')
+// console.log('3 - Telefone')
+// console.log('4 - Falar com atendente')
+// console.log('0 - Encerrar')
+// console.log('========')
 
-const opcaoMenu = rl.questionInt('Escolha uma opção: ')
+// const opcaoMenu = rl.questionInt('Escolha uma opcao: ')
 
-switch(opcaoMenu) {
-    case 1:
-        console.log('========')
-        console.log('1 - Sem conexão')
-        console.log('2 - Conexão lenta')
-        console.log('3 - Wi-Fi não aparece')
-        console.log('========')
+// switch(opcaoMenu) {
+//     case 1:
+//         console.log('========')
+//         console.log('1 - Sem conexão')
+//         console.log('2 - Conexão lenta')
+//         console.log('3 - Wi-Fi não aparece')
+//         console.log('========')
         
-        const opcaoInternet = rl.questionInt('Escolha uma opção: ')
+//         const opcaoInternet = rl.questionInt('Escolha uma opcao: ')
         
-        switch(opcaoInternet) {
-            case 1:
-                console.log(`Problema identificado: Sem conexão. Solução: Verifique se o modem está ligado e se todos os cabos estão conectados corretamente.`)
-                break
-            case 2:
-                console.log(`Problema identificado: Conexão lenta. Solução: Tente reiniciar o modem e o roteador ou aproxime-se do roteador.`)
-                break
-            case 3:
-                console.log(`Problema identificado: Wi-Fi não aparece. Solução: Verifique se o roteador está ligado e tente resetar a rede Wi-Fi.`)
-                break
-            default:
-                console.log('Opção inválida.')
-        }
-        break
+//         switch(opcaoInternet) {
+//             case 1:
+//                 console.log(`Problema identificado: Sem conexão. Solução: Verifique se o modem está ligado e se todos os cabos estão conectados corretamente.`)
+//                 break
+//             case 2:
+//                 console.log(`Problema identificado: Conexão lenta. Solução: Tente reiniciar o modem e o roteador ou aproxime-se do roteador.`)
+//                 break
+//             case 3:
+//                 console.log(`Problema identificado: Wi-Fi não aparece. Solução: Verifique se o roteador está ligado e tente resetar a rede Wi-Fi.`)
+//                 break
+//             default:
+//                 console.log('Opção inválida.')
+//         }
+//         break
         
-    case 2:
-        console.log('========')
-        console.log('1 - Sem sinal')
-        console.log('2 - Imagem ruim')
-        console.log('3 - Canais sumidos')
-        console.log('========')
+//     case 2:
+//         console.log('========')
+//         console.log('1 - Sem sinal')
+//         console.log('2 - Imagem ruim')
+//         console.log('3 - Canais sumidos')
+//         console.log('========')
         
-        const opcaoTV = rl.questionInt('Escolha uma opção: ')
+//         const opcaoTV = rl.questionInt('Escolha uma opcao: ')
         
-        switch(opcaoTV) {
-            case 1:
-                console.log(`Problema identificado: Sem sinal. Solução: Verifique a conexão do cabo coaxial na TV e na parede.`)
-                break
-            case 2:
-                console.log(`Problema identificado: Imagem ruim. Solução: Tente ajustar a antena, limpar as conexões ou trocar o cabo HDMI.`)
-                break
-            case 3:
-                console.log(`Problema identificado: Canais sumidos. Solução: Acesse o menu de configuração da TV e faça uma nova sintonia de canais.`)
-                break
-            default:
-                console.log('Opção inválida.')
-        }
-        break
+//         switch(opcaoTV) {
+//             case 1:
+//                 console.log(`Problema identificado: Sem sinal. Solução: Verifique a conexão do cabo coaxial na TV e na parede.`)
+//                 break
+//             case 2:
+//                 console.log(`Problema identificado: Imagem ruim. Solução: Tente ajustar a antena, limpar as conexões ou trocar o cabo HDMI.`)
+//                 break
+//             case 3:
+//                 console.log(`Problema identificado: Canais sumidos. Solução: Acesse o menu de configuração da TV e faça uma nova sintonia de canais.`)
+//                 break
+//             default:
+//                 console.log('Opção inválida.')
+//         }
+//         break
         
-    case 3:
-        console.log('Por favor, aguarde na linha.')
-        break
+//     case 3:
+//         console.log('Por favor, aguarde na linha.')
+//         break
         
-    case 4:
-        console.log('Por favor, aguarde na linha.')
-        break
+//     case 4:
+//         console.log('Por favor, aguarde na linha.')
+//         break
         
-    case 0:
-        console.log('Atendimento encerrado.')
-        break
+//     case 0:
+//         console.log('Atendimento encerrado.')
+//         break
         
-    default:
-        console.log('Opção inválida.')
-}
+//     default:
+//         console.log('Opção inválida.')
+// }
 
 console.log("_______________________________");
