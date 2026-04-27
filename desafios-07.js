@@ -1,4 +1,4 @@
-let pegarInfo = require('readline-sync')
+let rl = require('readline-sync')
 
 // ============================================================
 //   DESAFIOS (para quem já terminou a atividade 07) – If / Else
@@ -91,60 +91,61 @@ console.log("_______________________________");
 // Verifique se é possível fazer verificações uma única vez, alterando a lógica ao invés de duplicar código.
 
 // → Seu código aqui:
-let conta = {
-    titular: 'Maria',
-    saldo: 1500,
-    bloqueada: false,
-    senha: 1234
-}
-console.log('===== CAIXA ELETRONICO =====')
-console.log('1 - Sacar')
-console.log('2 - Depositar')
+
+// let conta = {
+//     titular: 'Maria',
+//     saldo: 1500,
+//     bloqueada: false,
+//     senha: 1234
+// }
+// console.log('===== CAIXA ELETRONICO =====')
+// console.log('1 - Sacar')
+// console.log('2 - Depositar')
 
 
-let senha = pegarInfo.questionInt('Digite a senha de 4 digitos: ')
-let saqueDeposito = 0
-let saque = 0
-let deposito = 0
+// let senha = pegarInfo.questionInt('Digite a senha de 4 digitos: ')
+// let saqueDeposito = 0
+// let saque = 0
+// let deposito = 0
 
-if (senha !== conta.senha) {
-    console.log('Senha incorreta, operacao cancelada.')
+// if (senha !== conta.senha) {
+//     console.log('Senha incorreta, operacao cancelada.')
 
-} else if (conta.bloqueada) {
-    console.log('Conta bloqueada, procure uma agencia.')
+// } else if (conta.bloqueada) {
+//     console.log('Conta bloqueada, procure uma agencia.')
 
-} else {
-     saqueDeposito = pegarInfo.questionInt('Qual operacao deseja realizar, Sacar ou Depositar? 1 p/saque 2p/deposito: ')
+// } else {
+//      saqueDeposito = pegarInfo.questionInt('Qual operacao deseja realizar, Sacar ou Depositar? 1 p/saque 2p/deposito: ')
 
-        if (saqueDeposito !== 1 && saqueDeposito !== 2) {
-            console.log('Operacao invalida')
+//         if (saqueDeposito !== 1 && saqueDeposito !== 2) {
+//             console.log('Operacao invalida')
 
-        } else if (saqueDeposito === 1) {
-            saque = pegarInfo.questionInt('Digite o valor para sacar: ')
+//         } else if (saqueDeposito === 1) {
+//             saque = pegarInfo.questionInt('Digite o valor para sacar: ')
 
-         if (saque <= 0) {
-            console.log('Valor invalido!')
+//          if (saque <= 0) {
+//             console.log('Valor invalido!')
 
-        } else if (saque > conta.saldo){
-            console.log(`Saldo insuficiente, saldo atual: ${conta.saldo}`)
+//         } else if (saque > conta.saldo){
+//             console.log(`Saldo insuficiente, saldo atual: ${conta.saldo}`)
 
-        } else {
-            conta.saldo -= saque
-            console.log(`Saque efetuado, saldo atual: ${conta.saldo}`)
-        }
+//         } else {
+//             conta.saldo -= saque
+//             console.log(`Saque efetuado, saldo atual: ${conta.saldo}`)
+//         }
 
-        } if (saqueDeposito === 2) {
-            deposito = pegarInfo.questionInt('Digite o valor para depositar: ')
+//         } if (saqueDeposito === 2) {
+//             deposito = pegarInfo.questionInt('Digite o valor para depositar: ')
 
-         if (deposito <= 0) {
-            console.log('Valor invalido')
+//          if (deposito <= 0) {
+//             console.log('Valor invalido')
 
-        } else {
-            conta.saldo += deposito
-            console.log(`Deposito realizado, saldo atual: ${conta.saldo}`)
-        }
-}
-}
+//         } else {
+//             conta.saldo += deposito
+//             console.log(`Deposito realizado, saldo atual: ${conta.saldo}`)
+//         }
+// }
+// }
 
 
 
@@ -179,6 +180,30 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// console.log(`
+// Classificação indicativa:
+// - Livre          → todas as idades
+// - 10 anos        → 10 anos ou mais
+// - 12 anos        → 12 anos ou mais
+// - 14 anos        → 14 anos ou mais
+// - 16 anos        → 16 anos ou mais
+// - 18 anos        → 18 anos ou mais
+// `);
+
+// const cinema = {
+//     nomeEspectador: rl.question('Digite seu nome: '),
+//     idadeEspectador: rl.questionInt('Digite sua idade: '),
+//     classificacaoFilme: rl.questionInt('Digite a classificacao do filme: ')
+// }
+
+// if (cinema.classificacaoFilme === 0 || cinema.idadeEspectador >= cinema.classificacaoFilme) {
+//     console.log(`${cinema.nomeEspectador} pode assistir. Boa sessão!`)
+
+// } else {
+//     console.log(`${cinema.nomeEspectador} não pode assistir. Classificação: ${cinema.classificacaoFilme} anos.`)
+// }
+
+
 
 console.log("_______________________________");
 
@@ -210,6 +235,51 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+console.log(`
+     Cardápio:
+   1 - X-Burguer R$ 22,00
+   2 - X-Frango  R$ 20,00
+   3 - X-Veggie  R$ 18,00
+   4 - Combo (lanche + batata + refri)  R$ 35,00
+`)
+
+let lanche = ''
+let batata = ''
+let refrigerante; ''
+let valorTotal = 0
+let soma = 0
+let valor = 0
+
+let pedido = {
+    nome: rl.question('Digite o seu nome: '),
+    lanche: rl.questionInt('Digite o numero do lanche: ')
+}
+
+switch(pedido.lanche) {
+    case 1:
+        pedido.lanche = 'X-Burguer'
+        pedido.valor = 'R$ 22,00'
+
+        console.log(`
+           1 - Batata frita: + R$ 8,00
+           2 - Refrigerante: + R$ 5,00
+           3 - Batata e Refrigerante + R$ 12,00`)
+
+        adicionais = rl.keyInYN(`Quer adicionais? `)
+        if (adicionais === false) {
+            console.table(pedido)
+
+        } else {
+            add = rl.questionInt('Selecione o adicional: ')
+        } switch(add) {
+            case 1: 
+            pedido.batata = ''
+            valorBatata = 8
+            valorTotal = (valor + valorBatata)
+            console.table(pedido)
+
+        }
+}
 
 console.log("_______________________________");
 

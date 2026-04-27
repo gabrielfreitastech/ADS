@@ -327,38 +327,38 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let produtos = rl.questionInt('Quantos produtos deseja cadastrar? ');
-let estoque = [];
+// let produtos = rl.questionInt('Quantos produtos deseja cadastrar? ');
+// let estoque = [];
 
-for (let i = 0; i < produtos; i++) {
-    estoque.push({
-        nome: rl.question('Digite o nome do produto: '),
-        preco: rl.questionFloat('Digite o preco: ')
-    });
-}
+// for (let i = 0; i < produtos; i++) {
+//     estoque.push({
+//         nome: rl.question('Digite o nome do produto: '),
+//         preco: rl.questionFloat('Digite o preco: ')
+//     });
+// }
 
 
-for (let i = 0; i < estoque.length; i++) {
-    console.log(`${estoque[i].nome}: R$ ${estoque[i].preco.toFixed(2)}`);
-}
+// for (let i = 0; i < estoque.length; i++) {
+//     console.log(`${estoque[i].nome}: R$ ${estoque[i].preco.toFixed(2)}`);
+// }
 
-let maisCaro = estoque[0];
-let maisBarato = estoque[0];
+// let maisCaro = estoque[0];
+// let maisBarato = estoque[0];
 
-for (let i = 1; i < estoque.length; i++) {
-    if (estoque[i].preco > maisCaro.preco) {
-        maisCaro = estoque[i];
-    }
-    if (estoque[i].preco < maisBarato.preco) {
-        maisBarato = estoque[i];
-    }
-}
+// for (let i = 1; i < estoque.length; i++) {
+//     if (estoque[i].preco > maisCaro.preco) {
+//         maisCaro = estoque[i];
+//     }
+//     if (estoque[i].preco < maisBarato.preco) {
+//         maisBarato = estoque[i];
+//     }
+// }
 
-console.log(`Produto mais caro: ${maisCaro.nome} - R$ ${maisCaro.preco.toFixed(2)}`);
-console.log(`Produto mais barato: ${maisBarato.nome} - R$ ${maisBarato.preco.toFixed(2)}`);
+// console.log(`Produto mais caro: ${maisCaro.nome} - R$ ${maisCaro.preco.toFixed(2)}`);
+// console.log(`Produto mais barato: ${maisBarato.nome} - R$ ${maisBarato.preco.toFixed(2)}`);
 
-console.log('Resumo do estoque:');
-console.table(estoque);
+// console.log('Resumo do estoque:');
+// console.table(estoque);
 
 
 
