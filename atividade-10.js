@@ -14,7 +14,12 @@ const rl = require('readline-sync');
 
 // → Seu código aqui:
 
+// let n = 1
 
+// while(n <= 7) {
+//     console.log(`Contagem: ${n}`)
+//     n++
+// } console.log("Fim da contagem!")
 
 console.log("_______________________________");
 
@@ -28,6 +33,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let regressiva = 10
+
+// while(regressiva >=0) {
+//     console.log(`Contagem regressiva: ${regressiva}`)
+//     regressiva--
+// } console.log("Lançamento ON!")
 
 console.log("_______________________________");
 
@@ -40,6 +51,7 @@ console.log("_______________________________");
 // b) Quando o valor for válido, exiba: "Você escolheu: <número>"
 
 // → Seu código aqui:
+
 
 
 console.log("_______________________________");
