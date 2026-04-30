@@ -52,7 +52,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let numero = rl.question('Digite um numero de 1 a 5: ')
 
+// while(numero <1 || numero >5) {
+//     console.log("Valor fora do intervalo. Tente novamente.")
+//     numero = rl.question('Digite um numero de 1 a 5: ')
+// } console.log(`Você escolheu: ${numero}`)
 
 console.log("_______________________________");
 
@@ -67,6 +72,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let digitado = rl.questionInt('Digite um numero: ')
+// let vezes = 0
+// let soma = 0
+
+// while(digitado !== 0) {
+//     soma += digitado
+//     vezes++
+    
+//     digitado = rl.questionInt('Digite um numero: ')
+// } 
+
+// console.log(`${soma}`)
+// console.log(`${--vezes}`)
 
 console.log("_______________________________");
 
@@ -80,6 +98,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let notas = rl.questionInt('Digite as notas: ')
+let quantidade = 0
+let total = 0
+
+while(notas !==1) {
+    if(notas < 0 && notas > 10) {
+        console.log('Notas inválidas!')
+
+} else {
+    soma += notas
+    quantidade++
+}
+    notas = rl.questionInt('Digite as notas: ')
+
+} if(quantidade > 0) {
+    total / quantidade
+} console.log(`Medias das notas: ${media}`)
+
+
+
+console.log(`Total das notas: ${notas} e média das notas: ${media}`)
 
 console.log("_______________________________");
 
