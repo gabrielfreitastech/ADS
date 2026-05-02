@@ -98,35 +98,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let notas = 0
-let soma = 0
-let media = 0
-let quantidade = 0
+// let notas = 0
+// let soma = 0
+// let media = 0
+// let quantidade = 0
 
-while(notas !== -1) {
-    let entradaValida = false
+// while(notas !== -1) {
+//     let entradaValida = false
     
-    while(!entradaValida) {
-        notas = rl.questionFloat('Digite notas de 0 a 10 e -1 para parar: ')
+//     while(!entradaValida) {
+//         notas = rl.questionFloat('Digite notas de 0 a 10 e -1 para parar: ')
         
-        if((notas < 0 && notas !== -1) || notas > 10) {
-            console.log('Nota inválida.')
-        } else {
-            entradaValida = true
-        }
-    }
+//         if((notas < 0 && notas !== -1) || notas > 10) {
+//             console.log('Nota inválida.')
+//         } else {
+//             entradaValida = true
+//         }
+//     }
     
-    if(notas !== -1) {
-        soma += notas
-        quantidade++
-        console.log(`Total das notas: ${soma}`)
-    }
-}
+//     if(notas !== -1) {
+//         soma += notas
+//         quantidade++
+//         console.log(`Total das notas: ${soma}`)
+//     }
+// }
 
-if(quantidade > 0) {
-    media = (soma / quantidade)
-    console.log(`Total das notas é: ${soma} e sua média foi de: ${media.toFixed(2)}`)
-}
+// if(quantidade > 0) {
+//     media = (soma / quantidade)
+//     console.log(`Total das notas é: ${soma} e sua média foi de: ${media.toFixed(2)}`)
+// }
 
 console.log("_______________________________");
 
@@ -142,6 +142,32 @@ console.log("_______________________________");
 // c) O menu deve repetir até o usuário escolher 0.
 
 // → Seu código aqui:
+
+let menu
+
+do {
+    console.log(`        1 - EXIBIR HORA ATUAL
+        2 - EXIBIR DATA ATUAL
+        0 - SAIR
+        `)
+        menu = rl.questionInt("Digite um numero do Menu: ")
+
+        switch(menu) {
+            case 1:
+                console.log(new Date().toLocaleTimeString())
+                break
+            case 2:
+                console.log(new Date().toLocaleDateString())
+                break
+            case 0:
+                console.log('Saindo...')
+                break
+            default:
+                console.log('OPÇÃO INVÁLIDA, DIGITE NOVAMENTE!')
+                break
+        }
+
+} while(menu !== 0)
 
 
 console.log("_______________________________");
