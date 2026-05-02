@@ -98,27 +98,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let notas = rl.questionInt('Digite as notas: ')
+let notas = 0
+let soma = 0
+let media = 0
 let quantidade = 0
-let total = 0
 
-while(notas !==1) {
-    if(notas < 0 && notas > 10) {
-        console.log('Notas inválidas!')
-
-} else {
-    soma += notas
-    quantidade++
+while(notas !== -1) {
+    let entradaValida = false
+    
+    while(!entradaValida) {
+        notas = rl.questionFloat('Digite notas de 0 a 10 e -1 para parar: ')
+        
+        if((notas < 0 && notas !== -1) || notas > 10) {
+            console.log('Nota inválida.')
+        } else {
+            entradaValida = true
+        }
+    }
+    
+    if(notas !== -1) {
+        soma += notas
+        quantidade++
+        console.log(`Total das notas: ${soma}`)
+    }
 }
-    notas = rl.questionInt('Digite as notas: ')
 
-} if(quantidade > 0) {
-    total / quantidade
-} console.log(`Medias das notas: ${media}`)
-
-
-
-console.log(`Total das notas: ${notas} e média das notas: ${media}`)
+if(quantidade > 0) {
+    media = (soma / quantidade)
+    console.log(`Total das notas é: ${soma} e sua média foi de: ${media.toFixed(2)}`)
+}
 
 console.log("_______________________________");
 
