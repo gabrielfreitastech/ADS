@@ -143,31 +143,31 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let menu
+// let menu
 
-do {
-    console.log(`        1 - EXIBIR HORA ATUAL
-        2 - EXIBIR DATA ATUAL
-        0 - SAIR
-        `)
-        menu = rl.questionInt("Digite um numero do Menu: ")
+// do {
+//     console.log(`        1 - EXIBIR HORA ATUAL
+//         2 - EXIBIR DATA ATUAL
+//         0 - SAIR
+//         `)
+//         menu = rl.questionInt("Digite um numero do Menu: ")
 
-        switch(menu) {
-            case 1:
-                console.log(new Date().toLocaleTimeString())
-                break
-            case 2:
-                console.log(new Date().toLocaleDateString())
-                break
-            case 0:
-                console.log('Saindo...')
-                break
-            default:
-                console.log('OPÇÃO INVÁLIDA, DIGITE NOVAMENTE!')
-                break
-        }
+//         switch(menu) {
+//             case 1:
+//                 console.log(new Date().toLocaleTimeString())
+//                 break
+//             case 2:
+//                 console.log(new Date().toLocaleDateString())
+//                 break
+//             case 0:
+//                 console.log('Saindo...')
+//                 break
+//             default:
+//                 console.log('OPÇÃO INVÁLIDA, DIGITE NOVAMENTE!')
+//                 break
+//         }
 
-} while(menu !== 0)
+// } while(menu !== 0)
 
 
 console.log("_______________________________");
@@ -188,6 +188,49 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// min = Math.ceil(1);
+// max = Math.floor(50);
+
+// let aleatorio = Math.floor(Math.random() * (max - min) + min);
+// let nome = rl.question('Qual o seu nome? ')
+// let chute = 0
+// let tentativas = 0
+
+// while(chute !== aleatorio) {
+//     chute = rl.questionInt('Chute um numero de 1 a 50: ')
+//     if(chute < 1 || chute > 50) {
+//         console.log('Número inválido!')
+
+//         } else {
+
+//         if(chute > aleatorio) {
+//             console.log('DICA, É MAIS BAIXO!')
+//             tentativas++
+
+//         } else if(chute < aleatorio) {
+//             console.log('DICA, É MAIS ALTO!')
+//             tentativas++
+
+//         } else {
+//             tentativas++
+//             if(tentativas > 0 && tentativas <= 3) {
+//                 console.log(`${nome} Tá usando que tipo de bruxaria?? Pra acertar em ${tentativas} vezes sendo que o número era ${aleatorio}`)
+
+//             } else if(tentativas > 3 && tentativas <= 5) {
+//                 console.log(`${nome} Acertou em ${tentativas} vezes? Tá suspeito isso, certeza que é IAkkkkkk acertou o ${aleatorio}`)
+
+//             } else if(tentativas > 5 && tentativas <= 7) {
+//                 console.log(`${nome} Tu foi bem, usando lógica matemática qualquer um consegue acertar em ${tentativas} vezes e o número era ${aleatorio}`)
+
+//             } else if(tentativas > 7 && tentativas <= 10) {
+//                 console.log(`${nome} Você tentou mesmo ou só chutou qualquer coisa? Acertou em ${tentativas} vezes o ${aleatorio}`)
+
+//             } else if(tentativas > 10) {
+//                 console.log(`O cara se esforça pra ser burro tambémkkkkkkk, ${nome} precisou de ${tentativas} tentativas pra acertar o ${aleatorio}`)
+//             }
+//         }
+//     }
+// }
 
 console.log("_______________________________");
 
