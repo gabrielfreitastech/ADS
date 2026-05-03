@@ -244,6 +244,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let numero = rl.questionInt('Escolha um numero para tabuada de 1 a 10: ')
+// let x = 0
+// let resultado = 0
+
+// while(x < 10) {
+//     if(numero <= 0 || numero > 10) {
+//         numero = rl.questionInt('DE 1 A 10: ')
+
+//         } else {
+//         x++
+//         resultado = (x * numero)
+//         console.log(`${numero} x ${x} = ${resultado}`)
+//         }
+// }
 
 console.log("_______________________________");
 
@@ -261,6 +275,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let saldo = 1000
+// let rodada = 0
+
+// while(saldo > 0 && rodada < 10) {
+//     let saque = Math.floor(Math.random() * (200 - 50 + 1)) + 50
+//     if(saque > saldo) {
+//         console.log("Saldo insuficiente. Fim!")
+//         break
+//     } else {
+//         saldo -= saque
+//         rodada++
+//         console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`)
+//     }
+// }
+
+// console.log(`Saldo restante: R$ ${saldo} | Total de rodadas: ${rodada}`)
 
 console.log("_______________________________");
 
@@ -279,5 +309,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let contatos = []
+// let cadastro = true
+
+// do {
+//     let contato = {
+//         nome: rl.question('Qual o nome do seu contato? '),
+//         telefone: rl.questionInt('Qual o numero do seu contato? ')
+//     }
+//     contatos.push(contato)
+
+//     cadastro = rl.keyInYN('Deseja cadastrar outro contato? ')
+
+// } while(cadastro)
+
+// console.table(contatos)
+// console.log(`Total de contatos cadastrados: ${contatos.length}`)
 
 console.log("_______________________________");
