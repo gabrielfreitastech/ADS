@@ -235,51 +235,51 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-console.log(`
-     Cardápio:
-   1 - X-Burguer R$ 22,00
-   2 - X-Frango  R$ 20,00
-   3 - X-Veggie  R$ 18,00
-   4 - Combo (lanche + batata + refri)  R$ 35,00
-`)
+// console.log(`
+//      Cardápio:
+//    1 - X-Burguer R$ 22,00
+//    2 - X-Frango  R$ 20,00
+//    3 - X-Veggie  R$ 18,00
+//    4 - Combo (lanche + batata + refri)  R$ 35,00
+// `)
 
-let lanche = ''
-let batata = ''
-let refrigerante; ''
-let valorTotal = 0
-let soma = 0
-let valor = 0
+// let lanche = ''
+// let batata = ''
+// let refrigerante; ''
+// let valorTotal = 0
+// let soma = 0
+// let valor = 0
 
-let pedido = {
-    nome: rl.question('Digite o seu nome: '),
-    lanche: rl.questionInt('Digite o numero do lanche: ')
-}
+// let pedido = {
+//     nome: rl.question('Digite o seu nome: '),
+//     lanche: rl.questionInt('Digite o numero do lanche: ')
+// }
 
-switch(pedido.lanche) {
-    case 1:
-        pedido.lanche = 'X-Burguer'
-        pedido.valor = 'R$ 22,00'
+// switch(pedido.lanche) {
+//     case 1:
+//         pedido.lanche = 'X-Burguer'
+//         pedido.valor = 'R$ 22,00'
 
-        console.log(`
-           1 - Batata frita: + R$ 8,00
-           2 - Refrigerante: + R$ 5,00
-           3 - Batata e Refrigerante + R$ 12,00`)
+//         console.log(`
+//            1 - Batata frita: + R$ 8,00
+//            2 - Refrigerante: + R$ 5,00
+//            3 - Batata e Refrigerante + R$ 12,00`)
 
-        adicionais = rl.keyInYN(`Quer adicionais? `)
-        if (adicionais === false) {
-            console.table(pedido)
+//         adicionais = rl.keyInYN(`Quer adicionais? `)
+//         if (adicionais === false) {
+//             console.table(pedido)
 
-        } else {
-            add = rl.questionInt('Selecione o adicional: ')
-        } switch(add) {
-            case 1: 
-            pedido.batata = ''
-            valorBatata = 8
-            valorTotal = (valor + valorBatata)
-            console.table(pedido)
+//         } else {
+//             add = rl.questionInt('Selecione o adicional: ')
+//         } switch(add) {
+//             case 1: 
+//             pedido.batata = ''
+//             valorBatata = 8
+//             valorTotal = (valor + valorBatata)
+//             console.table(pedido)
 
-        }
-}
+//         }
+// }
 
 console.log("_______________________________");
 
@@ -306,5 +306,87 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+console.log(`
+╔════════════════════════════════════════════════════════════╗
+║         🚦 SIMULADOR DE SEMÁFORO INTELIGENTE 🚦          ║
+╚════════════════════════════════════════════════════════════╝
+
+Um semáforo funciona assim:
+  🟢 Verde  → siga (velocidade permitida: até 60 km/h)
+  🟡 Amarelo → atenção (reduza a velocidade)
+  🔴 Vermelho → pare
+`)
+
+let continuar = true
+let tentativas = 0
+
+while (continuar) {
+    console.log('\n--- Simulação ' + (tentativas + 1) + ' ---')
+    
+    // Validar entrada de cor do semáforo
+    let corSemaforo = ''
+    let corValida = false
+    
+    do {
+        corSemaforo = rl.question('Qual a cor do semáforo? (verde/amarelo/vermelho): ').toLowerCase().trim()
+        
+        if (corSemaforo === 'verde' || corSemaforo === 'amarelo' || corSemaforo === 'vermelho') {
+            corValida = true
+        } else {
+            console.log('❌ Cor inválida! Por favor, digite: verde, amarelo ou vermelho.')
+        }
+    } while (!corValida)
+    
+    // Validar entrada de velocidade
+    let velocidade = -1
+    
+    do {
+        velocidade = rl.questionInt('Qual a velocidade do veículo? (km/h): ')
+        
+        if (velocidade < 0) {
+            console.log('❌ Velocidade inválida! A velocidade não pode ser negativa.')
+        }
+    } while (velocidade < 0)
+    
+    // Processar situação do semáforo
+    let mensagem = ''
+    
+    if (corSemaforo === 'verde' && velocidade <= 60) {
+        mensagem = '✅ Tudo certo. Pode seguir.'
+        
+    } else if (corSemaforo === 'verde' && velocidade > 60) {
+        mensagem = '⚠️  Atenção: acima do limite no sinal verde.'
+        
+    } else if (corSemaforo === 'amarelo') {
+        mensagem = '🟡 Reduza a velocidade e prepare-se para parar.'
+        
+    } else if (corSemaforo === 'vermelho' && velocidade > 0) {
+        mensagem = '🚫 PARE! Você avançou o sinal vermelho.'
+        
+    } else if (corSemaforo === 'vermelho' && velocidade === 0) {
+        mensagem = '✅ Correto. Aguarde o sinal abrir.'
+    }
+    
+    // Exibir resultado com template literal
+    console.log(`
+┌──────────────────────────────────────────┐
+│ SITUAÇÃO DO RADAR                        │
+├──────────────────────────────────────────┤
+│ Semáforo: ${corSemaforo.toUpperCase().padEnd(13)} (${corSemaforo.charAt(0).toUpperCase() + corSemaforo.slice(1)})
+│ Velocidade: ${velocidade} km/h
+│ Status: ${mensagem}
+└──────────────────────────────────────────┘
+    `)
+    
+    // Perguntar se deseja continuar simulando
+    let opcao = rl.keyInYN('\n🔄 Deseja simular outro veiculo? (S/N): ')
+    
+    if (!opcao) {
+        continuar = false
+        console.log('\n✅ Obrigado por usar o simulador de semáforo inteligente!')
+    }
+    
+    tentativas++
+}
 
 console.log("_______________________________");
