@@ -1,4 +1,4 @@
-let pegarInfo = require('readline-sync');
+let rl = require('readline-sync');
 // ============================================================
 //   DESAFIOS (para quem já terminou a atividade 03) – Input e Output em JavaScript
 // ============================================================
@@ -25,20 +25,20 @@ let pegarInfo = require('readline-sync');
 //    "Nome: <nome>. Idade: <idade> anos. Profissão: <profissão> em <cidade>. Gosta de JS: <sim/não> ...."
 
 // → Seu código aqui:
-let cadastro = {
-    nome: pegarInfo.question('Qual o seu nome? '),
-    idade: pegarInfo.questionInt('Qual a sua idade? '),
-    profissao: pegarInfo.question('Qual a sua profissao? '),
-    cidade: pegarInfo.question('Qual a sua cidade? '),
-    gostaJS: pegarInfo.keyInYN('Você gosta de JavaScript? y/n '),
-    comidasFavoritas: pegarInfo.question('Quais as suas comidas favoritas?(separe por virgulas) '),
-    pessoasComQuemMora: {
-        pessoa1: pegarInfo.question('Digite o nome de uma pessoa com quem com voce mora: '),
-        idadePessoa1: pegarInfo.questionInt('Digite a idade dessa pessoa' )
-    }
+// let cadastro = {
+//     nome: rl.question('Qual o seu nome? '),
+//     idade: rl.questionInt('Qual a sua idade? '),
+//     profissao: rl.question('Qual a sua profissao? '),
+//     cidade: rl.question('Qual a sua cidade? '),
+//     gostaJS: rl.keyInYN('Você gosta de JavaScript? y/n '),
+//     comidasFavoritas: rl.question('Quais as suas comidas favoritas?(separe por virgulas) '),
+//     pessoasComQuemMora: {
+//         pessoa1: rl.question('Digite o nome de uma pessoa com quem com voce mora: '),
+//         idadePessoa1: rl.questionInt('Digite a idade dessa pessoa' )
+//     }
     
-}
-console.log(cadastro);
+// }
+// console.log(cadastro);
 console.log("_______________________________");
 
 
@@ -54,6 +54,22 @@ console.log("_______________________________");
 // g) Exiba somente o nome e a rua do 1º usuário.
 
 // → Seu código aqui:
+
+// let pessoa1 = {
+//     nome: rl.question('Qual o nome do primeiro amigo? '),
+//     idade: rl.questionInt('Qual a idade do primeiro amigo? '),
+//     cidade: rl.question('Qual a cidade do primeiro amigo? ')
+// }
+
+// let pessoa2 = {
+//     nome: rl.question('Qual o nome do segundo amigo? '),
+//     idade: rl.questionInt('Qual a idade do segundo amigo? '),
+//     cidade: rl.question('Qual a cidade do segundo amigo? ')
+// }
+// let amigos = [pessoa1, pessoa2];
+// console.table(amigos);
+// console.log(`O nome do segundo amigo é ${amigos[1].nome} e ele tem ${amigos[1].idade} anos.`);
+// console.log(`O nome do primeiro amigo é ${amigos[0].nome} e ele mora na cidade de ${amigos[0].cidade}.`);
 
 
 console.log("_______________________________");
@@ -76,6 +92,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// console.info('Vamos montar o seu pedido!');
+// console.log('Menu:');
+// console.log('Entrada: Salada, Sopa, Bruschetta');
+// console.log('Prato Principal: Lasanha, Risoto, Strogonoff');
+// console.log('Sobremesa: Sorvete, Pudim, Mousse');
+// console.log('Bebidas: Refrigerante, Suco, Água');
+// let pedido = {
+//     entrada: rl.question('Escolha uma entrada: '),
+//     pratoPrincipal: rl.question('Escolha um prato principal: '),
+//     sobremesa: rl.question('Escolha uma sobremesa: '),
+//     listaBebidas: [rl.question('Escolha a primeira bebida: '), rl.question('Escolha a segunda bebida: ')]
+// }
+// console.table(pedido);
+// console.log(`Seu pedido: Entrada: ${pedido.entrada}, Prato Principal: ${pedido.pratoPrincipal}, Sobremesa: ${pedido.sobremesa}, Bebida 1: ${pedido.listaBebidas[0]}, Bebida 2: ${pedido.listaBebidas[1]}. Bom apetite!`);
+
 
 console.log("_______________________________");
 
@@ -91,6 +122,15 @@ console.log("_______________________________");
 // e) Use console.warn() para exibir: "Lembre-se que jogar não é problema, o problema é colocar o jogo como prioridade."
 
 // → Seu código aqui:
+
+// let perfil = {
+//     apelido: rl.question('Qual o seu apelido? '),
+//     jogoFavorito: rl.question('Qual o seu jogo favorito? '),
+//     horasTotaisJogadas: rl.questionInt('Quantas horas totais você já jogou? '),
+//     jogaEmTime: rl.keyInYN('Você joga em time? y/n ')
+// }
+// console.table(perfil);
+// console.warn('Lembre-se que jogar não é problema, o problema é colocar o jogo como prioridade.');
 
 
 console.log("_______________________________");
@@ -110,6 +150,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let pessoa1 = {
+//     nome: rl.question('Qual o nome do primeiro viajante? '),
+//     cidadeFavorita: rl.question('Qual a cidade favorita do primeiro viajante? ')
+// }
+
+// let pessoa2 = {
+//     nome: rl.question('Qual o nome do segundo viajante? '),
+//     cidadeFavorita: rl.question('Qual a cidade favorita do segundo viajante? ')
+// }
+
+// let pessoa3 = {
+//     nome: rl.question('Qual o nome do terceiro viajante? '),
+//     cidadeFavorita: rl.question('Qual a cidade favorita do terceiro viajante? ')
+// }
+
+// let viajantes = [pessoa1, pessoa2, pessoa3];
+// console.table(pessoa1);
+// console.table(viajantes);
+// console.info(`Há ${viajantes.length} viajantes na lista.`);
+// console.log(`A cidade favorita do segundo viajante é ${viajantes[1].cidadeFavorita}.`);
+// console.log(`O nome do primeiro viajante é ${viajantes[0].nome}.`);
 
 console.log("_______________________________");
 
@@ -153,5 +214,57 @@ console.log("_______________________________");
 //
 // → Seu código aqui:
 
+// let restaurante = {
+//     nome: rl.question('Qual o nome do restaurante? '),
+//     tipoCozinha: rl.question('Qual o tipo de cozinha? '),
+//     nota: rl.questionFloat('Qual a nota do restaurante? '),
+//     aberto: rl.keyInYN('O restaurante está aberto? y/n '),
+//     endereco: {
+//         rua: rl.question('Qual a rua do restaurante? '),
+//         numero: rl.questionInt('Qual o número do restaurante? '),
+//         bairro: rl.question('Qual o bairro do restaurante? '),
+//         cidade: rl.question('Qual a cidade do restaurante? ')
+//     },
+//     cardapio: [
+//         {
+//             nomePrato: rl.question('Digite o nome do primeiro prato: '),
+//             preco: rl.questionFloat('Digite o preço do primeiro prato: '),
+//             vegano: rl.keyInYN('O primeiro prato é vegano? y/n ')
+//         },
+//         {
+//             nomePrato: rl.question('Digite o nome do segundo prato: '), 
+//             preco: rl.questionFloat('Digite o preço do segundo prato: '),
+//             vegano: rl.keyInYN('O segundo prato é vegano? y/n ')
+//         },
+//         {
+//             nomePrato: rl.question('Digite o nome do terceiro prato: '), 
+//             preco: rl.questionFloat('Digite o preço do terceiro prato: '),
+//             vegano: rl.keyInYN('O terceiro prato é vegano? y/n ')
+//         },
+//         {
+//             nomePrato: rl.question('Digite o nome do quarto prato: '), 
+//             preco: rl.questionFloat('Digite o preço do quarto prato: '),
+//             vegano: rl.keyInYN('O quarto prato é vegano? y/n ')
+//         }
+//     ]
+// }
+// console.table(restaurante);
+// console.log(`O restaurante ${restaurante.nome} tem nota ${restaurante.nota}.`);
+// console.log(`O restaurante ${restaurante.nome} está localizado na ${restaurante.endereco.rua}, ${restaurante.endereco.numero}, ${restaurante.endereco.bairro}, ${restaurante.endereco.cidade}.`);
+// console.log(`O nome do primeiro prato é ${restaurante.cardapio[0].nomePrato} e ele custa R$${restaurante.cardapio[0].preco}.`);
+// console.log(`O prato ${restaurante.cardapio[2].nomePrato} é vegano: ${restaurante.cardapio[2].vegano}.`);
+// restaurante.cardapio[1].preco = rl.questionFloat('Digite o novo preço do segundo prato: ');
+// restaurante.cardapio.push({
+//     nomePrato: rl.question('Digite o nome do novo prato: '),
+//     preco: rl.questionFloat('Digite o preço do novo prato: '),
+//     vegano: rl.keyInYN('O novo prato é vegano? y/n ')
+// });
+// restaurante.aberto = false;
+// console.log(`Restaurante: ${restaurante.nome}, Tipo de cozinha: ${restaurante.tipoCozinha}, Nota: ${restaurante.nota}`);
+// console.log(`Status: ${restaurante.aberto ? 'Aberto' : 'Fechado'}`);
+// console.log(`O cardápio tem ${restaurante.cardapio.length} pratos.`);
+// restaurante.cardapio.forEach((prato, index) => {
+//     console.log(`Prato ${index + 1}: Nome: ${prato.nomePrato}, Preço: R$${prato.preco}, Vegano: ${prato.vegano}`);
+// });
 
 console.log("_______________________________");

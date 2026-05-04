@@ -31,6 +31,10 @@ const letras1 = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 // → Seu código aqui:
 
+let array1 = [letras1[0], letras1[2], letras1[5]];
+console.log(array1);
+let array2 = [letras1[4], letras1[5]];
+console.log(array2);
 
 console.log("_______________________________");
 
@@ -52,11 +56,11 @@ console.log("_______________________________");
 const pessoa = { nome: 'Junin', idade: 22, cidade: 'Porto Alegre' };
 // a) Acesse e exiba a propriedade 'nome' e 'cidade'.
 // b) Adicione uma nova propriedade 'curso' com valor 'Programação' por atribuição direta.
-console.log(pessoa.nome, pessoa.cidade);
-pessoa.curso = 'Programação';
-console.log(pessoa)
 // → Seu código aqui:
 
+console.log(`${pessoa.nome} é de ${pessoa.cidade} e está estudando ${pessoa.curso}.`);
+pessoa.curso = 'Programação';
+console.log(pessoa)
 
 console.log("_______________________________");
 
