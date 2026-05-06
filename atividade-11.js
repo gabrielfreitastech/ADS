@@ -1,9 +1,9 @@
 // ============================================================
 //   ATIVIDADE 11 – Interrompendo Laços (break / continue / return)
 // ============================================================
-
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Break simples
+const rl = require("readline-sync")
 // ------------------------------------------------------------
 // a) Use um for de 1 a 100.
 // b) Exiba cada número.
@@ -12,6 +12,14 @@
 
 // → Seu código aqui:
 
+// for(let i = 1; i <= 100; i++) {
+//       console.log(`${i}`)
+//       if(i % 7 === 0 && i > 30) {
+
+//             console.log(`Primero multiplo de 7 acima de 30: ${i}`)
+//             break
+//       }
+// }
 
 
 console.log("_______________________________");
@@ -21,13 +29,22 @@ console.log("_______________________________");
 // EXERCÍCIO 2 – Continue: filtrando vogais
 // ------------------------------------------------------------
 // a) Utilizando o array:
-      const letras = ['a', 'b', 'c', 'e', 'f', 'i', 'k', 'o', 'p', 'u'];
+const letras = ['a', 'b', 'c', 'e', 'f', 'i', 'k', 'o', 'p', 'u'];
 // b) Usando for e continue, exiba apenas as consoantes
 //    (pule as vogais: a, e, i, o, u).
 // c) Ao final, exiba: "Consoantes exibidas: <quantidade>"
 
 // → Seu código aqui:
 
+// let consoantes = 0
+
+// for(let i = 0; i < letras.length; i++) {
+//       if(letras[i] == 'a' || letras[i] == 'e' || letras[i] == 'i' || letras[i] == 'o' || letras[i] == 'u') {
+//             continue
+//       } else {
+//             console.log(`${letras[i]}`)
+//       } consoantes++
+// } console.log(`Consoantes exibidas: ${consoantes}`)
 
 console.log("_______________________________");
 
@@ -48,6 +65,26 @@ const notasAlunoB = [8, 4.5, 6.3, 9];
 // → Seu código aqui:
 
 
+// for (let i = 0; i < notasAlunoA.length; i++) {
+//       if (notasAlunoA < 5) {
+//             console.log(`Reprovado ma nota: ${notasAlunoA[i]} - índice: ${i}`)
+//             break
+
+//       } if (i == notasAlunoA.length -1) {
+//             console.log('Aprovado')
+//       }
+// }
+
+// for (let i = 0; i < notasAlunoB.length; i++) {
+//       if (notasAlunoB[i] < 5) {
+//             console.log(`Reprovado ma nota: ${notasAlunoB} - índice: ${i}`)
+//             break
+            
+//       } if (i == notasAlunoB.length -1) {
+//             console.log('Aprovado')
+//       }
+// }
+
 console.log("_______________________________");
 
 
@@ -64,6 +101,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let palavra = 'js'
+// let tentativas = 0
+// let valido = false
+
+// while(valido === false) {
+//       let adivinha = rl.question('Adivinha a palavra? ')
+      
+//       if(adivinha === palavra) {
+//             console.log("Parabéns! Você acertou!")
+//             valido = true
+//             tentativas++
+//             break
+
+//       } else {
+//             console.log('Errou! Tente novamente.')
+//             tentativas++
+//       }
+// }
+
+// console.log(`Você precisou de ${tentativas} tentativas para acertar!`)
 
 console.log("_______________________________");
 
@@ -81,6 +138,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let numeros = rl.questionFloat('Digite numeros para somar: ')
+let soma = 0
+let quantidade = 0
+
+while(numeros !== 0) {
+      if(numeros < 0) {
+            console.log("Ignorando números negativos.") //continuar o laço  mas sem parar o loop
+            break
+
+      } else {
+            soma += numeros
+            quantidade++
+            numeros = rl.questionFloat('Digite mais numeros ou 0 para parar: ')
+      }
+} if(soma > 0) {
+      console.log(`
+      Soma dos positivos: ${soma}
+      Quantidade de positivos: ${quantidade}
+      `)
+      }
+
 
 console.log("_______________________________");
 
@@ -89,14 +167,14 @@ console.log("_______________________________");
 // EXERCÍCIO 6 – Return: busca em array de objetos
 // ------------------------------------------------------------
 // a) Dado o array de alunos:
-   const alunos = [
-     { nome: "Ana", nota: 8.5 },
-     { nome: "Bruno", nota: 6.0 },
-     { nome: "Carlos", nota: 9.2 },
-     { nome: "Diana", nota: 4.8 },
-     { nome: "Eva", nota: 7.1 },
-     { nome: "Fernando", nota: 3.8 }
-   ];
+const alunos = [
+      { nome: "Ana", nota: 8.5 },
+      { nome: "Bruno", nota: 6.0 },
+      { nome: "Carlos", nota: 9.2 },
+      { nome: "Diana", nota: 4.8 },
+      { nome: "Eva", nota: 7.1 },
+      { nome: "Fernando", nota: 3.8 }
+];
 // b) Crie um array que retorna o primeiro aluno com nota < 5.
 //    Se não houver, retorna null.
 
@@ -110,7 +188,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Continue: relatório de vendas
 // ------------------------------------------------------------
 // a) Dado o array:
-      const vendas = [320, -1, 150, -1, 80, 410, -1, 200];
+const vendas = [320, -1, 150, -1, 80, 410, -1, 200];
 //    (valores -1 representam vendas canceladas)
 // b) Usando for e continue, ignore as vendas canceladas (-1).
 // c) Acumule o total das vendas válidas e conte quantas há.
