@@ -79,7 +79,7 @@ const notasAlunoB = [8, 4.5, 6.3, 9];
 //       if (notasAlunoB[i] < 5) {
 //             console.log(`Reprovado ma nota: ${notasAlunoB} - índice: ${i}`)
 //             break
-            
+
 //       } if (i == notasAlunoB.length -1) {
 //             console.log('Aprovado')
 //       }
@@ -107,7 +107,7 @@ console.log("_______________________________");
 
 // while(valido === false) {
 //       let adivinha = rl.question('Adivinha a palavra? ')
-      
+
 //       if(adivinha === palavra) {
 //             console.log("Parabéns! Você acertou!")
 //             valido = true
@@ -138,26 +138,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let numeros = rl.questionFloat('Digite numeros para somar: ')
-let soma = 0
-let quantidade = 0
+// let numeros = rl.questionFloat('Digite numeros para somar: ')
+// let soma = 0
+// let quantidade = 0
 
-while(numeros !== 0) {
-      if(numeros < 0) {
-            console.log("Ignorando números negativos.") //continuar o laço  mas sem parar o loop
-            break
+// while (numeros != 0) {
+//       if (numeros < 0) {
+//             console.log("Ignorando números negativos.")
+//             numeros = rl.questionFloat('Digite mais numeros ou 0 para parar: ')
 
-      } else {
-            soma += numeros
-            quantidade++
-            numeros = rl.questionFloat('Digite mais numeros ou 0 para parar: ')
-      }
-} if(soma > 0) {
-      console.log(`
-      Soma dos positivos: ${soma}
-      Quantidade de positivos: ${quantidade}
-      `)
-      }
+//       } else {
+//             soma += numeros
+//             quantidade++
+//             numeros = rl.questionFloat('Digite mais numeros ou 0 para parar: ')
+//       }
+// } if (soma > 0) {
+//       console.log(`
+//       Soma dos positivos: ${soma}
+//       Quantidade de positivos: ${quantidade}
+//       `)
+// }
 
 
 console.log("_______________________________");
@@ -171,15 +171,29 @@ const alunos = [
       { nome: "Ana", nota: 8.5 },
       { nome: "Bruno", nota: 6.0 },
       { nome: "Carlos", nota: 9.2 },
-      { nome: "Diana", nota: 4.8 },
+      { nome: "Diana", nota: 2.8 },
       { nome: "Eva", nota: 7.1 },
-      { nome: "Fernando", nota: 3.8 }
+      { nome: "Fernando", nota: 6.8 }
 ];
 // b) Crie um array que retorna o primeiro aluno com nota < 5.
 //    Se não houver, retorna null.
 
 // → Seu código aqui:
 
+
+let menor5 = []
+
+for (let i = 0; i < alunos.length; i++) {
+      if (alunos[i].nota < 5) {
+            menor5.push(alunos[i])
+            console.log(menor5)
+            break
+
+      } else {
+            console.log(null)
+            
+      }
+}
 
 console.log("_______________________________");
 
