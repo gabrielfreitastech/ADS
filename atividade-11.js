@@ -181,19 +181,19 @@ const alunos = [
 // → Seu código aqui:
 
 
-let menor5 = []
+// let menor5 = null
 
-for (let i = 0; i < alunos.length; i++) {
-      if (alunos[i].nota < 5) {
-            menor5.push(alunos[i])
-            console.log(menor5)
-            break
+// for (let i = 0; i < alunos.length; i++) {
+//       if (alunos[i].nota < 5) {
 
-      } else {
-            console.log(null)
-            
-      }
-}
+//             menor5 = alunos[i]
+//             console.log(menor5)
+//             break
+//       }
+// } 
+// if(menor5 === null) {
+//       console.log(null)
+// }
 
 console.log("_______________________________");
 

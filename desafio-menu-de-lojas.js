@@ -1,50 +1,50 @@
 // ============================================================
-// Loja de Itens – Menu Persistente
+// Loja de Itens - Menu Persistente
 // ============================================================
 //
-// INSTRUÇÕES e REGRAS:
-// Uma loja vende itens de um catálogo.
-// O menu principal repete até o usuário escolher "Sair".
-// O usuário começa com nenhum item e 200 reais.
-// O usuário deve poder:
-//   Visualizar o catálogo
-//   Comprar itens do catálogo
-//   Vender itens do inventário
+// INSTRUCOES e REGRAS:
+// Uma loja vende itens de um catalogo.
+// O menu principal repete ate o usuario escolher "Sair".
+// O usuario comeca com nenhum item e 200 reais.
+// O usuario deve poder:
+//   Visualizar o catalogo
+//   Comprar itens do catalogo
+//   Vender itens do inventario
 //   Visualizar seus itens
-// O valor de revenda de itens deve ser 70% do preço original, arredondado.
-// Após o usuário escolher "Sair", exiba um resumo do cliente: nome, dinheiro restante e itens no inventário.
+// O valor de revenda de itens deve ser 70% do preco original, arredondado.
+// Apos o usuario escolher "Sair", exiba um resumo do cliente: nome, dinheiro restante e itens no inventario.
 //
 // ============================================================
 
 let rl = require('readline-sync');
 
 // ============================================================
-// CATÁLOGO DA LOJA - Altere a vontade, mantendo a estrutura { id, nome, preco, estoque }
+// CATALOGO DA LOJA - Altere a vontade, mantendo a estrutura { id, nome, preco, estoque }
 // ============================================================
 
 const catalogo = [
   { id: 1, nome: "Espada de Ferro",   preco: 80, estoque: 2  },
   { id: 2, nome: "Escudo de Madeira", preco: 50, estoque: 5  },
-  { id: 3, nome: "Poção de Cura",     preco: 30, estoque: 10 },
+  { id: 3, nome: "Pocao de Cura",     preco: 30, estoque: 10 },
   { id: 4, nome: "Arco Longo",        preco: 65, estoque: 3  },
   { id: 5, nome: "Botas Velozes",     preco: 45, estoque: 4  },
   { id: 6, nome: "Batata",            preco: 15, estoque: 20 },
-  { id: 7, nome: "Cajado Mágico",     preco: 95, estoque: 1  },
+  { id: 7, nome: "Cajado Magico",     preco: 95, estoque: 1  },
   { id: 8, nome: "Armadura de Couro", preco: 85, estoque: 2  }
 ];
 
 // ============================================================
-// ESTADO DO CLIENTE - não altere a estrutura
+// ESTADO DO CLIENTE - nao altere a estrutura
 // ============================================================
 
 const Cliente = {
-  nome: "", // deve ser preenchido pelo usuário
-  moedas: 150,
+  nome: "", // deve ser preenchido pelo usuario
+  moedas: 250,
   inventario: []
 };
 
 // ============================================================
-// INÍCIO
+// INICIO
 // ============================================================
 
 console.log("╔════════════════════════════╗");
@@ -56,22 +56,22 @@ console.log("╚═════════════════════�
 // ============================================================
 
 do {
-  Cliente.nome = rl.question('📝 Qual é o seu nome? ').trim();
+  Cliente.nome = rl.question('Qual eh o seu nome? ').trim();
   
   if (Cliente.nome.length === 0) {
-    console.log('❌ Nome não pode ser vazio!');
+    console.log('Nome nao pode ser vazio!');
   }
 } while (Cliente.nome.length === 0);
 
 console.log(`\n✅ Bem-vindo(a), ${Cliente.nome}!\n`);
 
 // ============================================================
-// FUNÇÕES AUXILIARES
+// FUNCOES AUXILIARES
 // ============================================================
 
 function exibirCatalogo() {
   console.log('\n┌──────────────────────────────────────────────┐');
-  console.log('│         📦 CATÁLOGO DA LOJA 📦              │');
+  console.log('│          CATALOGO DA LOJA               │');
   console.log('├──────────────────────────────────────────────┤');
   
   catalogo.forEach(item => {
@@ -83,11 +83,11 @@ function exibirCatalogo() {
 
 function exibirInventario() {
   console.log('\n┌──────────────────────────────────────────────┐');
-  console.log('│       🎒 INVENTÁRIO DO CLIENTE 🎒           │');
+  console.log('│        INVENTARIO DO CLIENTE            │');
   console.log('├──────────────────────────────────────────────┤');
   
   if (Cliente.inventario.length === 0) {
-    console.log('│ Seu inventário está vazio!                   │');
+    console.log('│ Seu inventario esta vazio!                │');
   } else {
     Cliente.inventario.forEach((item, index) => {
       let precoRevenda = Math.round(item.preco * 0.7);
@@ -105,13 +105,13 @@ function comprarItem() {
   let id = 0;
   
   do {
-    id = rl.questionInt('\n🛒 Qual é o ID do item que deseja comprar? ');
+    id = rl.questionInt('\nQual e o ID do item que deseja comprar? ');
     const item = catalogo.find(x => x.id === id);
     
     if (!item) {
-      console.log('❌ ID inválido!');
+      console.log(' ID invalido!');
     } else if (item.estoque === 0) {
-      console.log(`❌ "${item.nome}" está fora de estoque!`);
+      console.log(` "${item.nome}" esta fora de estoque!`);
     } else {
       idValido = true;
     }
@@ -120,7 +120,7 @@ function comprarItem() {
   const item = catalogo.find(x => x.id === id);
   
   if (Cliente.moedas < item.preco) {
-    console.log(`❌ Você não tem dinheiro suficiente! Você tem R$ ${Cliente.moedas}, mas o item custa R$ ${item.preco}.`);
+    console.log(` Voce nao tem dinheiro suficiente! Voce tem R$ ${Cliente.moedas}, mas o item custa R$ ${item.preco}.`);
     return;
   }
   
@@ -128,15 +128,15 @@ function comprarItem() {
   Cliente.inventario.push({ ...item });
   item.estoque--;
   
-  console.log(`✅ Compra realizada! "${item.nome}" foi adicionado ao seu inventário.`);
-  console.log(`💰 Saldo restante: R$ ${Cliente.moedas}`);
+  console.log(` Compra realizada! "${item.nome}" foi adicionado ao seu inventario.`);
+  console.log(` Saldo restante: R$ ${Cliente.moedas}`);
 }
 
 function venderItem() {
   exibirInventario();
   
   if (Cliente.inventario.length === 0) {
-    console.log('❌ Você não tem itens para vender!');
+    console.log(' Voce nao tem itens para vender!');
     return;
   }
   
@@ -144,10 +144,10 @@ function venderItem() {
   let indice = 0;
   
   do {
-    indice = rl.questionInt('\n🏪 Qual é o número do item que deseja vender? ');
+    indice = rl.questionInt('\nQual e o numero do item que deseja vender? ');
     
     if (indice < 1 || indice > Cliente.inventario.length) {
-      console.log('❌ Número inválido!');
+      console.log(' Numero invalido!');
     } else {
       indiceValido = true;
     }
@@ -165,17 +165,17 @@ function venderItem() {
     itemCatalogo.estoque++;
   }
   
-  console.log(`✅ Item vendido! "${item.nome}" foi removido do inventário.`);
-  console.log(`💰 Você recebeu R$ ${precoRevenda}. Saldo atual: R$ ${Cliente.moedas}`);
+  console.log(` Item vendido! "${item.nome}" foi removido do inventario.`);
+  console.log(` Voce recebeu R$ ${precoRevenda}. Saldo atual: R$ ${Cliente.moedas}`);
 }
 
 function exibirStatusCliente() {
   console.log('\n┌──────────────────────────────────────────────┐');
-  console.log('│          💼 STATUS DO CLIENTE 💼            │');
+  console.log('│           STATUS DO CLIENTE             │');
   console.log('├──────────────────────────────────────────────┤');
   console.log(`│ Nome: ${Cliente.nome.padEnd(37)}│`);
   console.log(`│ Saldo: R$ ${Cliente.moedas.toString().padEnd(34)}│`);
-  console.log(`│ Itens no Inventário: ${Cliente.inventario.length.toString().padEnd(22)}│`);
+  console.log(`│ Itens no Inventario: ${Cliente.inventario.length.toString().padEnd(22)}│`);
   console.log('└──────────────────────────────────────────────┘');
 }
 
@@ -191,10 +191,10 @@ do {
   console.log('\n╔════════════════════════════╗');
   console.log('║      MENU PRINCIPAL        ║');
   console.log('╠════════════════════════════╣');
-  console.log('║ 1 - Ver Catálogo          ║');
+  console.log('║ 1 - Ver Catalogo          ║');
   console.log('║ 2 - Comprar Item          ║');
   console.log('║ 3 - Vender Item           ║');
-  console.log('║ 4 - Ver Inventário        ║');
+  console.log('║ 4 - Ver Inventario        ║');
   console.log('║ 5 - Sair                  ║');
   console.log('╚════════════════════════════╝');
   
@@ -202,12 +202,12 @@ do {
   let opcaoValida = false;
   
   do {
-    opcao = rl.questionInt('\n📌 Escolha uma opção (1-5): ');
+    opcao = rl.questionInt('\nEscolha uma opcao (1-5): ');
     
     if (opcao >= 1 && opcao <= 5) {
       opcaoValida = true;
     } else {
-      console.log('❌ Opção inválida! Digite um número de 1 a 5.');
+      console.log(' Opcao invalida! Digite um numero de 1 a 5.');
     }
   } while (!opcaoValida);
   
@@ -246,7 +246,7 @@ do {
 // ============================================================
 
 console.log('\n╔════════════════════════════════════════════════╗');
-console.log('║          👋 RESUMO FINAL - ATÉ LOGO! 👋       ║');
+console.log('║           RESUMO FINAL - ATE LOGO!        ║');
 console.log('╠════════════════════════════════════════════════╣');
 console.log(`║ Cliente: ${Cliente.nome.padEnd(40)}║`);
 console.log(`║ Dinheiro Final: R$ ${Cliente.moedas.toString().padEnd(29)}║`);
@@ -254,7 +254,7 @@ console.log(`║ Total de Itens: ${Cliente.inventario.length.toString().padEnd(3
 
 if (Cliente.inventario.length > 0) {
   console.log('║                                                ║');
-  console.log('║ Itens no Inventário:                           ║');
+  console.log('║ Itens no Inventario:                           ║');
   
   Cliente.inventario.forEach((item, index) => {
     console.log(`║  ${(index + 1).toString().padEnd(2)} | ${item.nome.padEnd(37)}║`);
@@ -262,4 +262,4 @@ if (Cliente.inventario.length > 0) {
 }
 
 console.log('╚════════════════════════════════════════════════╝\n');
-console.log('✅ Obrigado por usar a Loja Lojinha!');
+console.log(' Obrigado por usar a Loja Lojinha!');
