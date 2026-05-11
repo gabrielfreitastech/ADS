@@ -213,6 +213,25 @@ const vendas = [320, -1, 150, -1, 80, 410, -1, 200];
 
 // → Seu código aqui:
 
+// let vendasValidas = 0
+// let soma = 0
+// let media = 0
+
+// for(let i = 0; i < vendas.length; i ++) {
+//       if(vendas[i] < 1) {
+//             continue
+//       } else {
+//             soma += vendas[i]
+//             vendasValidas++
+//       }
+//       media = soma / vendasValidas
+// } 
+// if(media > 0) {
+//       console.log(`
+//       Vendas validas: ${vendasValidas}
+//       Total arrecadado: R$ ${soma}
+//       Ticket medio: R$ ${media.toFixed(2)}`)
+// }
 
 console.log("_______________________________");
 

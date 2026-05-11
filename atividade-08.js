@@ -437,51 +437,51 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let loja = {
-    nome: 'TechShop',
-    saldo: 0
-}
+// let loja = {
+//     nome: 'TechShop',
+//     saldo: 0
+// }
 
-console.log('===MENU===')
-console.log('1  -   VER PRODUTOS')
-console.log('2  -   COMPRAR')
-console.log('3  -   VER CARRINHO')
-console.log('4  -   SAIR')
+// console.log('===MENU===')
+// console.log('1  -   VER PRODUTOS')
+// console.log('2  -   COMPRAR')
+// console.log('3  -   VER CARRINHO')
+// console.log('4  -   SAIR')
 
-let opcao = lerTeclado.questionInt('Escolha umas das opcoes acima, de 1 a 4: ')
-let preco
+// let opcao = lerTeclado.questionInt('Escolha umas das opcoes acima, de 1 a 4: ')
+// let preco
 
-switch (opcao) {
-    case 1:
-        loja.produtos = {
-            0: 'mouse',
-            preco0: 89.90,
+// switch (opcao) {
+//     case 1:
+//         loja.produtos = {
+//             0: 'mouse',
+//             preco0: 89.90,
 
-            1: 'ps5',
-            preco1: 3500,
+//             1: 'ps5',
+//             preco1: 3500,
 
-            2: 'alexa',
-            preco2: 300
-        }
-        console.table(loja.produtos)
+//             2: 'alexa',
+//             preco2: 300
+//         }
+//         console.table(loja.produtos)
         
 
-    case 2: comprar = lerTeclado.question('Qual produto?: ')
-            preco = lerTeclado.questionFloat('Qual o preco?: ')
-            loja.saldo += preco
-            console.log('Produto adicionado ao carrinho')
-            break
+//     case 2: comprar = lerTeclado.question('Qual produto?: ')
+//             preco = lerTeclado.questionFloat('Qual o preco?: ')
+//             loja.saldo += preco
+//             console.log('Produto adicionado ao carrinho')
+//             break
 
-    case 3: console.log(`Total no carrinho: R$${loja.saldo}`)
-            break
+//     case 3: console.log(`Total no carrinho: R$${loja.saldo}`)
+//             break
 
-    case 4: console.log('Obrigado por visitar a TechShop!')
-            break
+//     case 4: console.log('Obrigado por visitar a TechShop!')
+//             break
 
-    default:
-        console.log('Opção inválida')
+//     default:
+//         console.log('Opção inválida')
 
-}
-console.log(`Total no seu carrinho: R$${loja.saldo}` )
+// }
+// console.log(`Total no seu carrinho: R$${loja.saldo}` )
 
-console.log("_______________________________");
+// console.log("_______________________________");
