@@ -1,3 +1,5 @@
+const rl = require('readline-sync')
+
 // ============================================================
 //   ATIVIDADE 12 – Estruturas de Dados: Vetor (Array)
 // ============================================================
@@ -14,6 +16,12 @@
 // d) Exiba a quantidade total de cidades.
 
 // → Seu código aqui:
+
+let cidades = ['Jaraguá', 'Joinville', 'Blumenau', 'Navegantes', 'Penha']
+
+for(let i = 0; i < cidades.length; i++){
+      console.log(cidades[i])
+}
 
 
 console.log("_______________________________");
