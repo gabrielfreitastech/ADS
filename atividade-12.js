@@ -90,6 +90,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let pares = []
+let impares = []
+
+for(const numeros of listaNumeros){
+      if(numeros % 2 === 0){
+            pares.push(numeros)
+      }
+      else{
+            impares.push(numeros)
+            impares.length
+      }
+}
+console.log(`
+      ${pares.length} Numeros pares: ${pares}
+      ${impares.length} Numeros impares: ${impares}`)
+      console.log(`${listaNumeros.length}`)
+
 console.log("_______________________________");
 
 
