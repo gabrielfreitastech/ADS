@@ -17,15 +17,15 @@ const rl = require('readline-sync')
 
 // → Seu código aqui:
 
-let cidades = ['Jaraguá', 'Joinville', 'Blumenau', 'Navegantes', 'Penha']
+// let cidades = ['Jaraguá', 'Joinville', 'Blumenau', 'Navegantes', 'Penha']
 
-for(const cidade of cidades){
-      console.log(cidade)
+// for(const cidade of cidades){
+//       console.log(cidade)
 
-}
-console.log(`Primeira cidade: ${cidades[0]}`)
-console.log(`Ultima cidade: ${cidades[cidades.length-1]}`)
-console.log(cidades.length)
+// }
+// console.log(`Primeira cidade: ${cidades[0]}`)
+// console.log(`Ultima cidade: ${cidades[cidades.length-1]}`)
+// console.log(cidades.length)
 
 console.log("_______________________________");
 
@@ -41,12 +41,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-soma = 0
-for(const numero of numeros){
-      soma += numero
-}
-let media = soma / numeros.length
-console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`)
+// soma = 0
+// for(const numero of numeros){
+//       soma += numero
+// }
+// let media = soma / numeros.length
+// console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`)
       
 console.log("_______________________________");
 
@@ -60,19 +60,19 @@ console.log("_______________________________");
 // c) Exiba: "Maior: <maior>°C | Menor: <menor>°C"
 
 // → Seu código aqui:
-let maior = temperaturas[0]
-let menor = temperaturas[0]
+// let maior = temperaturas[0]
+// let menor = temperaturas[0]
 
-for(let temperatura of temperaturas){
-      if(temperatura > maior){
-            maior = temperatura
-      }
-      if(temperatura < menor){
-            menor = temperatura
-      }
-}
+// for(let temperatura of temperaturas){
+//       if(temperatura > maior){
+//             maior = temperatura
+//       }
+//       if(temperatura < menor){
+//             menor = temperatura
+//       }
+// }
 
-console.log(`Maior: ${maior}°C | Menor: ${menor}°C`)
+// console.log(`Maior: ${maior}°C | Menor: ${menor}°C`)
 
 console.log("_______________________________");
 
@@ -90,22 +90,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let pares = []
-let impares = []
+// let pares = []
+// let impares = []
 
-for(const numeros of listaNumeros){
-      if(numeros % 2 === 0){
-            pares.push(numeros)
-      }
-      else{
-            impares.push(numeros)
-            impares.length
-      }
-}
-console.log(`
-      ${pares.length} Numeros pares: ${pares}
-      ${impares.length} Numeros impares: ${impares}`)
-      console.log(`${listaNumeros.length}`)
+// for(const numeros of listaNumeros){
+//       if(numeros % 2 === 0){
+//             pares.push(numeros)
+//       }
+//       else{
+//             impares.push(numeros)
+//             impares.length
+//       }
+// }
+// console.log(`
+//       ${pares.length} Numeros pares: ${pares}
+//       ${impares.length} Numeros impares: ${impares}`)
+//       console.log(`{listaNumeros.length}`)
 
 console.log("_______________________________");
 
@@ -124,6 +124,11 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let vetorInvertido = []
+// for(invertido of vetorOriginal){
+//       vetorInvertido.unshift(invertido)
+      
+// } console.log(vetorInvertido)
 
 console.log("_______________________________");
 
