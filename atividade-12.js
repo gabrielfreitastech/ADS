@@ -41,7 +41,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-    
+soma = 0
+for(const numero of numeros){
+      soma += numero
+}
+let media = soma / numeros.length
+console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`)
+      
 console.log("_______________________________");
 
 
