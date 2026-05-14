@@ -60,6 +60,19 @@ console.log("_______________________________");
 // c) Exiba: "Maior: <maior>°C | Menor: <menor>°C"
 
 // → Seu código aqui:
+let maior = temperaturas[0]
+let menor = temperaturas[0]
+
+for(let temperatura of temperaturas){
+      if(temperatura > maior){
+            maior = temperatura
+      }
+      if(temperatura < menor){
+            menor = temperatura
+      }
+}
+
+console.log(`Maior: ${maior}°C | Menor: ${menor}°C`)
 
 console.log("_______________________________");
 
