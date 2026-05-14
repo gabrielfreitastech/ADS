@@ -19,10 +19,13 @@ const rl = require('readline-sync')
 
 let cidades = ['Jaraguá', 'Joinville', 'Blumenau', 'Navegantes', 'Penha']
 
-for(let i = 0; i < cidades.length; i++){
-      console.log(cidades[i])
-}
+for(const cidade of cidades){
+      console.log(cidade)
 
+}
+console.log(`Primeira cidade: ${cidades[0]}`)
+console.log(`Ultima cidade: ${cidades[cidades.length-1]}`)
+console.log(cidades.length)
 
 console.log("_______________________________");
 
@@ -38,7 +41,7 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-
+    
 console.log("_______________________________");
 
 
@@ -51,7 +54,6 @@ console.log("_______________________________");
 // c) Exiba: "Maior: <maior>°C | Menor: <menor>°C"
 
 // → Seu código aqui:
-
 
 console.log("_______________________________");
 
@@ -68,7 +70,6 @@ console.log("_______________________________");
 //    "Ímpares (<qtd>): <imparesVetor>"
 
 // → Seu código aqui:
-
 
 console.log("_______________________________");
 
