@@ -34,7 +34,7 @@ console.log("_______________________________");
 // EXERCÍCIO 2 – Soma e média
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const numeros = [12, 7, 25, 3, 18, 9, 31, 14];
+const numeros = [12, 7, 25, 3, 18, 9, 31, 14];
 // b) Calcule a SOMA de todos os números.
 // c) Calcule a MÉDIA (soma / quantidade).
 // d) Exiba: "Soma: <soma> | Média: <média>" (use toFixed(2) na média).
@@ -47,7 +47,7 @@ console.log("_______________________________");
 // }
 // let media = soma / numeros.length
 // console.log(`Soma: ${soma} | Média: ${media.toFixed(2)}`)
-      
+
 console.log("_______________________________");
 
 
@@ -55,7 +55,7 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const temperaturas = [22.5, 19.0, 27.3, 18.7, 30.1, 25.4, 21.8];
+const temperaturas = [22.5, 19.0, 27.3, 18.7, 30.1, 25.4, 21.8];
 // b) Encontre a MAIOR e a MENOR temperatura.
 // c) Exiba: "Maior: <maior>°C | Menor: <menor>°C"
 
@@ -81,7 +81,7 @@ console.log("_______________________________");
 // EXERCÍCIO 4 – Pares e ímpares
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
+const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
 // b) Conte quantos números são pares e quantos são ímpares.
 // c) Crie dois vetores: paresVetor[] e imparesVetor[], e adicione os números em cada um.
 // d) Exiba:
@@ -114,7 +114,7 @@ console.log("_______________________________");
 // EXERCÍCIO 5 – Inversão de vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const vetorOriginal = ["A", "B", "C", "D", "E"];
+const vetorOriginal = ["A", "B", "C", "D", "E"];
 // b) Usando for(), crie um novo vetor 'vetorInvertido' com os elementos em ordem reversa.
 // c) Exiba ambos os vetores:
 //    "Original:  <original>"
@@ -127,7 +127,7 @@ console.log("_______________________________");
 // let vetorInvertido = []
 // for(invertido of vetorOriginal){
 //       vetorInvertido.unshift(invertido)
-      
+
 // } console.log(vetorInvertido)
 
 console.log("_______________________________");
@@ -144,6 +144,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produtos = []
+// let quantos = rl.questionInt('Quantos produtos deseja cadastrar? ')
+// let qtd = 0
+
+// for (let i = 0; i < quantos; i++) {
+
+//       let produto = {
+//             nome: rl.question('Digite o nome do produto: ')
+//       }
+//       produtos.push(produto)
+//       qtd++
+// }
+// for (let i = 0; i < produtos.length; i++) {
+
+//       console.log(produtos[i])
+// } console.log(`${qtd} produtos cadastrados.`)
 
 console.log("_______________________________");
 
@@ -152,7 +168,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Busca em vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const alunos = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
+const alunos = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 // b) Pergunte ao usuário o nome de um aluno.
 // c) Usando for e break, verifique se o nome existe na lista.
 //    - Se existir: "<nome> está matriculado(a) (índice <i>)."
@@ -168,12 +184,12 @@ console.log("_______________________________");
 // EXERCÍCIO 8 – Vetor de objetos
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const livros = [
-        { titulo: "Dom Casmurro",       paginas: 256 },
-        { titulo: "O Cortiço",          paginas: 304 },
-        { titulo: "Memórias Póstumas",  paginas: 208 },
-        { titulo: "Capitães da Areia",  paginas: 280 },
-      ];
+const livros = [
+      { titulo: "Dom Casmurro", paginas: 256 },
+      { titulo: "O Cortiço", paginas: 304 },
+      { titulo: "Memórias Póstumas", paginas: 208 },
+      { titulo: "Capitães da Areia", paginas: 280 },
+];
 // b) Exiba a lista com console.table().
 // c) Usando for, calcule:
 //    - Total de páginas de todos os livros.
@@ -190,7 +206,7 @@ console.log("_______________________________");
 // EXERCÍCIO 9 – Filtro com push
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
+const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 // b) Usando for, separe o vetor acima em dois vetores:
 //    - menores[]: pessoas com idade < 18
 //    - adultos[]: pessoas com idade >= 18
