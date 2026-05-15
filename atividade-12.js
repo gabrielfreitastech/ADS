@@ -176,6 +176,22 @@ const alunos = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 
 // → Seu código aqui:
 
+// let busca = rl.question('Digite o nome para buscar: ')
+// let iachou = -1
+
+// for (let i = 0; i < alunos.length; i++) {
+
+//       if (busca === alunos[i]) {
+//             iachou = [i]
+//             break
+//       }
+// }
+
+// if (iachou === -1) {
+//       console.log(`${busca} não foi encontrado(a)!`)
+// } else {
+//       console.log(`${busca} está matrículado(a) (Índice ${iachou})`)
+// }
 
 console.log("_______________________________");
 
