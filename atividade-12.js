@@ -213,21 +213,21 @@ const livros = [
 // d) Exiba o título do livro com MAIS páginas.
 
 // → Seu código aqui:
-let soma = 0
-let maisPaginas = livros[0].paginas
+// let soma = 0
+// let maisPaginas = livros[0].paginas
 
-console.table(livros)
+// console.table(livros)
 
-for (let i = 0; i < livros.length; i++) {
-      soma += livros[i].paginas
-      media = soma / livros.length
+// for (let i = 0; i < livros.length; i++) {
+//       soma += livros[i].paginas
+//       media = soma / livros.length
 
-      if (livros[i].paginas > maisPaginas) {
-            maisPaginas = livros[i].titulo
-      }
-}
-console.log(`Título com mais paginas do vetor: ${maisPaginas}`)
-console.log(`Média de páginas por livro: ${media}`)
+//       if (livros[i].paginas > maisPaginas) {
+//             maisPaginas = livros[i].titulo
+//       }
+// }
+// console.log(`Título com mais paginas do vetor: ${maisPaginas}`)
+// console.log(`Média de páginas por livro: ${media}`)
 
 console.log("_______________________________");
 
