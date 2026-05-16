@@ -246,23 +246,23 @@ const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 
 // → Seu código aqui:
 
-let menor = []
-let maior = []
+// let menor = []
+// let maior = []
 
-for(let i = 0; i < idades.length; i++){
-      if(idades[i] < 18){
-            menor.push(idades[i])
+// for(let i = 0; i < idades.length; i++){
+//       if(idades[i] < 18){
+//             menor.push(idades[i])
 
-      }else if(idades[i] >= 18) {
-            maior.push(idades[i])
-      }
-}
+//       }else if(idades[i] >= 18) {
+//             maior.push(idades[i])
+//       }
+// }
 
-console.log(`
-      Menores de idade: ${menor}
-      Maiores de idade: ${maior}
-      ${menor.length} Menores de idade.
-      ${maior.length} Maiores de idade.`)
+// console.log(`
+//       Menores de idade: ${menor}
+//       Maiores de idade: ${maior}
+//       ${menor.length} Menores de idade.
+//       ${maior.length} Maiores de idade.`)
 
 
 console.log("_______________________________");
