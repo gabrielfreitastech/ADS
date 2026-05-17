@@ -285,6 +285,35 @@ console.log("_______________________________"); // Continuar a task 10
 // → Seu código aqui:
 
 let notas = []
+let stop = 0
 
+do{
+      console.log(`
+1 - Adicionar nota
+2 - Listar notas
+3 - Estatísticas
+4 - Remover última
+5 - Limpar todas
+0 - Sair`
+      )
+      let opcao = rl.questionInt('Escolha a alternativa: ')
+
+      while(opcao > 5 || opcao < 0){
+            console.log('OPÇÃO INVÁLIDA!')
+            opcao = rl.questionInt('DIGITE NOVAMENTE: ')
+      }
+
+      switch(opcao){
+            case 1:
+            let nota = rl.questionFloat('Digite uma nota de 1 a 10: ')
+
+            while(nota < 0 || nota > 10){
+                  console.log('NOTA INVÁLIDA!')
+                  nota = rl.questionFloat('DIGITE NOVAMENTE: ')
+            }
+            notas.push(nota)
+      }
+
+}while(stop !== 0)
 
 console.log("_______________________________");
