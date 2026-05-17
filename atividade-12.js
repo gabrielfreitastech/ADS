@@ -322,6 +322,28 @@ do{
                         console.table(notas)
                   }
                   break
+
+            case 3:
+                  if(notas.length === 0){
+                        console.log('Sem notas para estatísticas!')
+
+                  } else {
+                        for(let i = 0; i < notas.length; i++){
+
+                              if(notas[i] === 10){
+                                    console.log(`${notas[i]}: Aprovado com nota máxima!`)
+                              
+                              } else if(notas[i] >= 7 && notas[i] <= 9){
+                                    console.log(`${notas[i]}: Tá na média mas pode melhorar!`)
+
+                              } else if(notas[i] > 4 && notas[i] <= 6){
+                                    console.log(`${notas[i]}: Tá abaixo da média mas pode recuperar.`)
+
+                              } else if(notas[i] < 4){
+                                    console.log(`${notas[i]}: Reprovado!`)
+                              }
+                        }
+                  }
       }
 
 }while(stop !== true)
