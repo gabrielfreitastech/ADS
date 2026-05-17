@@ -265,7 +265,7 @@ const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 //       ${maior.length} Maiores de idade.`)
 
 
-console.log("_______________________________");
+console.log("_______________________________"); // Continuar a task 10
 
 
 // ------------------------------------------------------------
@@ -283,6 +283,8 @@ console.log("_______________________________");
 // d) Ao sair: "Encerrando. Total de notas registradas: <qtd>"
 
 // → Seu código aqui:
+
+let notas = []
 
 
 console.log("_______________________________");
