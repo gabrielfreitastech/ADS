@@ -285,7 +285,7 @@ console.log("_______________________________"); // Continuar a task 10
 // → Seu código aqui:
 
 let notas = []
-let stop = 0
+let stop = false
 
 do{
       console.log(`
@@ -312,8 +312,18 @@ do{
                   nota = rl.questionFloat('DIGITE NOVAMENTE: ')
             }
             notas.push(nota)
+            break
+
+            case 2:
+                  if(notas.length === 0){
+                        console.log('Sem notas para listar!')
+                  } else {
+                        console.log('Notas até o momento: ')
+                        console.table(notas)
+                  }
+                  break
       }
 
-}while(stop !== 0)
+}while(stop !== true)
 
 console.log("_______________________________");
