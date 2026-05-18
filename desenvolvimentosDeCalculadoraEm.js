@@ -16,6 +16,7 @@ while (continuar) { // Enquanto 'Continuar for true, a calculadora continua func
     console.log('3  -   MULTIPLICAÇÃO')
     console.log('4  -   DIVISÃO')
     console.log('5  -   RESTO')
+    console.log('6  - DESCONTO')
 
     let operacao // Variável para guardar a operação
 

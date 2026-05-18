@@ -265,7 +265,7 @@ const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 //       ${maior.length} Maiores de idade.`)
 
 
-console.log("_______________________________"); // Continuar a task 10
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -287,7 +287,7 @@ console.log("_______________________________"); // Continuar a task 10
 let notas = []
 let stop = false
 
-do{
+do {
       console.log(`
 1 - Adicionar nota
 2 - Listar notas
@@ -298,24 +298,24 @@ do{
       )
       let opcao = rl.questionInt('Escolha a alternativa: ')
 
-      while(opcao > 5 || opcao < 0){
+      while (opcao > 5 || opcao < 0) {
             console.log('OPÇÃO INVÁLIDA!')
             opcao = rl.questionInt('DIGITE NOVAMENTE: ')
       }
 
-      switch(opcao){
+      switch (opcao) {
             case 1:
-            let nota = rl.questionFloat('Digite uma nota de 1 a 10: ')
+                  let nota = rl.questionFloat('Digite uma nota de 1 a 10: ')
 
-            while(nota < 0 || nota > 10){
-                  console.log('NOTA INVÁLIDA!')
-                  nota = rl.questionFloat('DIGITE NOVAMENTE: ')
-            }
-            notas.push(nota)
-            break
+                  while (nota < 0 || nota > 10) {
+                        console.log('NOTA INVÁLIDA!')
+                        nota = rl.questionFloat('DIGITE NOVAMENTE: ')
+                  }
+                  notas.push(nota)
+                  break
 
             case 2:
-                  if(notas.length === 0){
+                  if (notas.length === 0) {
                         console.log('Sem notas para listar!')
                   } else {
                         console.log('Notas até o momento: ')
@@ -324,28 +324,58 @@ do{
                   break
 
             case 3:
-                  if(notas.length === 0){
+                  if (notas.length === 0) {
                         console.log('Sem notas para estatísticas!')
 
                   } else {
-                        for(let i = 0; i < notas.length; i++){
+                        for (let i = 0; i < notas.length; i++) {
 
-                              if(notas[i] === 10){
+                              if (notas[i] === 10) {
                                     console.log(`${notas[i]}: Aprovado com nota máxima!`)
-                              
-                              } else if(notas[i] >= 7 && notas[i] <= 9){
+
+                              } else if (notas[i] >= 7 && notas[i] <= 9) {
                                     console.log(`${notas[i]}: Tá na média mas pode melhorar!`)
 
-                              } else if(notas[i] > 4 && notas[i] <= 6){
+                              } else if (notas[i] > 4 && notas[i] <= 6) {
                                     console.log(`${notas[i]}: Tá abaixo da média mas pode recuperar.`)
 
-                              } else if(notas[i] < 4){
+                              } else if (notas[i] < 4) {
                                     console.log(`${notas[i]}: Reprovado!`)
                               }
                         }
                   }
+                  break
+
+            case 4:
+                  if (notas.length === 0) {
+                        console.log('Sem notas para remover.')
+
+                  } else {
+                        notas.pop()
+                        console.table(notas)
+                  }
+                  break
+
+            case 5:
+                  if (notas.length === 0) {
+                        console.log('Sem notas para limpar.')
+
+                  } else {
+                        notas = []
+                        console.log('Notas limpadas com êxito!')
+                        console.table(notas)
+                  }
+                  break
+
+            case 0:
+                  console.log(`Encerrando... Total de notas de notas registradas: ${notas.length}`)
+                  stop = true
+                  break
+
+            default:
+                  console.log('erro')
       }
 
-}while(stop !== true)
+} while (stop !== true)
 
 console.log("_______________________________");
