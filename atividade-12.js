@@ -367,6 +367,11 @@ do {
                   }
                   break
 
+            case 0:
+                  console.log(`Encerrando... Total de notas de notas registradas: ${notas.length}`)
+                  stop = true
+                  break
+
       }
 
 } while (stop !== true)
