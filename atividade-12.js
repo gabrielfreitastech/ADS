@@ -372,6 +372,8 @@ do {
                   stop = true
                   break
 
+            default:
+                  console.log('erro')
       }
 
 } while (stop !== true)
