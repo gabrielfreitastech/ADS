@@ -312,6 +312,8 @@ do {
                         nota = rl.questionFloat('DIGITE NOVAMENTE: ')
                   }
                   notas.push(nota)
+                  console.log('Nota adicionada com êxito.')
+                  console.table(notas)
                   break
 
             case 2:
