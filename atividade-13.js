@@ -12,12 +12,27 @@
 //      [40, 50, 60],
 //      [70, 80, 90],
 //    ];
-// b) Exiba: número de linhas e número de colunas.
-// c) Exiba o elemento central (m[1][1]).
-// d) Exiba o canto inferior direito (use .length).
+// // b) Exiba: número de linhas e número de colunas.
+// // c) Exiba o elemento central (m[1][1]).
+// // d) Exiba o canto inferior direito (use .length).
 
-// → Seu código aqui:
+// // → Seu código aqui:
+// let linha = 0
+// let coluna = 0
 
+// for(let i = 0; i < m.length; i++){
+//   linha++
+//   coluna++
+  
+//   for(let j = 0; j < m[0].length; j++){
+//   }
+// }
+// console.log(`${linha} linha(s) e ${coluna} coluna(s) na matriz`)
+// console.log(m[1][1])
+
+// let ultimoValor = m[m.length - 1][m[0].length -1]
+
+// console.log(`Ultimo valor: ${ultimoValor}`)
 
 console.log("_______________________________");
 
@@ -45,11 +60,11 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-   const m = [
-     [12,  7, 25],
-     [ 3, 18,  9],
-     [31, 14, 22],
-   ];
+  //  const m = [
+  //    [12,  7, 25],
+  //    [ 3, 18,  9],
+  //    [31, 14, 22],
+  //  ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 

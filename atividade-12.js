@@ -124,11 +124,11 @@ const vetorOriginal = ["A", "B", "C", "D", "E"];
 
 // → Seu código aqui:
 
-// let vetorInvertido = []
-// for(invertido of vetorOriginal){
-//       vetorInvertido.unshift(invertido)
+let vetorInvertido = []
+for(invertido of vetorOriginal){
+      vetorInvertido.unshift(invertido)
 
-// } console.log(vetorInvertido)
+} console.log(vetorInvertido)
 
 console.log("_______________________________");
 
