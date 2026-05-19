@@ -46,12 +46,21 @@ console.log("_______________________________");
 //      [5, 6, 7, 8],
 //      [9, 10, 11, 12],
 //    ];
-// b) Usando dois for aninhados, exiba cada elemento no formato:
-//    "m[i][j] = <valor>"
-// c) Calcule e exiba a SOMA de todos os elementos da matriz.
+// // b) Usando dois for aninhados, exiba cada elemento no formato:
+// //    "m[i][j] = <valor>"
+// // c) Calcule e exiba a SOMA de todos os elementos da matriz.
 
-// → Seu código aqui:
+// // → Seu código aqui:
 
+// let soma = 0
+// for(let i = 0; i < m.length; i++){
+//   for(let j = 0; j < m[i].length; j++){
+//     soma += m[i][j]
+
+//     console.log(`m[${i}][${j}] = ${soma}`)
+//   }
+// }
+// console.log(`Soma de todos os elementos: ${soma}`)
 
 console.log("_______________________________");
 
