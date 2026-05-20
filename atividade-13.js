@@ -23,7 +23,7 @@
 // for(let i = 0; i < m.length; i++){
 //   linha++
 //   coluna++
-  
+
 //   for(let j = 0; j < m[0].length; j++){
 //   }
 // }
@@ -69,44 +69,44 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-   const m = [
-     [12,  1, 25],
-     [ 3, 18,  9],
-     [31, 14, 22],
-   ];
+//  const m = [
+//    [12,  1, 25],
+//    [ 3, 18,  9],
+//    [31, 14, 22],
+//  ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
 // → Seu código aqui:
 
-let maior = m[0][0]
-let menor = m[0][0]
+// let maior = m[0][0]
+// let menor = m[0][0]
 
-let linhaColuna
-let linhaMaior
-let colunaMaior
-let linhaMenor
-let colunaMenor
+// let linhaColuna
+// let linhaMaior
+// let colunaMaior
+// let linhaMenor
+// let colunaMenor
 
 
-for(let i = 0; i < m.length; i++){
-  for(let j = 0; j < m[0].length; j++){
+// for(let i = 0; i < m.length; i++){
+//   for(let j = 0; j < m[0].length; j++){
 
-    if(m[i][j]  > maior){
-      maior = m[i][j]
-      linhaMaior = i
-      colunaMaior = j
+//     if(m[i][j]  > maior){
+//       maior = m[i][j]
+//       linhaMaior = i
+//       colunaMaior = j
 
-    }
-    if(m[i][j] < menor){
-      menor = m[i][j]
-      linhaMenor = i
-      colunaMenor = j
-    }
-  }
-}
-console.log(`Numero: ${maior} | Linha = ${linhaMaior} | Coluna = ${colunaMaior}`)
-console.log(`Numero: ${menor} | Linha = ${linhaMenor} | Coluna = ${colunaMenor}`)
+//     }
+//     if(m[i][j] < menor){
+//       menor = m[i][j]
+//       linhaMenor = i
+//       colunaMenor = j
+//     }
+//   }
+// }
+// console.log(`Numero: ${maior} | Linha = ${linhaMaior} | Coluna = ${colunaMaior}`)
+// console.log(`Numero: ${menor} | Linha = ${linhaMenor} | Coluna = ${colunaMenor}`)
 
 
 console.log("_______________________________");
@@ -122,6 +122,33 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+const m = [
+  [12, 1, 25],
+  [3, 18, 9],
+  [31, 14, 22],
+];
+
+let somaLinha = 0
+let somaColuna = 0
+
+for (let i = 0; i < m.length; i++) {
+  for (let j = 0; j < m[i].length; j++) {
+
+    somaLinha += m[i][j]
+
+  }
+  console.log(`m linha[${i}] = ${somaLinha}`)
+  somaLinha = 0
+}
+
+for(let i = 0; i < m.length; i++){
+  for(let j = 0; j < m[i].length; j++){
+
+    somaColuna += m[i][j]
+  }
+  console.log(`m coluna[${i}] = ${somaColuna}`)
+  somaColuna = 0
+}
 
 console.log("_______________________________");
 
