@@ -70,7 +70,7 @@ console.log("_______________________________");
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
    const m = [
-     [12,  7, 25],
+     [12,  1, 25],
      [ 3, 18,  9],
      [31, 14, 22],
    ];
@@ -81,23 +81,33 @@ console.log("_______________________________");
 
 let maior = m[0][0]
 let menor = m[0][0]
-let linhaColuna = null
+
+let linhaColuna
+let linhaMaior
+let colunaMaior
+let linhaMenor
+let colunaMenor
+
 
 for(let i = 0; i < m.length; i++){
   for(let j = 0; j < m[0].length; j++){
 
     if(m[i][j]  > maior){
-      maior = m[i]
-      linhaColuna = m[i][j]
+      maior = m[i][j]
+      linhaMaior = i
+      colunaMaior = j
+
     }
     if(m[i][j] < menor){
       menor = m[i][j]
+      linhaMenor = i
+      colunaMenor = j
     }
   }
 }
-console.log(`Linha e Coluna: ${linhaColuna} = ${maior}`)
-console.log(`Linha e Coluna: ${linhaColuna} = ${menor}`)
-// Terminar de exibir qual a linha e a coluna
+console.log(`Numero: ${maior} | Linha = ${linhaMaior} | Coluna = ${colunaMaior}`)
+console.log(`Numero: ${menor} | Linha = ${linhaMenor} | Coluna = ${colunaMenor}`)
+
 
 console.log("_______________________________");
 
