@@ -69,16 +69,35 @@ console.log("_______________________________");
 // EXERCÍCIO 3 – Maior e menor valor
 // ------------------------------------------------------------
 // a) Utilizando a matriz:
-  //  const m = [
-  //    [12,  7, 25],
-  //    [ 3, 18,  9],
-  //    [31, 14, 22],
-  //  ];
+   const m = [
+     [12,  7, 25],
+     [ 3, 18,  9],
+     [31, 14, 22],
+   ];
 // b) Usando for aninhado, encontre o MAIOR e o MENOR valor da matriz.
 // c) Exiba também a posição (linha, coluna) onde cada um está.
 
 // → Seu código aqui:
 
+let maior = m[0][0]
+let menor = m[0][0]
+let linhaColuna = null
+
+for(let i = 0; i < m.length; i++){
+  for(let j = 0; j < m[0].length; j++){
+
+    if(m[i][j]  > maior){
+      maior = m[i]
+      linhaColuna = m[i][j]
+    }
+    if(m[i][j] < menor){
+      menor = m[i][j]
+    }
+  }
+}
+console.log(`Linha e Coluna: ${linhaColuna} = ${maior}`)
+console.log(`Linha e Coluna: ${linhaColuna} = ${menor}`)
+// Terminar de exibir qual a linha e a coluna
 
 console.log("_______________________________");
 
