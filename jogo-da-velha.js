@@ -1,16 +1,16 @@
-const rl = require('readline-sync') // Importa o pacote para ler dados do teclado
+const rl = require('readline-sync')
 
-let tabuleiro = [ // Cria a matriz do tabuleiro
+let tabuleiro = [
     ['-', '-', '-'],
     ['-', '-', '-'],
     ['-', '-', '-']
 ]
 
-let jogador = 'X' // Define o jogador inicial
+let jogador = 'X'
 let jogadas = 0 // Conta quantas jogadas já aconteceram
 let jogoAcabou = false // Controla quando o jogo termina
 
-console.log('Jogo da Velha - Jogador vs Jogador') // Título do jogo
+console.log('Jogo da Velha - Jogador vs Jogador')
 
 while (!jogoAcabou && jogadas < 9) { // Repete enquanto ninguém vencer e houver jogadas disponíveis
 
