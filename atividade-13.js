@@ -141,6 +141,15 @@ for (let i = 0; i < m.length; i++) {
   somaLinha = 0
 }
 
+for(let i = 0; i < m[0].length; i++){
+  for(let j = 0; j < m[i].length; j ++){
+
+    somaColuna += m[j][i]
+  }
+  console.log(`m coluna[${i}] = ${somaColuna}`)
+  somaColuna = 0
+}
+
 console.log("_______________________________");
 
 
