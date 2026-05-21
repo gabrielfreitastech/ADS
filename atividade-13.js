@@ -130,6 +130,7 @@ const m = [
 
 let somaLinha = 0
 let somaColuna = 0
+let somaDiagonal = 0
 
 for (let i = 0; i < m.length; i++) {
   for (let j = 0; j < m[i].length; j++) {
@@ -150,7 +151,14 @@ for(let i = 0; i < m[0].length; i++){
   somaColuna = 0
 }
 
-console.log("_______________________________");
+for(let i = 0; i < m.length; i++){
+
+    somaDiagonal += m[i][i]
+
+  }
+  console.log(`m diaonal principal = ${somaDiagonal}`)
+  
+  console.log("_______________________________");
 
 
 // ------------------------------------------------------------
