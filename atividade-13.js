@@ -172,17 +172,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let m = []
-let linhas = rl.questionInt('Quantas linhas? ')
-let colunas = rl.questionInt('Quantas colunas? ')
+// let m = []
+// let linhas = rl.questionInt('Quantas linhas? ')
+// let colunas = rl.questionInt('Quantas colunas? ')
 
-for(let i = 0; i < linhas; i++){
-  m[i] = []
+// for(let i = 0; i < linhas; i++){
+//   m[i] = []
 
-  for(let j = 0; j < colunas; j++){
-    m[i][j] = rl.questionInt(`Digite m[${i}][${j}]: \n`)
-    console.table(m)
-  }
-}
-console.table(m)
+//   for(let j = 0; j < colunas; j++){
+//     m[i][j] = rl.questionInt(`Digite m[${i}][${j}]: \n`)
+//     console.table(m)
+//   }
+// }
+// console.table(m)
 console.log("_______________________________");
