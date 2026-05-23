@@ -1,3 +1,4 @@
+const rl = require("readline-sync")
 // ============================================================
 //   ATIVIDADE 13 – Estruturas de Dados: Matriz
 // ============================================================
@@ -122,41 +123,41 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-const m = [
-  [12, 1, 25],
-  [3, 18, 9],
-  [31, 14, 22],
-];
+// const m = [
+//   [12, 1, 25],
+//   [3, 18, 9],
+//   [31, 14, 22],
+// ];
 
-let somaLinha = 0
-let somaColuna = 0
-let somaDiagonal = 0
+// let somaLinha = 0
+// let somaColuna = 0
+// let somaDiagonal = 0
 
-for (let i = 0; i < m.length; i++) {
-  for (let j = 0; j < m[i].length; j++) {
+// for (let i = 0; i < m.length; i++) {
+//   for (let j = 0; j < m[i].length; j++) {
 
-    somaLinha += m[i][j]
+//     somaLinha += m[i][j]
 
-  }
-  console.log(`m linha[${i}] = ${somaLinha}`)
-  somaLinha = 0
-}
+//   }
+//   console.log(`m linha[${i}] = ${somaLinha}`)
+//   somaLinha = 0
+// }
 
-for(let i = 0; i < m[0].length; i++){
-  for(let j = 0; j < m[i].length; j ++){
+// for(let i = 0; i < m[0].length; i++){
+//   for(let j = 0; j < m[i].length; j ++){
 
-    somaColuna += m[j][i]
-  }
-  console.log(`m coluna[${i}] = ${somaColuna}`)
-  somaColuna = 0
-}
+//     somaColuna += m[j][i]
+//   }
+//   console.log(`m coluna[${i}] = ${somaColuna}`)
+//   somaColuna = 0
+// }
 
-for(let i = 0; i < m.length; i++){
+// for(let i = 0; i < m.length; i++){
 
-    somaDiagonal += m[i][i]
+//     somaDiagonal += m[i][i]
 
-  }
-  console.log(`m diaonal principal = ${somaDiagonal}`)
+//   }
+//   console.log(`m diaonal principal = ${somaDiagonal}`)
   
   console.log("_______________________________");
 
@@ -171,5 +172,17 @@ for(let i = 0; i < m.length; i++){
 
 // → Seu código aqui:
 
+let m = []
+let linhas = rl.questionInt('Quantas linhas? ')
+let colunas = rl.questionInt('Quantas colunas? ')
 
+for(let i = 0; i < linhas; i++){
+  m[i] = []
+
+  for(let j = 0; j < colunas; j++){
+    m[i][j] = rl.questionInt(`Digite m[${i}][${j}]: \n`)
+    console.table(m)
+  }
+}
+console.table(m)
 console.log("_______________________________");
