@@ -52,34 +52,88 @@ const rl = require("readline-sync")
 // for(let i = 0; i < m.length; i++){
 //   for(let j = 0; j < m[i].length; j++){
 //     m[i][j] *= 2
-    
+
 //   }
 // }
 // console.table(m)
 
 //Exercício 4 — Encontrar a posição de um número
 
-const m = [
-  [12, 7, 25],
-  [3, 18, 9],
-  [31, 14, 22]
-]
+// const m = [
+//   [12, 7, 25],
+//   [3, 18, 9],
+//   [31, 14, 22]
+// ]
 
-console.table(m)
-let procurado = rl.questionInt('Digite um numero para encontrar a posicao: ')
-let achou = false
+// console.table(m)
+// let procurado = rl.questionInt('Digite um numero para encontrar a posicao: ')
+// let achou = false
 
-for(let i = 0; i < m.length; i++){
-  for(let j = 0; j < m[i].length; j++){
-    if(m[i][j] === procurado){
-      console.log(`Numero encontrado: m[${i}][${j}] = ${procurado}`)
-      achou = true
-      break
+// for(let i = 0; i < m.length; i++){
+//   for(let j = 0; j < m[i].length; j++){
+//     if(m[i][j] === procurado){
+//       console.log(`Numero encontrado: m[${i}][${j}] = ${procurado}`)
+//       achou = true
+//       break
+//     }
+//   }
+//   if(achou){
+//     break
+//   }
+// } if(!achou){
+//   console.log('Number not found!')
+// }
+
+// Exercício 5 — Criar matriz identidade
+// Objetivo
+
+// Criar automaticamente uma matriz identidade.
+
+// m = []
+
+// let linhas = rl.questionInt('Digite a quantidade de linhas para a matriz: ')
+// let colunas = rl.questionInt('Digite a quantidade de colunas: ')
+
+// if (linhas === colunas) {
+
+//     for (let i = 0; i < linhas; i++) {
+//         m[i] = []
+
+//         for (let j = 0; j < colunas; j++) {
+
+//             if (i === j) {
+//                 m[i][j] = 1
+
+//             } else {
+//                 m[i][j] = 0
+//             }
+//         }
+//     }
+//     console.table(m)
+
+// } else {
+//     console.log('Matriz identidade precisa ser quadrada!')
+// }
+
+// Versão com ternário para preencher as linha e colunas
+
+m = []
+
+let linhas = rl.questionInt('Digite a quantidade de linhas para a matriz: ')
+let colunas = rl.questionInt('Digite a quantidade de colunas: ')
+
+if (linhas === colunas) {
+
+    for (let i = 0; i < linhas; i++) {
+        m[i] = []
+
+        for (let j = 0; j < colunas; j++) {
+
+            m[i][j] = (i === j) ? 1 : 0
+        }
     }
-  }
-  if(achou){
-    break
-  }
-} if(!achou){
-  console.log('Number not found!')
+    console.table(m)
+
+} else {
+    console.log('Matriz identidade precisa ser quadrada!')
 }
