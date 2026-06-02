@@ -1,3 +1,4 @@
+const rl = require('readline-sync')
 // ============================================================
 // ATIVIDADE 14 – Funções Simples
 // ============================================================
@@ -19,15 +20,15 @@
 
 // → Seu código aqui:
 
-function saudacao(){
-    console.log(`
-           "Olá!"
-   "Bem-vindo(a) ao curso de JavaScript."
-   "Bons estudos!"
-        `)
-}
-saudacao()
-saudacao()
+// function saudacao(){
+//     console.log(`
+//            "Olá!"
+//    "Bem-vindo(a) ao curso de JavaScript."
+//    "Bons estudos!"
+//         `)
+// }
+// saudacao()
+// saudacao()
 
 console.log("_______________________________");
 
@@ -45,9 +46,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-
-
-console.log("_______________________________");
+// function linha(){
+//     console.log("----------------------------------------")
+// }
+// function titulo(){
+//     console.log("         RELATÓRIO MENSAL              ")
+// }
+// function cabecalho(){
+//     linha()
+//     titulo()
+//     linha()
+// }
+// cabecalho()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -72,10 +83,34 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function meusDados() {
+//     nome = rl.question('Digite seu nome: ')
+//     idade = rl.questionInt('Digite sua idade: ')
+//     cidade = rl.question('Digite a sua cidade: ')
+// }
+// function exibirDados() {
+//     meusDados()
+//     console.log(`
+//         Nome: ${nome}
+//         Idade: ${idade}
+//         Cidade: ${cidade}
+//         `)
+// }
+// function coletaDados2() {
+//     let usuarios = []
+//     for (let i = 0; i < 2; i++) {
+//         let usuario = {
+//             nome: rl.question('Digite seu nome: '),
+//             idade: rl.questionInt('Digite sua idade: '),
+//             cidade: rl.question('Digite a sua cidade: ')
+//         }
+//         usuarios.push(usuario)
+//     }
+//     console.log(usuarios)
+// }
+// coletaDados2()
 
 console.log("_______________________________");
-
-
 // ------------------------------------------------------------
 // EXERCÍCIO 4 – Sorteio de número
 // ------------------------------------------------------------
@@ -87,10 +122,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-
+// function sortear(){
+//     let aleatorio = (Math.floor(Math.random() * 100) + 1)
+//     console.log(`Número sorteado: ${aleatorio}`)
+// }
+// function sortearCinco(){
+//     for(let i = 1; i <= 5; i++){
+//         sortear()
+//     }
+// }
+// sortearCinco()
 console.log("_______________________________");
-
-
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Tabela de multiplicação
 // ------------------------------------------------------------
@@ -105,7 +147,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function tabuadaDoCinco() {
+    let soma = 1
+    let numero = 5
 
+    for (let i = 1; i <= 10; i++) {
+        soma = numero * i
+        console.log(`${numero} * ${i} = ${soma}`)
+    }
+}
+tabuadaDoCinco()
+
+function tabuadaDoSete() {
+    soma = 1
+    let numero = 7
+
+    for (let i = 1; i <= 10; i++) {
+        soma = numero * i
+        console.log(`${numero} * ${i} = ${soma}`)
+    }
+}
+tabuadaDoSete()
 console.log("_______________________________");
 
 
@@ -128,7 +190,7 @@ console.log("_______________________________");
 // EXERCÍCIO 7 – Listando informações
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
+const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 // b) Crie a função 'listarFilmes' que percorre o vetor 'filmes' com for
 //    e exibe cada um no formato: "<i+1> - <filme>".
 // c) Chame listarFilmes() duas vezes.
