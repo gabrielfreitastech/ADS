@@ -182,18 +182,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function converterTemperatura(){
-    let temp = rl.questionFloat('Digite a temperatura para converter: ')
-    let fah = temp * 1.8 + 32
-    console.log(`${temp}C° equivalem a ${fah}F°`)
-}
+// function converterTemperatura(){
+//     let temp = rl.questionFloat('Digite a temperatura para converter: ')
+//     let fah = temp * 1.8 + 32
+//     console.log(`${temp}C° equivalem a ${fah}F°`)
+// }
 
-for(let i = 0; i <= 2; i++){
-    converterTemperatura()
-}
+// for(let i = 0; i <= 2; i++){
+//     converterTemperatura()
+// }
 
 console.log("_______________________________");
-
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Listando informações
@@ -206,7 +205,15 @@ const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 
 // → Seu código aqui:
 
+// function listarFilmes(){
+//     for(let i = 0; i < filmes.length; i++){
+//         console.log(`${[i]} - ${filmes[i]}`)
+//     }
+// }
 
+// for(let i = 0; i < 2; i++){
+//     listarFilmes()
+// }
 console.log("_______________________________");
 
 
@@ -226,7 +233,74 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function limparTela(){
+    console.log(`
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        `)
+}
 
+function banner(){
+    console.log('====localHost/2004====')
+}
+
+function pedirNome(){
+    do{
+        let nome = rl.question('Digite seu nome: ')
+        valido = true
+        
+        if(nome === ''){
+            console.log('Nome inexistente, digite novamente')
+
+        } else {
+            console.log(`Olá ${nome}, Seja Bem Vindo(a) ao Programa!`)
+            valido = false
+        }
+    } while(valido)
+    
+}
+
+function rodape(nome){
+    
+    console.log(`
+        ${new Date().getFullYear()} | Sistemas desenvolvido por ${nome}
+        `)
+}
+
+function main(){
+    limparTela()
+    banner()
+    pedirNome()
+    rodape('Gabriel Freitas')
+}
+
+main()
 console.log("_______________________________");
 
 
