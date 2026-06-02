@@ -147,27 +147,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function tabuadaDoCinco() {
-    let soma = 1
-    let numero = 5
+// function tabuadaDoCinco() {
+//     let soma = 1
+//     let numero = 5
 
-    for (let i = 1; i <= 10; i++) {
-        soma = numero * i
-        console.log(`${numero} * ${i} = ${soma}`)
-    }
-}
-tabuadaDoCinco()
+//     for (let i = 1; i <= 10; i++) {
+//         soma = numero * i
+//         console.log(`${numero} * ${i} = ${soma}`)
+//     }
+// }
+// tabuadaDoCinco()
 
-function tabuadaDoSete() {
-    soma = 1
-    let numero = 7
+// function tabuadaDoSete() {
+//     soma = 1
+//     let numero = 7
 
-    for (let i = 1; i <= 10; i++) {
-        soma = numero * i
-        console.log(`${numero} * ${i} = ${soma}`)
-    }
-}
-tabuadaDoSete()
+//     for (let i = 1; i <= 10; i++) {
+//         soma = numero * i
+//         console.log(`${numero} * ${i} = ${soma}`)
+//     }
+// }
+// tabuadaDoSete()
 console.log("_______________________________");
 
 
@@ -182,6 +182,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function converterTemperatura(){
+    let temp = rl.questionFloat('Digite a temperatura para converter: ')
+    let fah = temp * 1.8 + 32
+    console.log(`${temp}C° equivalem a ${fah}F°`)
+}
+
+for(let i = 0; i <= 2; i++){
+    converterTemperatura()
+}
 
 console.log("_______________________________");
 
