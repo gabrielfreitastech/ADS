@@ -233,74 +233,74 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function limparTela(){
-    console.log(`
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        `)
-}
+// function limparTela(){
+//     console.log(`
 
-function banner(){
-    console.log('====localHost/2004====')
-}
 
-function pedirNome(){
-    do{
-        let nome = rl.question('Digite seu nome: ')
-        valido = true
-        
-        if(nome === ''){
-            console.log('Nome inexistente, digite novamente')
 
-        } else {
-            console.log(`Olá ${nome}, Seja Bem Vindo(a) ao Programa!`)
-            valido = false
-        }
-    } while(valido)
-    
-}
 
-function rodape(nome){
-    
-    console.log(`
-        ${new Date().getFullYear()} | Sistemas desenvolvido por ${nome}
-        `)
-}
 
-function main(){
-    limparTela()
-    banner()
-    pedirNome()
-    rodape('Gabriel Freitas')
-}
 
-main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         `)
+// }
+
+// function banner(){
+//     console.log('====localHost/2004====')
+// }
+
+// function pedirNome(){
+//     do{
+//         let nome = rl.question('Digite seu nome: ')
+//         valido = true
+
+//         if(nome === ''){
+//             console.log('Nome inexistente, digite novamente')
+
+//         } else {
+//             console.log(`Olá ${nome}, Seja Bem Vindo(a) ao Programa!`)
+//             valido = false
+//         }
+//     } while(valido)
+
+// }
+
+// function rodape(nome){
+
+//     console.log(`
+//         ${new Date().getFullYear()} | Sistemas desenvolvido por ${nome}
+//         `)
+// }
+
+// function main(){
+//     limparTela()
+//     banner()
+//     pedirNome()
+//     rodape('Gabriel Freitas')
+// }
+
+// main()
 console.log("_______________________________");
 
 
@@ -321,5 +321,84 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function somar() {
+    let a = rl.questionFloat('Digite um valor para somar: ')
+    let b = rl.questionFloat('Digite o segundo valor: ')
+    let resultado = a + b
+    console.log(`Resultado de ${a} + ${b} = ${resultado}`)
+}
+
+function subtrair() {
+    let a = rl.questionFloat('Digite um valor para subtrair: ')
+    let b = rl.questionFloat('Digite o segundo valor: ')
+    let resultado = a - b
+    console.log(`Resultado de ${a} - ${b} = ${resultado}`)
+}
+
+function multiplicar() {
+    let a = rl.questionFloat('Digite um valor para multiplicar: ')
+    let b = rl.questionFloat('Digite o segundo valor: ')
+    let resultado = a * b
+    console.log(`Resultado de ${a} * ${b} = ${resultado}`)
+}
+
+function dividir() {
+    let a = rl.questionFloat('Digite um valor para dividir: ')
+    let b = rl.questionFloat('Digite o segundo valor: ')
+    let resultado = a / b
+
+    if (b <= 0) {
+        console.log('Erro de divisão, 0 ou menos não divide!')
+
+    } else {
+
+        console.log(`Resultado de ${a} / ${b} = ${resultado}`)
+    }
+}
+
+function menu() {
+    let opcao
+
+    do {
+        console.log(`
+            SOMAR - 1
+            SUBTRAIR - 2
+            MULTIPLICAR - 3
+            DIVIDIR - 4
+            SAIR - 0
+            `)
+
+            opcao = rl.questionInt('Digite uma opcao: ')
+
+            switch(opcao){
+                case 1:
+                    somar()
+                    break
+                
+                case 2:
+                    subtrair()
+                    break
+
+                case 3:
+                    multiplicar()
+                    break
+
+                case 4:
+                    dividir()
+                    break
+
+                case 0:
+                    console.log('Encerrando programa, obrigado por executar!')
+                    break
+
+                default:
+                    console.log('Operação inválida, tente novamente!')
+                    break
+            }
+
+    } while (opcao !== 0)
+}
+
+menu()
 
 console.log("_______________________________");
