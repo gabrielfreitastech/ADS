@@ -249,8 +249,40 @@ console.log("_______________________________");
 
 
 
-console.log("_______________________________");
+function criarAluno(nome, idade, nota){
+    const situacao = situacaoA(nota)
+    const aluno = {
+        nome: nome,
+        idade: idade,
+        nota: nota,
+        situacao
+    }
 
+    return aluno
+}
+
+function situacaoA(nota){
+    if(nota >= 7)
+        return 'Aprovado(a)'
+    return 'Reprovado(a)'
+}
+
+console.log(criarAluno('Gabriel', 21, 10))
+
+let alunos = []
+
+for(let i = 0; i < 3; i++){
+    
+    let nome = rl.question('Nome do aluno: ')
+    let idade = rl.questionInt('Idade do aluno: ')
+    let nota = rl.questionFloat('Nota do aluno: ')
+
+    const aluno = criarAluno(nome, idade, nota)
+    
+    alunos.push(aluno)
+}
+
+console.table(alunos)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Função que retorna vetor
