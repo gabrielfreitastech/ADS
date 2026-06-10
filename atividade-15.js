@@ -267,22 +267,22 @@ function situacaoA(nota){
     return 'Reprovado(a)'
 }
 
-console.log(criarAluno('Gabriel', 21, 10))
+// console.log(criarAluno('Gabriel', 21, 10))
 
 let alunos = []
 
-for(let i = 0; i < 3; i++){
+// for(let i = 0; i < 3; i++){
     
-    let nome = rl.question('Nome do aluno: ')
-    let idade = rl.questionInt('Idade do aluno: ')
-    let nota = rl.questionFloat('Nota do aluno: ')
+//     let nome = rl.question('Nome do aluno: ')
+//     let idade = rl.questionInt('Idade do aluno: ')
+//     let nota = rl.questionFloat('Nota do aluno: ')
 
-    const aluno = criarAluno(nome, idade, nota)
+//     const aluno = criarAluno(nome, idade, nota)
     
-    alunos.push(aluno)
-}
+//     alunos.push(aluno)
+// }
 
-console.table(alunos)
+// console.table(alunos)
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Função que retorna vetor
@@ -296,5 +296,32 @@ console.table(alunos)
 
 // → Seu código aqui:
 
+let numeros1 = [12, 7, 25, 3, 18, 9, 31, 14];
+
+function gerarPares(inicio, fim){
+    const pares = []
+    for(let i = inicio; i <= fim; i++){
+        if(i % 2 == 0){
+            pares.push(i)
+        }
+    }
+    return pares
+}
+// console.log(gerarPares(1, 20))
+
+function filtrarMaioresQue(vet, limite){
+    const filtrado = []
+    for(let i = 0; i <= vet.length; i++){
+        if(vet[i] > limite){
+            filtrado.push(vet[i])
+        }
+    }
+    return filtrado
+}
+
+// console.log(filtrarMaioresQue(numeros, 10))
+
+const pares = gerarPares(0,50)
+console.log(filtrarMaioresQue(pares, 30))
 
 console.log("_______________________________");
