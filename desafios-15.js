@@ -21,6 +21,67 @@
 
 // → Seu código aqui:
 
+function tamanhoMin(senha, min) {
+    const minSenha = senha.split('')
+
+    if (minSenha.length >= min)
+        return true
+    return false
+}
+// console.log(tamanhoMin('12345', 5))
+
+// function temNum(senha){
+//     const anyNum = senha.split('')
+//     for(let i = 0; i < anyNum.length; i++){
+//         if(anyNum[i] === '0' || anyNum[i] === '1' || anyNum[i] === '2' || anyNum[i] === '3' || anyNum[i] === '4' || anyNum[i] === '5'
+//             || anyNum[i] === '6' || anyNum[i] === '7' || anyNum[i] === '8' || anyNum[i] === '9')
+//             return true
+//         }
+//         return false
+// }
+// // console.log(temNum('freitas1'))
+
+function temNum(senha) {
+
+    for (let i = 0; i < senha.length; i++) {
+        if (senha[i] >= '0' && senha[i] <= '9')
+            return true
+    }
+    return false
+}
+// console.log(temNum('freitas'))
+// console.log(temNum('freitas1'))
+// console.log(temNum('1freitas'))
+// console.log(temNum('abc123'))
+
+function temMaiuscula(senha) {
+    for (let i = 0; i < senha.length; i++) {
+        if (senha[i] >= 'A' && senha[i] <= 'Z')
+            return true
+    }
+    return false
+}
+
+// console.log(temMaiuscula('freitaS'))
+// console.log(temMaiuscula('freitas1'))
+// console.log(temMaiuscula('1freiAtas'))
+// console.log(temMaiuscula('abc123'))
+
+// d) 'temEspecial(senha)'            → true se houver !@#$%&*?
+
+function temEspecial(senha) {
+    let special = senha.split('')
+    for (let i = 0; i < special.length; i++){
+        if (special[i] === '!' || special[i] === '@' || special[i] === '#' || special[i] === '$' || special[i] === '%' || special[i] === '&' || special[i] === '*')
+            return true
+    }
+    return false
+}
+
+// console.log(temEspecial('@freitaS'))
+// console.log(temEspecial('!freitas1'))
+// console.log(temEspecial('@1freiAtas'))
+// console.log(temEspecial('abc123'))
 
 console.log("_______________________________");
 
