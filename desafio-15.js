@@ -1,3 +1,5 @@
+const rl = require('readline-sync')
+
 // ============================================================
 //   DESAFIOS (para quem já terminou a atividade 15)
 //   Funções com Parâmetros e Retornos
@@ -87,20 +89,45 @@ function temEspecial(senha) {
 //        { valida, motivos }
 //    'motivos' é um VETOR de strings com tudo que falta. Ex:
 //        { valida: false, motivos: ["Mínimo de 8 caracteres", "Deve conter número"] }
+// f) Pergunte uma senha ao usuário e exiba o resultado da validação.
 
 function validarSenha(senha){
-    return {
-        tamanhoValido: tamanhoMin(senha, 7),
-        temNumero: temNum(senha),
-        temMaiuscula: temMaiuscula(senha),
-        temEspecial: temEspecial(senha)
-    }
-}
 
-console.log(validarSenha('@Freitas303'))
-console.log(validarSenha('!freitas1'))
-console.log(validarSenha('@1freiAtas'))
-console.log(validarSenha('abc123'))
+    let valida = {
+        tamanhoMinimo: 'OK',
+        possuiNumero: 'OK',
+        temLetraMaiuscula: 'OK',
+        temCaracterEspecial: 'OK'
+    }
+
+    let tamanhoMinimo = tamanhoMin(senha, 10)
+    let temNumero = temNum(senha)
+    let temMaiusculo = temMaiuscula(senha)
+    let temespecial = temEspecial(senha)
+
+    const motivo = [`Tamanho mínimo não atingido! Minimo 10 caracteres.`, `Falta Número! Exemplo: ${senha}123`, `Não possui letra Maiúscula`, `Não possui caracter especial! Exemplo: @${senha}`]
+
+    if(tamanhoMinimo === false){
+        valida.tamanhoMinimo = motivo[0]
+    }
+    if(temNumero === false){
+        valida.possuiNumero = motivo[1]
+    }
+    if(temMaiusculo === false){
+        valida.temLetraMaiuscula = motivo[2]
+    }
+    if(temespecial === false){
+        valida.temCaracterEspecial = motivo[3]
+    }
+
+    return valida
+
+}
+console.log(validarSenha('gabriel'))
+console.log(validarSenha('gabrielfreitas'))
+console.log(validarSenha('gabrielfreitas123'))
+console.log(validarSenha('gabrielFreitas123'))
+console.log(validarSenha('gabriel@Freitas123'))
 
 console.log("_______________________________");
 
