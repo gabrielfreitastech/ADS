@@ -67,7 +67,7 @@ function temMaiuscula(senha) {
 // console.log(temMaiuscula('1freiAtas'))
 // console.log(temMaiuscula('abc123'))
 
-// d) 'temEspecial(senha)'            → true se houver !@#$%&*?
+// d) 'temEspecial(senha)'    → true se houver !@#$%&*?
 
 function temEspecial(senha) {
     let special = senha.split('')
@@ -83,8 +83,26 @@ function temEspecial(senha) {
 // console.log(temEspecial('@1freiAtas'))
 // console.log(temEspecial('abc123'))
 
-console.log("_______________________________");
+// e) 'validarSenha(senha)'           → retorna um OBJETO com:
+//        { valida, motivos }
+//    'motivos' é um VETOR de strings com tudo que falta. Ex:
+//        { valida: false, motivos: ["Mínimo de 8 caracteres", "Deve conter número"] }
 
+function validarSenha(senha){
+    return {
+        tamanhoValido: tamanhoMin(senha, 7),
+        temNumero: temNum(senha),
+        temMaiuscula: temMaiuscula(senha),
+        temEspecial: temEspecial(senha)
+    }
+}
+
+console.log(validarSenha('@Freitas303'))
+console.log(validarSenha('!freitas1'))
+console.log(validarSenha('@1freiAtas'))
+console.log(validarSenha('abc123'))
+
+console.log("_______________________________");
 
 // ------------------------------------------------------------
 // DESAFIO 2 – Conversor de unidades
@@ -124,7 +142,6 @@ console.log("_______________________________");
 // f) Crie a função 'iniciarQuiz' para iniciar o quiz.
 
 // → Seu código aqui:
-
 
 console.log("_______________________________");
 
