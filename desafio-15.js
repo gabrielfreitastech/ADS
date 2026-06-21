@@ -123,11 +123,11 @@ function validarSenha(senha){
     return valida
 
 }
-console.log(validarSenha('gabriel'))
-console.log(validarSenha('gabrielfreitas'))
-console.log(validarSenha('gabrielfreitas123'))
-console.log(validarSenha('gabrielFreitas123'))
-console.log(validarSenha('gabriel@Freitas123'))
+// console.log(validarSenha('gabriel'))
+// console.log(validarSenha('gabrielfreitas'))
+// console.log(validarSenha('gabrielfreitas123'))
+// console.log(validarSenha('gabrielFreitas123'))
+// console.log(validarSenha('gabriel@Freitas123'))
 
 console.log("_______________________________");
 
@@ -151,6 +151,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+function celsiusParaFahrenheit(c){
+    let fahrenheit = c * 1.8 + 32
+    return fahrenheit.toFixed(2)
+}
+
+function fahrenheitParaCelsius(f){
+    let celsius = (f - 32) / 1.8
+    return celsius.toFixed(2)
+}
+
+function kmParaMilhas(km){
+    let milhas = km * 0.621371
+    return milhas.toFixed(2)
+}
+
+function milhasParaKm(mi){
+    let km = mi / 0.621371
+    return km.toFixed(2)
+}
+
+function kgParaLibras(kg){
+    let libras = kg * 2.20462
+    return libras.toFixed(2)
+}
+
+function librasParaKg(lb){
+    let kilos = lb / 2.20462
+    return kilos.toFixed(2)
+}
 
 console.log("_______________________________");
 
