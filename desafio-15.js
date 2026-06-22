@@ -152,38 +152,32 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 function celsiusParaFahrenheit(c) {
-    let farenheit = c * 1.8 + 32
-    return farenheit   
+    return c * 1.8 + 32
 }
 
 function fahrenheitParaCelsius(f) {
-    let celsius = (f - 32) / 1.8
-    return celsius
+    return (f - 32) / 1.8
 }
 
 function kmParaMilhas(km) {
-    let milhas = km * 0.621371
-    return milhas
+    return km * 0.621371
 }
 
 function milhasParaKm(mi) {
-    let km = mi / 0.621371
-    return km
+    return mi / 0.621371
 }
 
 function kgParaLibras(kg) {
-    let libras = kg * 2.20462
-    return libras
+    return kg * 2.20462
 }
 
 function librasParaKg(lb) {
-    let kilos = lb / 2.20462
-    return kilos
+    return lb / 2.20462
 }
 
 function converter(valor, dePara) {
 
-    switch(dePara){
+    switch (dePara) {
         case 'c-f':
             return celsiusParaFahrenheit(valor)
 
@@ -196,7 +190,6 @@ function converter(valor, dePara) {
         case 'mi-km':
             return milhasParaKm(valor)
 
-
         case 'kg-lb':
             return kgParaLibras(valor)
 
@@ -208,20 +201,81 @@ function converter(valor, dePara) {
     }
 }
 
-// do {
-//     console.log(`
-//         === Vamos converter ===
-//         1 - Celsius Para Fahrenheit
-//         2 - Fahrenheit Para Celsius
-//         3 - Km Para Milhas
-//         4 - Milhas Para Km
-//         5 - Kg Para Libras
-//         6 - Libras Para Kg
-//         0 - Finalizar Conversão
-//         === --------------- ===
-//         `)
+function menu() {
+    let opcao
+    let dePara
+    let unidadeOrigem
+    let unidadeDestino
+    let continuar = true
 
+    do {
 
+        let valor = rl.questionFloat('Qual o valor a ser convertido? ')
+
+        const menu = (`
+        === Vamos converter ===
+        1 - Celsius Para Fahrenheit
+        2 - Fahrenheit Para Celsius
+        3 - Km Para Milhas
+        4 - Milhas Para Km
+        5 - Kg Para Libras
+        6 - Libras Para Kg
+        === --------------- ===
+        `)
+        console.log(menu)
+
+        opcao = rl.questionInt(`Converter ${valor} para qual unidade? 1 a 6: `)
+        while(opcao < 1 || opcao > 6){
+                opcao = rl.questionInt(`Opcao invalida, converter ${valor} para qual unidade? 1 a 6: `)
+            }
+
+        switch (opcao) {
+            case 1: 
+                dePara = 'c-f'
+                unidadeOrigem = 'C°'
+                unidadeDestino = 'F°'
+                break
+
+            case 2:
+                dePara = 'f-c'
+                unidadeOrigem = 'F°'
+                unidadeDestino = 'C°'
+                break
+
+            case 3:
+                dePara = 'km-mi'
+                unidadeOrigem = 'km'
+                unidadeDestino = 'mi'
+                break
+
+            case 4:
+                dePara = 'mi-km'
+                unidadeOrigem = 'mi'
+                unidadeDestino = 'km'
+                break
+
+            case 5:
+                dePara = 'kg-lb'
+                unidadeOrigem = 'kg'
+                unidadeDestino = 'lb'
+                break
+
+            case 6:
+                dePara = 'lb-kg'
+                unidadeOrigem = 'lb'
+                unidadeDestino = 'kg'
+                break
+                
+        }
+
+        console.log(`${valor.toFixed(2)} ${unidadeOrigem} = ${converter(valor, dePara).toFixed(2)} ${unidadeDestino}`)
+
+        continuar = rl.keyInYN('Deseja fazer outra conversao? ')
+
+    } while (continuar)
+        console.log('Obrigado por usar o nosso Conversor!')
+}
+menu()
 // ------------------------------------------------------------
 // DESAFIO 3 – Quizz
 // ------------------------------------------------------------
