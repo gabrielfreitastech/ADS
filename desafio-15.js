@@ -73,7 +73,7 @@ function temMaiuscula(senha) {
 
 function temEspecial(senha) {
     let special = senha.split('')
-    for (let i = 0; i < special.length; i++){
+    for (let i = 0; i < special.length; i++) {
         if (special[i] === '!' || special[i] === '@' || special[i] === '#' || special[i] === '$' || special[i] === '%' || special[i] === '&' || special[i] === '*')
             return true
     }
@@ -91,7 +91,7 @@ function temEspecial(senha) {
 //        { valida: false, motivos: ["Mínimo de 8 caracteres", "Deve conter número"] }
 // f) Pergunte uma senha ao usuário e exiba o resultado da validação.
 
-function validarSenha(senha){
+function validarSenha(senha) {
 
     let valida = {
         tamanhoMinimo: 'OK',
@@ -107,16 +107,16 @@ function validarSenha(senha){
 
     const motivo = [`Tamanho mínimo não atingido! Minimo 10 caracteres.`, `Falta Número! Exemplo: ${senha}123`, `Não possui letra Maiúscula`, `Não possui caracter especial! Exemplo: @${senha}`]
 
-    if(tamanhoMinimo === false){
+    if (tamanhoMinimo === false) {
         valida.tamanhoMinimo = motivo[0]
     }
-    if(temNumero === false){
+    if (temNumero === false) {
         valida.possuiNumero = motivo[1]
     }
-    if(temMaiusculo === false){
+    if (temMaiusculo === false) {
         valida.temLetraMaiuscula = motivo[2]
     }
-    if(temespecial === false){
+    if (temespecial === false) {
         valida.temCaracterEspecial = motivo[3]
     }
 
@@ -151,37 +151,75 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function celsiusParaFahrenheit(c){
-    let fahrenheit = c * 1.8 + 32
-    return fahrenheit.toFixed(2)
+function celsiusParaFahrenheit(c) {
+    let farenheit = c * 1.8 + 32
+    return farenheit   
 }
 
-function fahrenheitParaCelsius(f){
+function fahrenheitParaCelsius(f) {
     let celsius = (f - 32) / 1.8
-    return celsius.toFixed(2)
+    return celsius
 }
 
-function kmParaMilhas(km){
+function kmParaMilhas(km) {
     let milhas = km * 0.621371
-    return milhas.toFixed(2)
+    return milhas
 }
 
-function milhasParaKm(mi){
+function milhasParaKm(mi) {
     let km = mi / 0.621371
-    return km.toFixed(2)
+    return km
 }
 
-function kgParaLibras(kg){
+function kgParaLibras(kg) {
     let libras = kg * 2.20462
-    return libras.toFixed(2)
+    return libras
 }
 
-function librasParaKg(lb){
+function librasParaKg(lb) {
     let kilos = lb / 2.20462
-    return kilos.toFixed(2)
+    return kilos
 }
 
-console.log("_______________________________");
+function converter(valor, dePara) {
+
+    switch(dePara){
+        case 'c-f':
+            return celsiusParaFahrenheit(valor)
+
+        case 'f-c':
+            return fahrenheitParaCelsius(valor)
+
+        case 'km-mi':
+            return kmParaMilhas(valor)
+
+        case 'mi-km':
+            return milhasParaKm(valor)
+
+
+        case 'kg-lb':
+            return kgParaLibras(valor)
+
+        case 'lb-kg':
+            return librasParaKg(valor)
+
+        default:
+            return 'Conversão Inválida!'
+    }
+}
+
+// do {
+//     console.log(`
+//         === Vamos converter ===
+//         1 - Celsius Para Fahrenheit
+//         2 - Fahrenheit Para Celsius
+//         3 - Km Para Milhas
+//         4 - Milhas Para Km
+//         5 - Kg Para Libras
+//         6 - Libras Para Kg
+//         0 - Finalizar Conversão
+//         === --------------- ===
+//         `)
 
 
 // ------------------------------------------------------------
@@ -200,7 +238,6 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 console.log("_______________________________");
-
 
 // ------------------------------------------------------------
 // DESAFIO 4 – Banco de funcionários
